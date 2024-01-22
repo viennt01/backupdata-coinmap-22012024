@@ -1,0 +1,16 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [master]
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  ci-build:
+    uses: CoinmapTrading/workflows/.github/workflows/share-build.yaml@master
+    with:
+      service: merchants-admin
+      build_type: docker
+    secrets:
+      envPAT: ${{ secrets.GH_PAT }}

@@ -1,0 +1,11 @@
+.tourCover {
+  :global {
+    div.ant-image-preview-wrap {
+      z-index: 10000;
+    }
+  }
+}
+
+.tourCover:global(.ant-image-preview-operations-wrapper) {
+  z-index: 10001;
+}

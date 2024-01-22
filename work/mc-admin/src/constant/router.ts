@@ -1,0 +1,15 @@
+export const ROUTERS = {
+  LOGIN: '/login',
+  LOGOUT: '/logout',
+  HOME: '/',
+  CHANGE_PASSWORD: '/change-password',
+  SETTINGS: '/settings',
+  STOREFRONT: '/storefront',
+  AI_TRADING: '/ai-trading',
+  TRANSACTION_LIST: '/transaction-list',
+  CUSTOMER_LIST: '/customer/list',
+  CUSTOMER_CREATE: '/customer/create',
+  CUSTOMER_EDIT: (customerId: string) => `/customer/edit/${customerId}`,
+  PAYMENT: '/payment',
+  FAQ: '/faq',
+};
