@@ -1,0 +1,22 @@
+@import '@/styles/color.scss';
+@import '@/styles/mixin.scss';
+
+.page {
+  color: $WHITE;
+  .title {
+    margin-bottom: 48px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    color: $WHITE;
+  }
+}
+
+@include desktop-device {
+  .page {
+    padding: 52px 32px;
+    .title {
+      padding-left: 32px;
+    }
+  }
+}

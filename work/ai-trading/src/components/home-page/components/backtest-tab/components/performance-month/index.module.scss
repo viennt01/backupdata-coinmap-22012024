@@ -1,0 +1,19 @@
+@import '@/styles/color.scss';
+
+.performanceContainer {
+  margin-bottom: 24px;
+
+  .title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: 0.08em;
+    color: var(--on_secondary_darken_2);
+    margin-bottom: 24px;
+  }
+  .performanceContent {
+    .down {
+      color: $SUNSET_ORANGE;
+    }
+  }
+}

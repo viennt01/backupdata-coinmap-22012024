@@ -1,0 +1,37 @@
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: false
+        type: string
+      service:
+        required: false
+        type: string
+      version:
+        required: true
+        type: string
+      repo:
+        required: true
+        type: string
+    secrets:
+      envPAT:
+        required: true
+
+env:
+  ENVIRONMENT: ${{ inputs.environment }}
+  SERVICE: ${{ inputs.service }}
+  VERSION: ${{ inputs.version }}
+  REPO: ${{ inputs.repo }}
+
+jobs:
+  update-pre-release:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: CoinmapTrading/actions
+          token: ${{ secrets.envPAT }}
+          path: coinmap-actions
+      - id: update-pre-release
+        uses: ./coinmap-actions/update-pre-release
+

@@ -1,0 +1,35 @@
+{
+  "checkout": "Checkout",
+  "guide_main": "Please transfer to the following address to complete the payment",
+  "guide_sub_1": "Please pay this invoice after",
+  "guide_sub_2": "After the above time, if the payment is not complete, the invoice will be canceled automatically.",
+  "guide_qr_code": "Scan this QR code or copy and paste the payment details into your wallet",
+  "total_payment": "Total payment",
+  "payment_note": "Make sure to send enough to cover any coin transaction fees!",
+  "policy": {
+    "agree_to": "By processing payment, you agree to",
+    "according_to": "Payment will be processd separately by Coinpayments according to",
+    "and": "and",
+    "our_policy": "Our Policy",
+    "user_agreement": "Coinpayments User Agreement",
+    "privacy_policy": "Privacy Policy"
+  },
+  "customer_support": "Customer support",
+  "order_summary": {
+    "title": "Order summary",
+    "product": "Product",
+    "payment_id": "Payment ID",
+    "billing_cycle": "Billing cycle",
+    "month": "month",
+    "price": "Price",
+    "payment_method": "Payment method",
+    "discount": "Discount",
+    "you_saved": "You saved",
+    "total": "Total"
+  },
+  "timeout": {
+    "title": "This order has expired",
+    "description": "Please go back to the market and make a new one.",
+    "go_to_market": "GO TO THE MARKET"
+  }
+}

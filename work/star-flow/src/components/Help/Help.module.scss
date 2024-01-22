@@ -1,0 +1,119 @@
+$white: #FFFFFF;
+$background: #111024;
+$blue: #31AFFE;
+$darkBlue: #253E53;
+$E0E6F1: #E0E6F1;
+
+.container {
+  background: $E0E6F1;
+  flex: 1;
+  .bannerContainer {
+    display: none;
+    position: relative;
+    .title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: 700;
+      font-size: 110px;
+      line-height: 134px;
+      color: $white;
+    }
+    @media screen and(min-width: 1170px) {
+      display: block;
+    }
+  }
+  .contentContainer {
+    max-width: 1423px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 48px 0;
+    .title {
+      text-align: center;
+      font-weight: 700;
+      font-size: 24px;
+      color: $darkBlue;
+      margin-bottom: 32px;
+      @media screen and(min-width: 1170px) {
+        font-size: 48px;
+        line-height: 59px;
+      }
+    }
+    @media screen and(min-width: 1170px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.collapseItem {
+  max-width: 889px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $white;
+  padding: 24px;
+  box-shadow: 0px 6px 16px rgba(74, 58, 255, 0.19);
+  border-radius: 14px;
+  margin-bottom: 32px;
+  cursor: pointer;
+
+  @media screen and(min-width: 1170px) {
+    padding: 32px;
+  }
+
+  &.active {
+    border: 2px solid #31AFFE;
+  }
+
+  .headerContaienr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+     &.active {
+       margin-bottom: 18px;
+      }
+    .title {
+      text-align: left;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 0;
+      @media screen and(min-width: 1170px) {
+        font-size: 22px;
+        line-height: 28px;
+      }
+    }
+    .arrowdownBtn {
+      flex-shrink: 0;
+      background-color: $white;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      color:  $blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.active {
+        background-color: $blue;
+        color: $white;
+      }
+
+    }
+  }
+  .content {
+    max-width: 715.3px;
+    transition: all 0.4s;
+    max-height: 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    overflow: hidden;
+
+    &.active {
+      max-height: 200px;
+    }
+  }
+
+}

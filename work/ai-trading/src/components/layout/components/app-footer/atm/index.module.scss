@@ -1,0 +1,69 @@
+@import '@/styles/color.scss';
+@import '@/styles/mixin.scss';
+
+.appFooterWrapper {
+  background: var(--secondary);
+  padding: 0;
+  .moreInfo {
+    padding: 67px 0 58px;
+    background: var(--secondary_darken_2);
+    .container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      .about {
+        text-align: left;
+        margin-bottom: 32px;
+      }
+      .aboutText {
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        max-width: 584px;
+      }
+    }
+  }
+  .appFooter {
+    min-height: 64px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    .copyRight {
+      color: var(--on_secondary);
+    }
+    .version {
+      color: var(--on_secondary);
+    }
+    .socialMedia {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+}
+
+@include desktop-device {
+  .appFooterWrapper {
+    .moreInfo {
+      .container {
+        justify-content: space-between;
+        flex-direction: row;
+        .about{
+        margin-bottom: 0;
+        }
+        .aboutText {
+          text-align: justify;
+        }
+      }
+    }
+    .appFooter {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

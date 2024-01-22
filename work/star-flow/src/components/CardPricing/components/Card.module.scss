@@ -1,0 +1,398 @@
+.cardFreeTrialContainer {
+  .cardContainer {
+    margin-bottom: 16px;
+    .title {
+      color: #2CCFBF;
+    }
+  }
+
+}
+
+.cardBestContainer {
+  height: 100%;
+  position: relative;
+  .bestLabel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 24px;
+    top: -24px;
+    background-color: #FFFFFF;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    h1 {
+      position: absolute;
+      top: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 20px;
+      letter-spacing: 0.2em;
+      color: #FFFFFF;
+    }
+    svg {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .bottomBestCard {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 24px;
+    bottom: -24px;
+    background-color: #FFFFFF;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+  }
+}
+
+.cardContainer {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 40px;
+    padding-top: 48px;
+    background-color: #09081A;
+    border-radius: 4px;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &.best {
+      background-color: #FFFFFF;
+      border-radius: 0;
+      color: #1D2842;
+    }
+
+
+  .titleWrapper {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+    .title {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      &.best {
+        color: #1D2842;
+      }
+    }
+  }
+  .priceContainer {
+    position: relative;
+    text-align: center;
+    margin-bottom: 36px;
+    height: 52px;
+
+    .pricing {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin-bottom: 12px;
+
+      .currency {
+        font-size: 14px;
+        line-height: 24px;
+        text-align: right;
+        color: #FFFFFF;
+        margin-right: 8px;
+        &.best {
+          color: #1D2842;
+        }
+        .discount {
+          text-decoration-line: line-through;
+        }
+      }
+      .priceContainer {
+        display: flex;
+        align-items: flex-end;
+      }
+      .price {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 59px;
+        letter-spacing: 0.04em;
+        color: #FFFFFF;
+        &.best {
+          color: #FE842B;
+        }
+
+      }
+      .time {
+        font-size: 24px;
+        line-height: 42px;
+        margin-left: 8px;
+        color: #FFFFFF;
+
+        &.best {
+          color: #1D2842;
+        }
+      }
+    }
+    .comingSoon {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 24px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    .priceBill {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 17px;
+      letter-spacing: 0.05em;
+      color: #FFFFFF;
+
+      &.best {
+        color: #696969;
+      }
+    }
+    .expiredTag {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(100%);
+      padding: 2px 8px;
+      background: #FF5757;
+      border-radius: 12px;
+      font-size: 12px;
+      line-height: 15px;
+      color: #FFFFFF;
+    }
+  }
+  .cardDescription {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #8F9BCE;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    height: 48px;
+  }
+  .featureListContainer {
+    margin-bottom: 40px;
+    padding-top: 32px;
+    margin-top: 24px;
+    border-top: 1px dashed #72788F;
+
+
+
+    .keyFeatures {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+      &.best {
+        color: #253E53;
+      }
+    }
+    .featureList {
+      list-style-type: disc;
+      list-style-position: inside;
+    }
+
+    .featureItem {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      color: #FFFFFF;
+      clear: both;
+      &.best {
+        color: #253E53;
+      }
+      &+.featureItem {
+        margin-top: 8px;
+      }
+      &::marker {
+        font-size: 10px;
+      }
+      div {
+        display: inline-block;
+        width: calc(100% - 16px);
+        vertical-align: text-top;
+      }
+    }
+  }
+  .upgradeButtonContainer {
+    text-align: center;
+    .upgradeButton {
+      margin-left: auto;
+      margin-right: auto;
+      color: #FFFFFF;
+      background: #FE842B;
+    }
+
+    .launchButton {
+      margin-left: auto;
+      margin-right: auto;
+      color: #FFFFFF;
+      background: #B02BFE;
+      &:hover {
+        box-shadow: 16px 20px 40px rgba(176, 43, 254, 0.5);
+      }
+      &:active {
+        box-shadow: 16px -20px 40px rgba(176, 43, 254, 0.5);
+      }
+    }
+
+    .disabledButton {
+      color: #253E53;
+      background: transparent;
+    }
+  }
+}
+
+.freeTrialContainer {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 40px;
+  padding-top: 48px;
+  background: #2CCFBF;
+  border: 1px solid #151424;
+  border-radius: 4px;
+
+  .freeTrialName {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 26px;
+  }
+  .freeTrialButtonContainer {
+    text-align: center;
+
+    .freeTrialButton {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+.freeTrialPopup {
+  max-width: 608px;
+  margin: 0 auto;
+  margin-top: 148px;
+
+  .freeTrialPopupTitle {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+
+    color: #FFFFFF;
+    span {
+      color: #2CCFBF;
+    }
+
+
+  }
+  .freeTrialPopupDescription {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 32px;
+
+    letter-spacing: 0.04em;
+
+    color: #FFFFFF;
+
+  }
+  .featureListContainer {
+    margin-bottom: 40px;
+
+    .keyFeatures {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+      color: #FFFFFF;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+    .featureList {
+      list-style-type: disc;
+      list-style-position: inside;
+    }
+
+    .featureItem {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      color: #FFFFFF;
+      clear: both;
+      &.best {
+        color: #253E53;
+      }
+      &+.featureItem {
+        margin-top: 8px;
+      }
+      &::marker {
+        font-size: 10px;
+      }
+      div {
+        display: inline-block;
+        width: calc(100% - 16px);
+        vertical-align: text-top;
+      }
+    }
+  }
+  .freeTrialPopupButtonContainer {
+    text-align: right;
+    .freeTrialPopupButton {
+      width: 100%;
+      height: 56px;
+      margin-left: auto;
+      margin-right: 0;
+      color: #FFFFFF;
+      background: #B02BFE;
+      &:hover {
+        background: #B02BFE;
+        box-shadow: 16px 20px 40px rgba(176, 43, 254, 0.5);
+      }
+      &:active {
+        box-shadow: 16px -20px 40px rgba(176, 43, 254, 0.5);
+      }
+    }
+  }
+}
+// css for mobile
+@media (max-width: 1169px) {
+  .cardBestContainer {
+    margin-top: 24px;
+
+    .cardContainer {
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+
+    .bottomBestCard {
+      display: none;
+    }
+  }
+
+  .cardFreeTrialContainer {
+    .cardContainer {
+      margin-bottom: 24px;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import '@/styles/color.scss';
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .formContainer {
+    margin: 100px 16px;
+    border-radius: 8px;
+    color: $WHITE;
+    width: 464px;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .loginTxt {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 44px;
+      margin-bottom: 48px;
+    }
+    .loginFormButton {
+      width: 100%;
+      height: 56px;
+      font-size: 18px;
+    }
+    .supportWrapper {
+      text-align: center;
+      margin: 24px 0;
+      font-size: 16px;
+      line-height: 22px;
+      .support {
+        color: $PRIMARY;
+        align-self: center;
+      }
+    }
+    .forgotPassword {
+      color: $PRIMARY;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}

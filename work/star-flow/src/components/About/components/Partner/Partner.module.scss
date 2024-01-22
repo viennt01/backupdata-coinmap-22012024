@@ -1,0 +1,44 @@
+$white: #FFFFFF;
+$background: #111024;
+$blue: #31AFFE;
+$darkBlue: #253E53;
+$E0E6F1: #E0E6F1;
+
+.container {
+  flex: 1;
+  min-height: max(100vh, 1080px) ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $white;
+  padding: 24px;
+  @media screen and(min-width: 1170px) {
+   padding: 0;
+  }
+  .contentContainer {
+    max-width: 1423px;
+    margin-left: auto;
+    margin-right: auto;
+    .title {
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 78px;
+      color: $white;
+      text-align: center;
+      margin-bottom: 64px;
+      color: $darkBlue;
+    }
+    .iconPartnerContainer {
+      text-align: center;
+
+      .iconPartnerItem {
+        display: inline-block;
+        width: 200px;
+        height: 150px;
+        padding: 0 6px;
+        margin-bottom: 6px;
+      }
+
+    }
+  }
+}

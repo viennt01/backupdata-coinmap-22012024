@@ -1,0 +1,140 @@
+$watch-list-header-height: 60px;
+$table-header-height: 42px;
+$watch-list-background: #0C122A;
+$watch-list-header-background: #0F1A30;
+$watch-list-text-color:  #AEAEAE;
+
+.watchListContainer {
+  width: 100%;
+  height: 100%;
+  color: #FFFFFF;
+  font-size: 14px;
+  background: $watch-list-background;
+
+  .watchListHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
+    gap: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: $watch-list-header-background;
+
+    .headerLeft {
+      overflow: hidden;
+
+      .headerLeftTitle {
+        font-weight: 500;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #2bdbea;
+      }
+    }
+
+    .headerRight {
+      display: flex;
+      align-items: center;
+
+      .loading {
+        position: relative;
+        width: 34px;
+        height: 34px;
+      }
+
+      .buttonClose {
+        color: #515b6b;
+
+        &:hover {
+          background: rgba(55, 55, 55, 0.2);
+        }
+
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  .selectWatchList {
+    margin: 0 8px;
+    margin-bottom: 8px;
+    overflow: hidden;
+
+    &>button {
+      width: 166px;
+      height: 24px;
+      border: 1px solid rgba(168, 188, 222, 0.3);
+      border-radius: 2px;
+      background: $watch-list-background;
+      font-size: 9px;
+      line-height: 9px;
+      color: $watch-list-text-color;
+      padding: 0 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    &>div {
+      width: 166px !important;
+      min-width: 0 !important;
+      background: $watch-list-background !important;
+      padding: 0 !important;
+
+      &>button {
+        width: 166px !important;
+        min-height: 20px;
+        font-size: 8px;
+        line-height: 8px;
+        color: $watch-list-text-color;
+        text-align: left;
+        padding: 0 4px;
+        white-space: break-spaces;
+      }
+    }
+  }
+
+  .watchListBody {
+    overflow-y: auto;
+    height: calc(100% - $watch-list-header-height);
+
+    .watchListBodyAddSymbol {
+      height: calc(100% - $table-header-height);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .watchListBodyAddSymbolIcon {
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+      }
+
+      .watchListBodyAddSymbolText {
+        font-weight: 500;
+        font-size: 16px;
+        color: $watch-list-text-color;
+        margin-top: 20px;
+      }
+    }
+
+    .watchListBodyLoading {
+      height: calc(100% - $table-header-height);
+      width: 100%;
+      position: relative;
+
+      .loading {
+        background: $watch-list-background;
+      }
+    }
+
+  }
+}

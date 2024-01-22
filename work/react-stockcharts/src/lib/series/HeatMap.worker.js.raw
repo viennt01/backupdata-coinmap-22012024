@@ -1,0 +1,382 @@
+const getColor = (vol, colors = [], baseOrange) => {
+  if (colors.length === 0) {
+    return null;
+  }
+  const normalColorLength = Math.floor(colors.length * 0.8);
+  const lastColor = colors.length - 1;
+  const colorIndex = Math.min(
+    Math.floor((vol / baseOrange) * normalColorLength),
+    lastColor
+  );
+
+  return colors[colorIndex];
+};
+
+const combineDots = (dotXYs) => {
+  const result = [];
+  let maxDotVol = 0;
+  Object.keys(dotXYs).forEach((keyXY) => {
+    const dots = dotXYs[keyXY];
+    if (!Array.isArray(dots) || dots.length < 1) {
+      console.log("dots.length", dots.length);
+      return;
+    }
+
+    const firstDot = dots[0];
+    const newDot = {
+      ...firstDot,
+    };
+
+    for (let i = 1; i < dots.length; i++) {
+      const dot = dots[i];
+      newDot.vol += dot.vol;
+      newDot.nTrade += dot.nTrade;
+    }
+
+    if (maxDotVol < newDot.vol) {
+      maxDotVol = newDot.vol;
+    }
+
+    result.push(newDot);
+  });
+
+  result.maxDotVol = maxDotVol;
+
+  return result;
+};
+
+const combineDotByTypes = ({ buy, sell, unknown }) => {
+  return {
+    buy: combineDots(buy),
+    sell: combineDots(sell),
+    unknown: combineDots(unknown),
+  };
+};
+
+const toKey = (n, diff = 16) => {
+  return Math.floor(n - (n % diff) + diff / 2);
+};
+
+const toXKey = (time, timeToCombine) => {
+  return Math.floor(time - (time % timeToCombine) + timeToCombine / 2);
+};
+
+function calcDrawData({ props, plotData }) {
+  const {
+    buyGradient,
+    sellGradient,
+    extendLastX,
+    showTopRatio,
+    tickCombineDiff,
+    candleWidth,
+    lastOpenTime,
+    height,
+    domain,
+    baseOrange,
+  } = props;
+
+  const timeParts = {
+    0: Date.now(),
+  };
+
+  const firstCandle = plotData[0];
+  const candleTime = firstCandle.closetime - firstCandle.opentime;
+  const timeToCombine = (candleTime * tickCombineDiff) / candleWidth;
+  const tickValue = plotData[0].heatmap.tv || 0.001;
+
+  const minPrice = Math.min(...domain) - tickValue;
+  const maxPrice = Math.max(...domain);
+  const maxVol = {
+    buy: 0,
+    sell: 0,
+  };
+  const bestAsks = [];
+  const bestBids = [];
+  const dots = {
+    buy: {},
+    sell: {},
+    unknown: {},
+  };
+  const priceLinePoints = [];
+  const volSet = new Set();
+  timeParts[1] = Date.now();
+
+  let totalDotCount = 0;
+  const allBars = {};
+  const minVolToShow = (1 - showTopRatio) * baseOrange;
+  for (let i = 0; i < plotData.length; i++) {
+    const candle = plotData[i];
+    if (!Array.isArray(candle.heatmap)) {
+      continue;
+    }
+
+    const candleX = candle.idx.index;
+    const isLastCandle = candle.opentime === lastOpenTime;
+    const extendXRatio = isLastCandle ? extendLastX : 1;
+
+    const heatmap = candle.heatmap;
+    const dotVol = heatmap.dotVol;
+    const bestAsk = heatmap.bestask;
+    const bestBid = heatmap.bestbid;
+    for (let j = 0; j < heatmap.length; j++) {
+      const item = heatmap[j];
+      if (
+        item.price > maxPrice ||
+        item.price < minPrice ||
+        item.vol < minVolToShow
+      ) {
+        continue;
+      }
+      const colors = item.orderType === "sell" ? sellGradient : buyGradient;
+      // volSet.add(Math.floor(item.vol));
+      const color = getColor(item.vol, colors, baseOrange);
+      item.color = color;
+      if (!allBars[color]) {
+        allBars[color] = [];
+      }
+
+      const bar = {
+        isLastCandle,
+        extendXRatio,
+        x: candleX,
+        y: item.price + tickValue,
+        height: height,
+        width: candleWidth * extendXRatio,
+        color,
+        candleWidth,
+        vol: item.vol,
+        price: item.price,
+      };
+      allBars[color].push(bar);
+
+      if (item.vol > maxVol[item.orderType]) {
+        maxVol[item.orderType] = item.vol;
+      }
+    }
+
+    bestAsks.push({
+      openTime: candle.opentime,
+      price: bestAsk,
+      x: candleX,
+      // x: candleX - 0.5 * candleWidth,
+      y: bestAsk,
+    });
+    bestBids.push({
+      openTime: candle.opentime,
+      price: bestBid,
+      x: candleX,
+      y: bestBid,
+    });
+    if (Array.isArray(dotVol)) {
+      dotVol.forEach((item) => {
+        const dxRatio = (item.t - candle.opentime) / candleTime;
+        const y = item.p;
+        const dotX = candleX;
+
+        const keyXY = `${toXKey(item.t, timeToCombine)}_${toKey(
+          y,
+          tickCombineDiff * tickValue * 0.5
+        )}`;
+
+        if (item.bv) {
+          totalDotCount++;
+          if (!dots.buy[keyXY]) {
+            dots.buy[keyXY] = [];
+          }
+          dots.buy[keyXY].push({
+            dxRatio,
+            x: dotX,
+            y,
+            vol: item.bv,
+            fill: "#007b46",
+            nTrade: item.n,
+          });
+        }
+
+        if (item.sv) {
+          totalDotCount++;
+          if (!dots.sell[keyXY]) {
+            dots.sell[keyXY] = [];
+          }
+          dots.sell[keyXY].push({
+            dxRatio,
+            x: dotX,
+            y,
+            vol: item.sv,
+            fill: "#9e0108",
+            nTrade: item.n,
+          });
+        }
+
+        if (item.uv) {
+          totalDotCount++;
+          if (!dots.unknown[keyXY]) {
+            dots.unknown[keyXY] = [];
+          }
+          dots.unknown[keyXY].push({
+            dxRatio,
+            x: dotX,
+            y,
+            vol: item.uv,
+            fill: "#FFFFFF",
+            nTrade: item.n,
+          });
+        }
+      });
+    }
+  }
+
+  timeParts[2] = Date.now();
+
+  // console.log('total dot', totalDotCount);
+
+  // const vols = [...volSet].sort((a, b) => a - b);
+  // const anchorVolIndex = Math.ceil((1 - showTopRatio) * vols.length);
+  // const anchorVol = vols[anchorVolIndex] || vols[anchorVolIndex - 1];
+
+  // const gradientLength = buyGradient.length;
+  // const gradientLastIndex = gradientLength - 1;
+  // const colorChunkCount = Math.floor(vols.length / gradientLength * 0.55);
+  // const volIndexMap = {};
+  // for (let i = 0; i < vols.length; i++) {
+  //   const vol = vols[i];
+  //   volIndexMap[vol] = i;
+  // }
+
+  // timeParts[3] = Date.now();
+
+  // if (sameMaxVol) {
+  //   const maxBothSide = Object.keys(maxVol).reduce((tmp, key) => {
+  //     const vol = maxVol[key];
+  //     if (tmp < vol) {
+  //       return vol;
+  //     }
+
+  //     return tmp;
+  //   }, 0);
+
+  //   Object.keys(maxVol).forEach((key) => {
+  //     maxVol[key] = maxBothSide;
+  //   });
+  // }
+
+  // const tickValue = plotData[0].heatmap.tv || 0.001;
+  // const height = Math.abs(yScale(0) - yScale(tickValue));
+
+  // let currentMaxVol = 0;
+  // const allBars = {};
+  // const allBarPriceMap = {};
+  // plotData.forEach((d) => {
+  //   if (!isDefined(d.heatmap)) {
+  //     return;
+  //   }
+
+  //   const heatmap = d.heatmap;
+  //   if (!Array.isArray(heatmap) || heatmap.length === 0) {
+  //     return null;
+  //   }
+
+  //   const x = xScale(xAccessor(d)) - 0.5 * candleWidth;
+  //   const isLastCandle = d.opentime === lastCandle.opentime;
+  //   const extendXRatio = isLastCandle ? extendLastX : 1;
+
+  //   heatmap.forEach((item) => {
+  //     if (!item.price || !item.vol) {
+  //       return;
+  //     }
+
+  //     const marginValue = tickValue * 3;
+  //     const notInRange =
+  //       item.price + marginValue < minPrice ||
+  //       item.price - marginValue > maxPrice ||
+  //       item.vol < anchorVol;
+  //     if (notInRange) {
+  //       return;
+  //     }
+
+  //     if (currentMaxVol < item.vol) {
+  //       currentMaxVol = item.vol;
+  //     }
+
+  //     const y = yScale(item.price + tickValue),
+  //       className = item.price <= d.low ? classNames.up : classNames.down;
+
+  //     const volIndex = volIndexMap[Math.floor(item.vol)];
+  //     const colorIndex = Math.min(Math.floor(volIndex / colorChunkCount), gradientLastIndex);
+  //     let color;
+  //     if (item.orderType === "sell") {
+  //       if (!sellGradient[colorIndex]) {
+  //         return;
+  //       }
+  //       color = sellGradient[colorIndex];
+  //     } else if (item.orderType === "buy") {
+  //       if (!buyGradient[colorIndex]) {
+  //         return;
+  //       }
+  //       color = buyGradient[colorIndex];
+  //     }
+  //     item.color = color;
+
+  //     if (!allBars[color]) {
+  //       allBars[color] = [];
+  //     }
+
+  //     const bar = {
+  //       isLastCandle,
+  //       className: className,
+  //       x,
+  //       y,
+  //       height: height,
+  //       width: candleWidth * extendXRatio,
+  //       color,
+  //       candleWidth,
+  //       vol: item.vol,
+  //       price: item.price,
+  //     };
+  //     allBars[color].push(bar);
+  //   });
+  // });
+
+  // timeParts[4] = Date.now();
+
+  const combinedDots = combineDotByTypes(dots);
+  // console.log('combinedDots', combinedDots.sell.length + combinedDots.buy.length + combinedDots.unknown.length);
+  const maxDotVol = Math.max(
+    combinedDots.buy.maxDotVol,
+    combinedDots.sell.maxDotVol,
+    combinedDots.unknown.maxDotVol
+  );
+
+  // timeParts[5] = Date.now() - timeParts[4];
+  // timeParts[4] = timeParts[4] - timeParts[3];
+  // timeParts[3] = timeParts[3] - timeParts[2];
+  timeParts[2] = timeParts[2] - timeParts[1];
+  timeParts[1] = timeParts[1] - timeParts[0];
+
+  console.log("timeParts", timeParts);
+
+  return {
+    allBars,
+    bestAsks,
+    bestBids,
+    dots: combinedDots,
+    candleWidth,
+    maxDotVol,
+    priceLinePoints,
+  };
+}
+
+self.requestCalc = async (input) => {
+  const data = calcDrawData(input);
+  // console.log("worker data", data);
+  self.postMessage(data);
+};
+
+self.onmessage = (message) => {
+  if (message.data === "ping") {
+    self.postMessage("pong");
+    return;
+  }
+
+  self.requestCalc(message.data);
+};

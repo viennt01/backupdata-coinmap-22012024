@@ -1,0 +1,43 @@
+@import '@/assets/scss/variables';
+
+.filter {
+  width: 344px;
+  padding: 12px 4px 14px;
+
+  .formTitle {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 600;
+    margin-bottom: 32px;
+  }
+
+  .actions {
+    display: flex;
+
+    button {
+      flex: 1;
+      margin-left: 8px;
+      font-weight: 700;
+      font-size: 16px;
+
+      svg {
+        margin-left: 5px;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    .resetBtn:not(:hover) {
+      color: $color-text-placeholder;
+    }
+  }
+
+  :global(.ant-form-large .ant-form-item .ant-form-item-label) {
+    padding: 0 0 12px;
+    & > label {
+      height: auto;
+    }
+  }
+}

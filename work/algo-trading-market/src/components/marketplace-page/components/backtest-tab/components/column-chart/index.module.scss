@@ -1,0 +1,17 @@
+@import '@/styles/color.scss';
+@import '@/styles/mixin.scss';
+
+.columnChart {
+  padding: 40px;
+  @include mobile-device {
+    padding: 24px;
+  }
+  .title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    color: $WHITE;
+    letter-spacing: 0.08em;
+    margin-bottom: 24px;
+  }
+}

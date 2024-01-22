@@ -1,0 +1,35 @@
+@import '@/styles/color.scss';
+@import '@/styles/mixin.scss';
+
+.appFooterWrapper {
+  background: var(--secondary_darken_2);
+  padding: 0;
+  .appFooter {
+    min-height: 92px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    .copyRight {
+      color: var(--on_secondary_darken_2);
+    }
+    .version {
+      color: var(--on_secondary_darken_2);
+    }
+    .socialMedia {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+}
+
+@include desktop-device {
+  .appFooterWrapper .appFooter {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

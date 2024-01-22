@@ -1,0 +1,80 @@
+{
+  "label": {
+    "email":"Email",
+    "password":"Password",
+    "change_password":"Change password",
+    "current_password":"Password",
+    "new_password":"New Password",
+    "repeat_password":"Repeat Password",
+    "first_name":"First name",
+    "last_name":"Last name",
+    "country":"Country",
+    "phone":"Phone",
+    "gender": "Gender",
+    "male": "Male",
+    "female": "Female",
+    "others": "Others",
+    "year_of_birth":"Date of birth",
+    "broker": "Broker",
+    "server": "Server",
+    "id": "ID",
+    "balance": "Trading balance",
+    "platform": "Platform",
+    "profile": "Profile",
+    "upload": "Upload"
+  },
+  "placeholder": {
+    "email":"account@email.com",
+    "password":"Passsword",
+    "current_password":"Current password",
+    "repeat_password":"Repeat password",
+    "first_name":"First Name",
+    "last_name":"Last Name",
+    "country":"Country",
+    "phone":"Phone Number",
+    "year_of_birth":"yyyy",
+    "broker": "Select broker",
+    "server": "Select server",
+    "id": "ID",
+    "balance_range": "Select balance range",
+    "balance": "Input your A.I’s Trading balance",
+    "platform": "Select platform",
+    "profile": "No file chosen"
+  },
+  "message_error_required": {
+    "email":"Please input email",
+    "password": "Please input password",
+    "current_password": "Please input current password",
+    "repeat_password": "Please input password",
+    "first_name": "Please input first name",
+    "last_name": "Please input last name",
+    "gender": "Please select gender",
+    "country": "Please input country",
+    "phone": "Please input phone",
+    "year_of_birth": "Please input date of birth",
+    "broker": "Please select broker",
+    "server": "Please select server",
+    "id": "Please input ID",
+    "payment_method": "Please select payment method",
+    "package": "Please select package",
+    "balance_range": "Please select balance range",
+    "balance": "Please input your A.I’s Trading balance",
+    "balance_out_of_range": "Balance out of range",
+    "platform": "Please select platform",
+    "profile": "Please upload profile"
+  },
+  "message_error_pattern": {
+    "email": "Email is invalid",
+    "password": "Must contain at least 8 characters, one uppercase, one lowercase, one number and one special case character",
+    "phone": "The phone is invalid"
+  },
+  "message_error_validator": {
+    "password": "The password does not match",
+    "confirm_rule": "Please confirm"
+  },
+  "button": {
+    "save": "Save",
+    "cancle": "Cancle",
+    "connect": "Connect"
+  }
+}

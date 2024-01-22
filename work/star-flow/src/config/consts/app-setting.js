@@ -1,0 +1,3 @@
+export const APP_SETTING_NAMES = {
+  SIGNAL_PLATFORM: 'SIGNAL_PLATFORM',
+};

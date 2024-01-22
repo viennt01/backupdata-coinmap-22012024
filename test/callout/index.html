@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <canvas id="canvas" width="1000" height="1000"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        // ctx.beginPath();
+        // // ctx.moveTo(50, 20);
+        // ctx.quadraticCurveTo(230, 30, 50, 100);
+        // ctx.stroke();
+
+        // // Start and end points
+        // ctx.fillStyle = 'blue';
+        // ctx.beginPath();
+        // ctx.arc(50, 20, 5, 0, 2 * Math.PI);   // Start point
+        // ctx.arc(50, 100, 5, 0, 2 * Math.PI);  // End point
+        // ctx.fill();
+
+        // // Control point
+        // ctx.fillStyle = 'red';
+        // ctx.beginPath();
+        // ctx.arc(230, 30, 5, 0, 2 * Math.PI);
+        // ctx.fill();
+
+        // ctx.beginPath();
+        // ctx.moveTo(20, 110);
+        // ctx.quadraticCurveTo(230, 150, 250, 20);
+        // ctx.stroke();
+
+        // ctx.beginPath();
+        // ctx.moveTo(0, 50);
+        // ctx.lineTo(200, 50);
+        // ctx.stroke();
+
+        // ctx.beginPath();
+        // ctx.moveTo(200, 50);
+        // ctx.lineTo(200, 170);
+        // ctx.stroke();
+
+        // ctx.beginPath();
+        // ctx.moveTo(0, 200);
+        // ctx.lineTo(170, 200);
+        // ctx.stroke();
+
+        ctx.beginPath();
+        ctx.lineTo(60, 50);
+        ctx.lineTo(170, 50);
+        ctx.quadraticCurveTo(200, 50, 200, 80);
+        // ctx.lineTo(200, 80);
+        ctx.lineTo(200, 170);
+        ctx.quadraticCurveTo(200, 200, 170, 200);
+        ctx.lineTo(60, 200);
+        ctx.quadraticCurveTo(30, 200, 30, 170);
+        ctx.lineTo(30, 80);
+        ctx.quadraticCurveTo(30, 50, 60, 50);
+
+        // ctx.closePath();
+        ctx.strokeStyle = "red";
+        ctx.stroke();
+        // ctx.fill();
+    </script>
+</body>
+
+</html>

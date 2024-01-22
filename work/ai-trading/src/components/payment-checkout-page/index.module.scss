@@ -1,0 +1,19 @@
+@import '@/styles/mixin.scss';
+
+.page {
+  .title {
+    margin-bottom: 48px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+  }
+}
+
+@include desktop-device {
+  .page {
+    padding: 52px 32px;
+    .title {
+      padding-left: 32px;
+    }
+  }
+}

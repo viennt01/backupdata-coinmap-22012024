@@ -1,0 +1,77 @@
+@import '@/styles/color.scss';
+@import '@/styles/mixin.scss';
+
+.wrapper {
+  position: relative;
+  padding: 80px 0;
+  .background {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    &.image {
+      background-image: url('/images/guide-background.png');
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      mix-blend-mode: overlay;
+    }
+    @include mobile-device {
+      display: none;
+    }
+  }
+  .guideListWrapper {
+    position: relative;
+    .guideListTitle {
+      margin-bottom: 16px;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 59px;
+      text-align: center;
+      color: var(--on_secondary_darken_2);
+    }
+    .guideList {
+      max-width: 945px;
+      margin: 0 auto;
+      :global {
+        .ant-collapse-content-box {
+          background-color: var(--secondary_darken_1);
+        }
+        .ant-collapse-item {
+          border-radius: 0;
+          border-bottom: 1px solid var(--on_secondary_darken_2);
+          .ant-collapse-header {
+            padding: 32px 0;
+            font-size: 18px;
+            line-height: 24px;
+            color: var(--on_secondary_darken_2);
+            .ant-collapse-expand-icon svg {
+              font-size: 18px;
+            }
+          }
+          .ant-collapse-content {
+            font-size: 16px;
+            line-height: 22px;
+            color: var(--on_secondary_darken_1);
+            border: 1px solid var(--on_secondary_darken_2);
+            border-bottom: none;
+            border-radius: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.contentFaqContainer {
+  list-style: none;
+  list-style-position: inside;
+  li {
+    margin-bottom: 12px;
+  }
+  a {
+    color: var(--primary);
+  }
+}

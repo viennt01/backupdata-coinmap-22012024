@@ -1,0 +1,29 @@
+.devider {
+  position: absolute;
+  background: transparent;
+  height: 6px;
+  width: 100%;
+  z-index: 1000;
+  cursor: ns-resize;
+
+  &:hover,
+  &.moving {
+    background: #576887;
+
+    &::before {
+      border-color: #009cbb;
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 0;
+    width: 100%;
+    border-top: 1px solid #576887;
+  }
+}

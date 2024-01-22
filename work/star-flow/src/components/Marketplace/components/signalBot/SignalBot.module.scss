@@ -1,0 +1,127 @@
+$white: #ffffff;
+$black: #050206;
+$background: #111024;
+$blueGray: hsl(229, 16%, 45%);
+$backgroundLight : #1D1C32;
+$orange: #FE842B;
+$purple: #B02BFE;
+$blue: #31AFFE;
+$red: #FF5757;
+$white: #FFFFFF;
+$gray: #8F9BCE;
+
+.signalBotContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0 16px;
+  .signalBotItemWrapper {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .signalBotItem {
+    display: flex;
+    flex-direction: column;
+    min-height: 440px;
+    height: 100%;
+    background-color: $black;
+    border-radius: 8px;
+    padding: 24px;
+    position: relative;
+    .botTag {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      border-radius: 0px 0px 12px 12px;
+      background-color: $backgroundLight;
+      padding: 0 12px;
+    }
+
+    .topContent {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 40px;
+      .image {
+        border-radius: 50%;
+      }
+      .name {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        color: $blue;
+        .expiredTag {
+          padding: 2px 8px;
+          background: #FF5757;
+          border-radius: 12px;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 15px;
+          color: #FFFFFF;
+        }
+      }
+      .description {
+        margin-top: 8px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+    .midContent {
+      margin-bottom: 40px;
+      .featureName {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 8px;
+      }
+      .feature {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+    .bottomContent {
+      margin-top: auto;
+      margin-bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .price {
+        font-weight: 600;
+        font-size: 48px;
+        color: $orange;
+      }
+      .perTime {
+        line-height: 59px;
+        vertical-align: top;
+      }
+      .launchButton {
+        &:hover {
+          background: #B02BFE;
+          box-shadow: 16px 20px 40px rgba(176, 43, 254, 0.5);
+        }
+        &:active {
+          box-shadow: 16px -20px 40px rgba(176, 43, 254, 0.5);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1170px) {
+  .signalBotContainer {
+    margin: 0 8px;
+    .signalBotItemWrapper {
+      display: inline-block;
+      width: 33.333333%;
+      padding-left: 8px;
+      padding-right: 8px;
+      margin-bottom: 16px;
+    }
+  }
+}

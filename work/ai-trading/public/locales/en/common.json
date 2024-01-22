@@ -1,0 +1,17 @@
+{
+  "login": "Login",
+  "logout": "Logout",
+  "signup": "Signup",
+  "dashboard": "Dashboard",
+  "language": "Language",
+  "year": "Year",
+  "required": "Required",
+  "yes": "Yes",
+  "no": "No",
+  "history_transition": "Trading history",
+  "detail_trading_ai": "Detail A.I Trading",
+  "report_backtest": "Report backtest data",
+  "back_to_login": "Back to login",
+  "disclaimer": "We will not, in any circumstances, share your personal information with other individuals or organizations without your permission, including public organizations, corporations, or individuals, except when applicable by law.",
+  "confirm_text": "Are you sure to do this?"
+}

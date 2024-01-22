@@ -1,0 +1,69 @@
+{
+  "banner": {
+    "pnl_summary": "TỔNG KẾT PNL",
+    "total_balance": "Tổng tài sản",
+    "pnl_today": "PNL hôm nay"
+  },
+  "bot_list": {
+    "bot_list_notification":{
+      "description_1": "Bạn chưa đăng ký A.I Trading nào hết.",
+      "description_2": "Hãy mua trên "
+    },
+    "tabs_data": {
+      "title_1": "Tất cả",
+      "title_2": "Đã kích hoạt",
+      "title_3": "Chưa kết nối",
+      "title_4": "Tạm dừng",
+      "title_5": "Chưa kích hoạt"
+    },
+    "all_ai": "Tất cả",
+    "card_bot_item": {
+      "total_trade": "Số lượng lệnh",
+      "profit": "Lợi nhuận",
+      "gain": "Tăng trưởng",
+      "balance": "Số dư",
+      "insufficient_balance": "Không đủ số dư",
+      "activated": "Đã kích hoạt",
+      "not_activated": "Chưa kích hoạt",
+      "connecting": "Đang kết nối",
+      "processing": "Đang xử lý",
+      "not_connect": "Chưa kết nối",
+      "connect_broker": "Kết nối broker",
+      "disconnected": "Mất kết nối",
+      "expired": "Hết hạn",
+      "renewal": "Gia hạn",
+      "inactive_by_system": "Tạm dừng bởi hệ thống",
+      "stop_out": "Stop out"
+    }
+  },
+  "expired": {
+    "title": "Hết hạn",
+    "description": " đã hết thời gian sử dụng. Gia hạn ngay để tiếp tục sử dụng.",
+    "button": "GIA HẠN NGAY"
+  },
+  "insufficient_balance": {
+    "title": "Số dư không đủ",
+    "description_1": " tạm dừng hoạt động vì số dư tài khoản của bạn không đủ để thực hiện giao dịch.",
+    "description_2": "Tham khảo ",
+    "description_link": "Quy tắc hoạt động ",
+    "description_3": " để biết thêm chi tiết.",
+    "button": "ĐÃ HIỂU VÀ TIẾP TỤC"
+  },
+  "remove-account": {
+    "title": "Vô hiệu hóa tài khoản",
+    "description_1": "Chiến lược A.I Trading sẽ dừng giao dịch tự động trên tài khoản này.",
+    "description_2": "Đừng lo, bạn có thể kết nối lại với chiến lược giao dịch của chúng tôi bất cứ lúc nào.",
+    "description_highlight": "Chiến lược A.I Trading này sẽ không hoạt động với tài khoản MT4 khác.",
+    "button": "VÔ HIỆU HÓA TÀI KHOẢN"
+  },
+  "insufficient_account": {
+    "title": "Tài khoản không đủ",
+    "description": "Để tiếp tục sử dụng A.I Trading bạn cần đáp ứng các yêu cầu như lúc đăng ký ban đầu. Với số tiền tối thiểu là",
+    "button": "XÁC NHẬN"
+  },
+  "max_drawdown_warning": {
+    "title": "Cảnh báo Maxdrawdown",
+    "description": "Tài khoản của bạn đã ở mức Maxdrawdown. Khi tiếp tục sử dụng A.I Trading, hệ thống sẽ thiếp lập lại từ đầu theo số tiền bạn hiện có.",
+    "button": "XÁC NHẬN"
+  }
+}

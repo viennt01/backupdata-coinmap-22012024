@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DragEvent Example</title>
+
+    <script>
+        var btn = document.querySelector(".add");
+        var remove = document.querySelector(".draggable");
+
+        function drag_start(event) {
+            var style = window.getComputedStyle(event.target, null);
+            var str = (parseInt(style.getPropertyValue("left")) - event.clientX) + ',' 
+            + (parseInt(style.getPropertyValue("top")) - event.clientY) + ',' 
+            + event.target.id;
+            console.log(str,"str");
+            event.dataTransfer.setData("text/plain", str);
+        }
+
+        function drop(event) {
+            var offset = event.dataTransfer.getData("text/plain").split(',');
+            console.log(offset, "Drop");
+            var dm = document.getElementById(offset[2]);
+            console.log(dm, "dm");
+            dm.style.left = (event.clientX + parseInt(offset[0], 10)) + 'px';
+            dm.style.top = (event.clientY + parseInt(offset[1], 10)) + 'px';
+            console.log(event.clientX, "clientX");
+            // event.preventDefault();
+            return false;
+        }
+
+        function drag_over(event) {
+            event.preventDefault();
+            return false;
+        }
+
+        function addNewItem() {
+            var newItem = document.querySelector(".input").value;
+            if (newItem != "") {
+                document.querySelector(".input").value = "";
+                var li = document.createElement("li");
+                var attr = document.createAttribute("draggable")
+                var drag = document.createAttribute("ondragstart");
+                var ul = document.querySelector("ul");
+                var body = document.body;
+                li.className = "draggable";
+                li.id = Math.random().toString();
+                attr.value = "true";
+                drag.value = "drag_start(event)"
+                li.setAttributeNode(attr);
+                li.setAttributeNode(drag);
+                li.appendChild(document.createTextNode(newItem));
+                ul.appendChild(li);
+            }
+        }
+    </script>
+    <style>
+        body {
+            /* width: 500px; */
+            height: 1000px;
+        }
+
+        .adder {
+            position: relative;
+            width: 250px;
+            margin: 0px auto;
+            /* display:flex */
+        }
+
+        .adder .input {
+            outline: none;
+            border: 1px solid white;
+            background-color: #434547;
+            color: white;
+            height: 50px;
+            width: 250px;
+            padding-left: 10px;
+            font-weight: 800;
+            font-size: 16px;
+            margin-left: -5px;
+        }
+
+        .adder span {
+            position: absolute;
+            right: 0;
+            top: -20px;
+            font-size: 30px;
+            font-weight: 800;
+            line-height: 1.8;
+            cursor: pointer;
+            transition: all 200ms;
+            color: white;
+            will-change: transform;
+        }
+
+        ul {
+            padding: 0px;
+            list-style-type: none;
+        }
+
+        ul .draggable:hover:after {
+            opacity: 1;
+            transform: translate(0);
+        }
+
+        li {
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 200px;
+            background: rgba(255, 255, 255, 0.66);
+            border: 2px solid rgba(0, 0, 0, 0.5);
+            border-radius: 4px;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body ondragover="drag_over(event)" ondrop="drop(event)">
+    <span id="t1" class="adder" ondragstart="drag_start(event)" draggable="true">
+        <input type="text" class="input" placeholder="Add items in your list" />
+        <span class="add" onclick="addNewItem()">+</span>
+    </span>
+    <ul>
+    </ul>
+</body>
+
+</html>

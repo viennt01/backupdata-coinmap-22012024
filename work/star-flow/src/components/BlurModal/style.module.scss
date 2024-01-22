@@ -1,0 +1,40 @@
+.blurModal {
+  width: 100vw;
+  height: 100vh;
+
+  :global {
+    .ant-modal {
+      position: unset;
+      padding: 0;
+    }
+
+    .ant-modal .ant-modal-content {
+      position: unset;
+      padding: 0;
+      border-radius: 0;
+      box-shadow: none;
+      background-color: transparent;
+    }
+
+    .ant-modal-close {
+      position: fixed;
+      top: 24px;
+      right: 24px;
+      width: fit-content;
+      height: fit-content;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
+  .closeIcon {
+    font-size: 48px;
+    color: #8F9BCE;
+    transition: color 0.3s;
+    &:hover {
+      color: #9ea7cf;
+    }
+  }
+}

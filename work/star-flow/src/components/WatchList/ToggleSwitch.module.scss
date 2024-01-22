@@ -1,0 +1,41 @@
+.toggleSwitch {
+  input[type=checkbox] {
+    display: none;
+  }
+
+  label {
+    text-indent: -9999px;
+    display: block;
+    position: relative;
+    width: 28px;
+    height: 16px;
+    background: grey;
+    border-radius: 16px;
+    cursor: pointer;
+  }
+
+  label:after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border-radius: 14px;
+    transition: 0.3s;
+  }
+
+  input:checked+label {
+    background: #1890FF;
+  }
+
+  input:checked+label:after {
+    left: calc(100% - 1px);
+    transform: translateX(-100%);
+  }
+
+  label:active:after {
+    width: 14px;
+  }
+}

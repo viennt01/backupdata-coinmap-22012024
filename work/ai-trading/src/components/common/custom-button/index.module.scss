@@ -1,0 +1,46 @@
+.customButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 40px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: inherit;
+  color: var(--button-text-color);
+  background: rgb(var(--button-background-color));
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 16px 20px 40px rgba($color: var(--button-background-color), $alpha: 0.5);
+  }
+  &:active {
+    box-shadow: 16px -20px 40px rgba($color: var(--button-background-color), $alpha: 0.5);
+  }
+  &:disabled {
+    box-shadow: none;
+    color: #8F8F8F;
+    background: #C1C2C4;
+    cursor: not-allowed;
+    &.loading {
+      color: rgb(var(--button-background-color));
+      background: rgb(var(--button-background-color));
+    }
+  }
+  .spin {
+    position: absolute;
+    margin: auto;
+    animation: rotate 1.5s linear infinite;
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}

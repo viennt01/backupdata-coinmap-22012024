@@ -1,0 +1,40 @@
+@import '@/styles/color.scss';
+@import '@/styles/mixin.scss';
+
+.profileWrapper {
+  color: var(--on_secondary_darken_2);
+  .title {
+    margin-bottom: 48px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+  }
+  .sectionTitle {
+    margin-bottom: 38px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--on_secondary_darken_2);
+  }
+  .accountSection,
+  .personalSection {
+    margin: 0 -56px 60px -56px;
+    @include mobile-device {
+      margin: 0;
+      margin-bottom: 60px;
+    }
+    :global {
+      .ant-form-item {
+        margin-bottom: 38px;
+      }
+    }
+  }
+  .personalSection {
+    margin-bottom: 24px;
+  }
+  .accountSection {
+    .passwordLabel {
+      color: var(--on_secondary_darken_2);
+    }
+  }
+}

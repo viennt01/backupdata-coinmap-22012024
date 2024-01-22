@@ -1,0 +1,26 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  input {
+    cursor: pointer;
+    border: 1px solid #1d2842;
+    color: aliceblue;
+    width: 24px;
+    height: 24px;
+    margin-top: 0px;
+    border-radius: 5px;
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+    &[type='checkbox']:checked {
+      background-color: #1d2842;
+      color: #2bdbea;
+      background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='28' height='28' fill='%231d2842'/%3E%3Cg filter='url(%23filter0_d_761_446)'%3E%3Cpath d='M7.5 14.25L13 18.75L20.5 9.25' stroke='%232BDBEA' stroke-width='1.25'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_761_446' x='3.10425' y='8.86328' width='21.8862' height='18.7734' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='4'/%3E%3CfeGaussianBlur stdDeviation='2'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_761_446'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_761_446' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A");
+    }
+  }
+  label {
+    margin-left: 10px;
+  }
+}

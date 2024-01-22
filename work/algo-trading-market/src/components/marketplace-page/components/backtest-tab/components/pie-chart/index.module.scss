@@ -1,0 +1,14 @@
+@import '@/styles/color.scss';
+
+
+.pieChart {
+  .title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    color: $WHITE;
+    text-align: center;
+    letter-spacing: 0.08em;
+  }
+}

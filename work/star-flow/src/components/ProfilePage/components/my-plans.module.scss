@@ -1,0 +1,102 @@
+$background: #050206;
+
+$orange: #FE842B;
+$purple: #B02BFE;
+$blue: #31AFFE;
+$red: #FF5757;
+$white: #FFFFFF;
+
+.planItemContainer {
+  display: flex;
+  width: 100%;
+  margin-bottom: 32px;
+  .planItemContentContainer {
+    margin-right: 16px;
+    background-color: $background;
+    border-radius: 4px;
+    padding: 24px;
+    display: flex;
+    flex: 1;
+    max-width: 1920px;
+    justify-content: space-between;
+
+    .leftContentContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-right: 58px;
+      .leftWrapper {
+        display: flex;
+        gap: 12px;
+      }
+      .itemName {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        color: $blue;
+        margin-bottom: 12px;
+      }
+      .description {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+      }
+      
+    }
+
+
+    .rightContentContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      .rightWrapper {
+        margin-bottom: 54px;
+      }
+
+      .price {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 59px;
+        color: $orange;
+      }
+      .perTime {
+
+      }
+    }
+
+  }
+
+  .planItemTimeContainer {
+    background-color: $background;
+    border-radius: 4px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .textContainer {
+      .textTitle {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+      }
+      .expired {
+        color: $red;
+
+      }
+      .renewal {
+        color: $white;
+      } 
+    }
+    .goToMarketplace {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      color: $blue;
+      cursor: pointer;
+    }
+
+  }
+}

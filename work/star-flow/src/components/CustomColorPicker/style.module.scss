@@ -1,0 +1,72 @@
+.colorWrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  min-width: 36px;
+  height: 36px;
+  gap: 9px;
+  cursor: pointer;
+  background: #0F1A30;
+  border-radius: 4px;
+
+  &.disabledPicker {
+    opacity: 0.55;
+    cursor: default;
+  }
+
+  .colorPickerCircleBackground {
+    position: absolute;
+    background-image: url(../../assets/images/svg/opacity-pattern.svg);
+    z-index: 0;
+    border-radius: 2px;
+  }
+
+  .colorPickerCircle {
+    position: absolute;
+    z-index: 1;
+    border-radius: 2px;
+  }
+}
+
+.customTooltip {
+  opacity: 1 !important;
+  user-select: none;
+
+  :global {
+    .tooltip-inner {
+      background: transparent;
+      padding: 0;
+    }
+
+    .tooltip-arrow::before {
+      border-top-color: #fff;
+    }
+  }
+}
+
+.presetWrapper {
+  padding: 14px 0 14px 14px;
+  background: #fff;
+  border-top: 1px solid #eee;
+}
+
+.selectWrapper {
+  position: relative;
+}
+
+.selectArrow {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  z-index: 1;
+  position: absolute;
+  display: inline-block;
+  /* background: red; */
+  top: 8px;
+  right: 25px;
+  transform: rotate(45deg);
+}

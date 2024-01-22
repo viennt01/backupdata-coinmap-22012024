@@ -1,0 +1,109 @@
+.page {
+  position: relative;
+  background-color: #0C122A;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  flex: 1;
+
+
+  .pageBackground {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 480px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .pageBackgroundPound {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+  }
+}
+
+.popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+
+  .popupBlur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .popupContainer {
+    position: relative;
+    background: #1D2842;
+    border-radius: 4px;
+    padding: 42px 24px;
+  }
+
+  .popupTitle {
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    margin-bottom: 16px;
+
+    span {
+      color: #2CCFBF;
+    }
+  }
+
+  .popupDescription {
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+
+    margin-bottom: 32px;
+  }
+
+  .popupButtonContainer {
+    text-align: right;
+  }
+
+  .popupButton {
+    background: #2CCFBF;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
+    border-radius: 2px;
+
+    padding: 8px 32px;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "payment": "Thanh toán",
+  "billing_information": "Thông tin thanh toán",
+  "payment_method": "Phương thức thanh toán",
+  "payment_method_note": "Vui lòng đảm bảo rằng nền tảng của bạn có hỗ trợ token và network mà bạn đang chọn.",
+  "order_summary": "Chi tiết đơn hàng",
+  "product": "Sản phẩm",
+  "trading_fund": "Quỹ giao dịch A.I",
+  "trading_fund_desc": "Vui lòng chọn gói giao dịch A.I mà bạn muốn sử dụng.",
+  "billing_cycle": "Chu kỳ thanh toán",
+  "discount": "Giảm giá",
+  "you_saved": "Tiết kiệm",
+  "total": "Tổng",
+  "get_it": "THANH TOÁN",
+  "cancel_order": "Hủy bỏ",
+  "modal_policy": {
+    "title": "Chính sách và Điều khoản",
+    "subtitle": "Hãy đọc kĩ điều khoản trước khi bạn nhấn đồng ý.",
+    "accept_policy": "Tôi đã đọc và đồng ý với các chính sách và điều khoản."
+  }
+}

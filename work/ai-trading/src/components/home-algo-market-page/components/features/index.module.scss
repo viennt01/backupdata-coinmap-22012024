@@ -1,0 +1,134 @@
+@import '@/styles/color.scss';
+@import '@/styles/mixin.scss';
+
+.section {
+  background: $WHITE;
+  padding: 96px 0;
+
+  .title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 68px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+  }
+
+  .desc {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: center;
+    margin-bottom: 70px;
+    margin-top: 32px;
+    color: $BLACK;
+  }
+
+  .featureSelect {
+    text-align: center;
+
+    .btnFeature {
+      display: none;
+      height: 64px;
+      font-size: 24px;
+      font-weight: 500;
+      margin-left: 16px;
+      border-radius: 100px;
+      padding-left: 26px;
+      padding-right: 26px;
+      box-shadow: none;
+      background: var(--primary);
+      color: var(--on_primary);
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &.selectable {
+        background: $SOFT_BLUE;
+        color: var(--primary);
+      }
+    }
+
+    .btnSelectMobile {
+      display: inline-block;
+      height: 50px;
+      font-size: 18px;
+    }
+  }
+
+  .feature {
+    background: $SOFT_BLUE;
+    padding: 0 20px 16px;
+    border-radius: 4px;
+    text-align: center;
+    margin: 100px auto 0;
+    height: calc(100% - 100px);
+    max-width: 600px;
+
+    .icon {
+      display: inline-flex;
+      width: 128px;
+      height: 128px;
+      margin-top: -69px;
+      border-radius: 50%;
+      border: 4px solid var(--primary);
+      align-items: center;
+      justify-content: center;
+      background: $WHITE;
+      color: var(--primary);
+      transition: all ease 0.3s;
+    }
+
+    &:hover {
+      .icon {
+        color: $WHITE;
+        background: var(--primary);
+      }
+    }
+
+    .featureTitle {
+      font-size: 24px;
+      line-height: 36px;
+      color: var(--primary);
+      margin-top: 21px;
+      word-wrap: break-word;
+    }
+
+    .featureDesc {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      color: $BLACK;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@include desktop-device {
+  .section {
+    padding: 80px 0 210px;
+
+    .title {
+      font-size: 64px;
+      line-height: 96px;
+    }
+
+    .featureSelect {
+      .btnFeature {
+        display: inline-block;
+        min-width: 344px;
+      }
+      .btnSelectMobile {
+        display: none;
+      }
+    }
+
+    .feature {
+      padding: 0 40px 32px;
+    }
+  }
+}

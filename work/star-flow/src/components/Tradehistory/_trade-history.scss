@@ -1,0 +1,79 @@
+.market-history .nav {
+  background: #f5f9fc;
+}
+.market-history .heading {
+  background: transparent;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 2px;
+  margin: 0;
+  cursor: move;
+}
+.market-history .nav-link {
+  color: #4a4a4a;
+  //padding: 10px 13px;
+}
+
+.market-history .nav-link.active {
+  color: #007bff;
+  background: transparent;
+}
+
+.market-history thead tr th {
+  font-weight: 500;
+  font-size: 14px;
+  background: rgba(196, 196, 196, 0.15);
+  color: #b9c2d0;
+}
+.market-history tbody tr td {
+  font-weight: 300;
+  font-size: 11px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-bottom: #4a4a4a;
+}
+.market-history tbody {
+  height: 798px;
+  overflow-y: auto;
+  display: block;
+}
+
+.market-history table,
+.market-history tr,
+.market-history td {
+  width: 100%;
+  table-layout: fixed;
+  font-size: 14px;
+}
+.market-history th {
+  width: 100%;
+  table-layout: fixed;
+  font-size: 14px;
+}
+//.market-history tr {
+//  fload: right;
+// clear: both;
+//  overflow: hidden;
+//}
+.market-history {
+  border: 1px solid #e0e3eb;
+  border-radius: 2px;
+}
+
+.my-custom-scrollbar {
+  position: relative;
+  min-height: 100%;
+  overflow: auto;
+  position: relative;
+}
+.table-wrapper-scroll-y {
+  display: block;
+}
+
+.first-col td,
+.first-col th {
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  width: 100px !important;
+}

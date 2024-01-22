@@ -1,0 +1,97 @@
+.chooseYourPlanContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: unset;
+  margin: 0 auto;
+  padding: 16px 8px;
+  border-radius: 33px;
+  background-color: #21233B;
+  font-family: 'Montserrat';
+  font-style: normal;
+  color: #FFFFFF;
+
+  .chooseYourPlan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 180px;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .pricePackage {
+    min-width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    .checkbox {
+      width: 100%;
+      margin-right: 0;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+
+      &>span:nth-child(2) {
+        flex: 1;
+        padding: 0;
+        margin-right: 8px;
+      }
+
+      :global {
+        .ant-radio-inner {
+          background-color: #FFFFFF;
+        }
+
+        .ant-radio-checked .ant-radio-inner {
+          background-color: #2d98db;
+        }
+      }
+    }
+  }
+
+  .namePricePackage {
+    .name {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 17px;
+      color: #FFFFFF;
+    }
+
+    .saving {
+      margin-top: 4px;
+      font-size: 12px;
+      line-height: 15px;
+      color: #FFFFFF;
+
+      .savingPercentage {
+        color: #52B16F;
+      }
+    }
+  }
+}
+
+// css for desktop
+@media (min-width: 1170px) {
+  .chooseYourPlanContainer {
+    flex-direction: row;
+    max-width: 940px;
+    height: 64px;
+    padding: 0 8px;
+
+    .chooseYourPlan {
+      margin-top: 0;
+      border-right: 1px solid #72788F;
+    }
+
+    .pricePackage {
+      &:not(:last-child) {
+        border-right: 1px solid #72788F;
+      }
+    }
+  }
+}

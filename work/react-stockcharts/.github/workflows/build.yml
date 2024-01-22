@@ -1,0 +1,17 @@
+name: Build nodejs package
+
+on:
+  push:
+    branches: [ master ]
+    tags:
+      - 'v*.*.*'
+    paths:
+      - 'package.json'
+
+jobs:
+  ci-build:
+    uses: CoinmapTrading/workflows/.github/workflows/npm-build.yaml@master
+    with:
+      build_type: package
+    secrets:
+      envPAT: ${{ secrets.GH_PAT }}

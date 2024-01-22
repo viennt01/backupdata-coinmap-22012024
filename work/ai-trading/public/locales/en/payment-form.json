@@ -1,0 +1,21 @@
+{
+  "payment": "Payment",
+  "billing_information": "Billing information",
+  "payment_method": "Payment method",
+  "payment_method_note": "Please ensure your receiving platform supports the token and network you are choosing.",
+  "order_summary": "Order summary",
+  "product": "Product",
+  "trading_fund": "A.I trading funds",
+  "trading_fund_desc": "Please select the A.I trading package you would like to use.",
+  "billing_cycle": "Billing cycle",
+  "discount": "Discount",
+  "you_saved": "You saved",
+  "total": "Total",
+  "get_it": "GET IT",
+  "cancel_order": "Cancel order",
+  "modal_policy": {
+    "title": "Policy and Terms",
+    "subtitle": "Please read the terms and conditions carefully before you click agree.",
+    "accept_policy": "I have read and agree to the terms and conditions."
+  }
+}

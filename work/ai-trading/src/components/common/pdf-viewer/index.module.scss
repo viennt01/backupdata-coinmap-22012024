@@ -1,0 +1,50 @@
+@import '@/styles/mixin.scss';
+
+.pdfWrapper {
+  position: relative;
+  height: calc(100vh - 60px);
+  width: 100vw;
+  overflow: auto;
+  margin: -48px -80px;
+  text-align: center;
+  background: #525659;
+  @include mobile-device {
+    margin: -32px -16px;
+  }
+  .menuBar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    height: 60px;
+    background: #323639;
+    color: white;
+    .actionButton {
+      color: white;
+      span {
+        display: block;
+      }
+      &:disabled {
+        color: #6b6b6b;
+      }
+    }
+    .pagination,
+    .zoom {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+    .verticalDivider {
+      width: 0;
+      height: 32px;
+      border-right: 1px solid #828282;
+    }
+  }
+  .pdfContent {
+    margin: 16px 0;
+  }
+}

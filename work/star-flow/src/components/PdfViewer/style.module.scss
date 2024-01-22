@@ -1,0 +1,55 @@
+.pdfWrapper {
+  margin: 0 -16px;
+  text-align: center;
+  background: #525659;
+  position: relative;
+
+  .menuBar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    height: 60px;
+    background: rgb(50 54 57);
+
+    .actionButton {
+      span {
+        display: block;
+      }
+    }
+
+    .pagination,
+    .zoom {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .verticalDivider {
+      width: 0;
+      height: 32px;
+      border-right: 1px solid gray;
+    }
+  }
+
+  .pdfContent {
+    padding-bottom: 48px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1170px) {
+  .menuBar {
+    top: 0;
+  }
+  .pdfContent {
+    padding-top: 68px;
+  }
+}

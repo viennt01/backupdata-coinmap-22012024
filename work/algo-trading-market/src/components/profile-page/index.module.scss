@@ -1,0 +1,132 @@
+@import '@/styles/color.scss';
+@import '@/styles/mixin.scss';
+
+.pageWrapper {
+  background-image: linear-gradient(
+    to right,
+    $BG_SECONDARY 50%,
+    $DARK_BLUE 50%
+  );
+  @include mobile-device {
+    background: $DARK_BLUE;
+  }
+}
+
+.page {
+  position: relative;
+  min-height: calc(100vh - 172px);
+  display: flex;
+  @include mobile-device {
+    flex-direction: column;
+    margin: 0 -16px;
+  }
+  .leftContainer {
+    width: 25%;
+    @include mobile-device {
+      width: unset;
+    }
+    .leftContentContainer {
+      text-align: center;
+      padding: 64px 0;
+      color: $WHITE;
+      @include mobile-device {
+        padding: 8px 0;
+      }
+      .avatarContainer {
+        display: block;
+        margin-bottom: 32px;
+        @include mobile-device {
+          display: none;
+        }
+        :global {
+          .ant-upload {
+            overflow: hidden;
+            margin: 0;
+            border-radius: 50%;
+          }
+        }
+        .email {
+          margin-top: 24px;
+          font-size: 18px;
+          line-height: 24px;
+          text-align: center;
+        }
+      }
+      .navigatorContainerMobile {
+        display: none;
+        @include mobile-device {
+          display: block;
+          margin-top: 8px;
+        }
+        :global {
+          .ant-menu-item {
+            &::after {
+              border: none;
+            }
+          }
+          .ant-menu-item-selected {
+            color: $PRIMARY;
+            background-color: transparent;
+            &::after {
+              border: none;
+            }
+          }
+        }
+      }
+      .navigatorContainerDesktop {
+        display: block;
+        @include mobile-device {
+          display: none;
+        }
+        :global {
+          .ant-menu-item {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 22px;
+          }
+          .ant-menu-item-selected {
+            color: $PRIMARY;
+            background-color: transparent;
+          }
+          .ant-menu-title-content {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+  .rightContainer {
+    display: flex;
+    width: 75%;
+    background-color: $DARK_BLUE;
+    @include mobile-device {
+      width: 100%;
+    }
+    .rightContentContainer {
+      flex: 1;
+      padding: 52px 56px;
+      margin-right: auto;
+      @include mobile-device {
+        padding: 16px;
+      }
+    }
+    .myProfileTab {
+      flex: 2;
+    }
+    .policy {
+      flex: 1;
+      margin-top: 150px;
+      @include mobile-device {
+        display: none;
+      }
+      > div {
+        padding: 24px 18px;
+        border-radius: 4px;
+        font-size: 14px;
+        line-height: 17px;
+        color: $WHITE;
+        background: $BG_SECONDARY;
+      }
+    }
+  }
+}

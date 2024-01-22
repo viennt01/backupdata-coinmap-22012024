@@ -1,0 +1,100 @@
+$white: #FFFFFF;
+$background: #111024;
+$blue: #31AFFE;
+$darkBlue: #253E53;
+$E0E6F1: #E0E6F1;
+
+.container {
+  flex: 1;
+  min-height: max(100vh, 1080px) ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $background;
+  .contentContainer {
+    max-width: 1423px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 24px;
+    @media screen and(min-width: 1170px) {
+     padding: 0;
+    }
+    .titleContainer {
+      color: $white;
+      position: relative;
+      margin-bottom: 130px;
+      .title {
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 78px;
+        @media screen and(min-width: 1170px) {
+          position: absolute;
+          left: 0;
+          top: -100%;
+        }
+      }
+      .description {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 39px;
+        margin-bottom: 0;
+        @media screen and(min-width: 1170px) {
+          text-align: center;
+        }
+      }
+    }
+   
+    .iconPartnerContainer {
+      .itemContainer {
+        display: inline-block;
+        text-align: center;
+        position: relative;
+        width: 100%;
+        margin-bottom: 24px;
+        @media screen and(min-width: 1170px) {
+          width: 25%;
+          margin-bottom: 80px;
+        }
+        .lastItem {
+          opacity: 0;
+        }
+        .lastItemContent {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          color: $white;
+          transform: translate(-50%, -50%);
+          font-weight: 500;
+          font-size: 32px;
+          line-height: 39px;
+        }
+
+        .itemAvatart {
+          display: inline-block;
+          width: 224px;
+          height: 224px;
+          padding: 0 6px;
+        }
+
+        .itemContent {
+          margin-top: 16px;
+          .name {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 22px;
+            color: $white;
+            margin-bottom: 8px;
+          }
+          .position {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: $white;
+          }
+         
+        }
+      }
+
+    }
+  }
+}

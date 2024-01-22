@@ -1,0 +1,127 @@
+.modal {
+  .modalBody {
+    .content {
+      .item1 {
+        .line1 {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+        }
+
+        .line2 {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          margin: 20px 0;
+
+          input {
+            height: 38px;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            background-color: #fff;
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 16px 12px;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            outline: none;
+          }
+        }
+
+        .position {
+          margin-right: 10px;
+        }
+
+        .formCustom {
+          width: 30%;
+        }
+
+        .groupCustom {
+          width: 80px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+
+      .item3 {
+        .groupTime {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+
+          .itemTime {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+
+            .slider {
+              width: 30%;
+            }
+
+            .groupChecboxTime {
+              width: 16%;
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-start;
+              align-items: center;
+
+              label {
+                margin-left: 10px;
+              }
+            }
+
+            input[type='text'] {
+              width: 20%;
+              height: 38px;
+              font-size: 1rem;
+              font-weight: 400;
+              line-height: 1.5;
+              color: #212529;
+              background-color: #fff;
+              background-repeat: no-repeat;
+              background-position: right 0.75rem center;
+              background-size: 16px 12px;
+              border: 1px solid #ced4da;
+              border-radius: 0.25rem;
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .modalFooter {
+    display: flex;
+    justify-content: space-between;
+
+    .buttonGroup {
+      width: 30%;
+      display: flex;
+      justify-content: space-between;
+
+      .btnCancel {
+        color: #0d6efd;
+        border-color: #0d6efd;
+      }
+
+      .btnOK {
+        color: #fff;
+        background-color: #0d6efd;
+      }
+    }
+  }
+}

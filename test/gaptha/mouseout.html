@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <script type="text/javascript">
+        window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer",
+                {
+                    title: {
+                        text: "Both dataSeries attached to Mouseout events."
+                    },
+                    data: [
+                        {
+                            mouseout: function (e) {
+                                alert("dataSeries Event => Name: " + e.dataSeries.name + ", dataPoint { x:" + e.dataPoint.x + ", y: " + e.dataPoint.y + " }");
+                            },
+                            name: "Series 1",
+                            indexLabelOrientation: "vertical",
+                            type: "column",
+                            dataPoints: [
+                                { x: 10, y: 71 },
+                                { x: 20, y: 55 },
+                                { x: 30, y: 50 },
+                                { x: 40, y: 65 },
+                                { x: 50, y: 95 },
+                                { x: 60, y: 68 },
+                                { x: 70, y: 28 },
+                                { x: 80, y: 34 },
+                                { x: 90, y: 14 }
+                            ]
+                        },
+                        {
+                            mouseout: function (e) {
+                                alert("dataSeries Event => Name: " + e.dataSeries.name + ", dataPoint { x:" + e.dataPoint.x + ", y: " + e.dataPoint.y + " }");
+                            },
+                            name: "Series 2",
+                            type: "column",
+                            dataPoints: [
+                                { x: 10, y: 64 },
+                                { x: 20, y: 45 },
+                                { x: 30, y: 54 },
+                                { x: 40, y: 43 },
+                                { x: 50, y: 34 },
+                                { x: 60, y: 28 },
+                                { x: 70, y: 15 },
+                                { x: 80, y: 10 },
+                                { x: 90, y: 9 }
+                            ]
+                        }
+                    ]
+                });
+
+            chart.render();
+        }
+    </script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+
+<body>
+    <div id="chartContainer" style="height: 300px; width: 100%;">
+    </div>
+</body>
+
+</html>

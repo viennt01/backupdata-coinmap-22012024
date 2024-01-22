@@ -1,0 +1,11 @@
+{
+  "payment": "My payments",
+  "bot": "A.I Trading",
+  "payment_id": "Payment ID",
+  "payment_date": "Payment date",
+  "expired_date": "Expired date",
+  "expired": "Expired",
+  "amount": "Amount",
+  "status": "Status",
+  "renewal": "Renewal"
+}

@@ -1,0 +1,5 @@
+export const DEFAULT_ZOOM_MULTIPLIER_X = 1.05;
+export const DEFAULT_ZOOM_MULTIPLIER_Y = 1.05;
+
+export const HEATMAP_ZOOM_MULTIPLIER_X = 1.02;
+export const HEATMAP_ZOOM_MULTIPLIER_Y = 1.02;

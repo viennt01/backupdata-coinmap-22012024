@@ -1,0 +1,64 @@
+.btn__1 {
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+  -webkit-appearance: button;
+  background-color: transparent;
+  background-image: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255/var(--tw-text-opacity));
+}
+
+.btn__2 {
+  font-family: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-radius: 0.25rem;
+  position: relative;
+  height: 44px;
+  border-radius: 2px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.btn__3 {
+  width: 100%;
+}
+
+.btn__4 {
+  display: inline-block;
+}
+
+.btn__5 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 191 228/var(--tw-bg-opacity));
+}
+
+.btn__6 {
+  --tw-gradient-to: #45fac5;
+  --tw-gradient-from: #01c3fe;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(1, 195, 254, 0));
+
+  &:hover {
+    --tw-gradient-to: #01c3fe;
+    --tw-gradient-from: #45fac5;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(69, 250, 197, 0));
+  }
+
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.btnDisable {
+  cursor: not-allowed;
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 191 191/var(--tw-bg-opacity));
+}

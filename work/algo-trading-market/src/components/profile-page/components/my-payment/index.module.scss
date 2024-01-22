@@ -1,0 +1,50 @@
+@import '@/styles/color.scss';
+@import '@/styles/mixin.scss';
+
+.paymentWrapper {
+  height: fit-content;
+  @include mobile-device {
+    max-width: calc(100vw - 40px);
+  }
+  .title {
+    margin-bottom: 48px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    color: $WHITE;
+  }
+  .paymentTable {
+    .botName {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      color: $PRIMARY;
+    }
+    .botPaymentDate {
+      white-space: nowrap;
+    }
+    .botExpiredDate {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      .expiredTag {
+        background: $SUNSET_ORANGE;
+        border-radius: 12px;
+        font-size: 12px;
+        line-height: 15px;
+        padding: 2px 8px;
+      }
+    }
+    .renewalButton {
+      white-space: nowrap;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: right;
+      text-decoration-line: underline;
+      color: $PRIMARY;
+      cursor: pointer;
+    }
+  }
+}

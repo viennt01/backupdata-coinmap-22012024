@@ -1,0 +1,49 @@
+$white: #ffffff;
+$black: #050206;
+$background: #111024;
+$blueGray: #616887;
+
+.container {
+  flex: 1;
+  font-family: 'Montserrat';
+  font-style: normal;
+  color: $white;
+  background-color: $background;
+
+  .contentContainer {
+    .content {
+      text-align: center;
+      margin-top: 64px;
+      margin-bottom: 64px;
+      h1 {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 59px;
+      }
+      p {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 24px;
+      }
+    }
+    .tabBarStyle {
+      :global {
+        .ant-tabs-nav {
+          &::before {
+            border-bottom-color: $blueGray;
+            margin: 0 16px;
+          }
+        }
+        .ant-tabs-tab {
+          font-size: 18px;
+        }
+        .ant-tabs-tab.ant-tabs-tab-active {
+          font-weight: 700;
+        }
+        .ant-tabs-tab.ant-tabs-tab-disabled {
+          color: $blueGray;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,133 @@
+@import '@/styles/mixin.scss';
+
+.section {
+  padding: 96px 0;
+  text-align: center;
+  background: linear-gradient(0, var(--secondary_darken_2) 0%, var(--secondary_darken_1) 100%);
+  background-size: cover;
+  .container {
+    max-width: 1424px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+  .title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 68px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+    color: var(--on_secondary_darken_1);
+  }
+  .desc {
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    margin: 0 auto 90px;
+    max-width: 440px;
+    color: var(--on_secondary_darken_1);
+  }
+  .planCol {
+    padding: 16px 0;
+  }
+  .plan {
+    height: 100%;
+    background: var(--secondary_darken_2);
+    border: 1px solid var(--secondary_darken_1);
+    border-radius: 4px;
+    padding: 0 16px;
+    .bestBadge {
+      border-radius: 12px;
+      color: var(--on_primary);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 5px 10px;
+      background: var(--primary);
+      display: inline-block;
+      transform: translateY(-50%);
+    }
+    .innear {
+      max-width: 320px;
+      margin: 0 auto;
+      padding-bottom: 40px;
+    }
+    .name {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 36px;
+      text-align: center;
+      margin-top: 68px;
+      color: var(--on_secondary_darken_2);
+    }
+    .price {
+      font-weight: 500;
+      font-size: 48px;
+      line-height: 72px;
+      color: var(--primary);
+      margin-top: 16px;
+      span {
+        font-size: 18px;
+        line-height: 27px;
+        color: var(--on_secondary_darken_2);
+      }
+    }
+    .btn {
+      margin-top: 12px;
+      height: 72px;
+      width: 100%;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    .featTitle {
+      margin: 48px 0 20px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 36px;
+      text-align: left;
+      color: var(--on_secondary_darken_2);
+    }
+    ul {
+      text-align: left;
+      padding-left: 15px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      li {
+        margin-top: 20px;
+        color: var(--on_secondary_darken_2);
+      }
+    }
+  }
+  .best {
+    border: 1px solid var(--primary);
+    .name {
+      margin-top: 38px;
+    }
+  }
+}
+
+@include desktop-device {
+  .section {
+    padding: 80px 0 108px;
+    background-size: 100% auto;
+    .title {
+      font-size: 64px;
+      line-height: 96px;
+    }
+    .planCol {
+      padding: 0;
+    }
+    .plan {
+      margin-left: 0;
+      margin-right: 0;
+      &.best {
+        margin-top: -30px;
+        height: calc(100% + 60px);
+      }
+    }
+  }
+}

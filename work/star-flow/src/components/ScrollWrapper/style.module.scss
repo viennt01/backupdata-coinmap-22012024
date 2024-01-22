@@ -1,0 +1,31 @@
+.resultList {
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+  text-align: left;
+
+  &.hasTopCover {
+    .header {
+      box-shadow: 0 0 10px 8px rgb(0 0 0 / 30%);
+    }
+    &::before {
+      content: '';
+      display: block;
+      position: sticky;
+      top: 0;
+      background: red;
+      box-shadow: 0 0 10px 8px rgb(0 0 0 / 30%);
+    }
+  }
+
+  &.hasBottomCover {
+    &::after {
+      content: '';
+      display: block;
+      position: sticky;
+      bottom: 0;
+      background: red;
+      box-shadow: 0 0 10px 8px rgb(0 0 0 / 30%);
+    }
+  }
+}

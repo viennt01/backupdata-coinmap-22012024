@@ -1,0 +1,64 @@
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  position: relative;
+  padding: 40px 0;
+  @media screen and (min-width: 576px) {
+    max-width: 540px;
+  }
+  @media screen and (min-width: 640px) {
+    max-width: 640px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 720px;
+  }
+  @media screen and (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media screen and (min-width: 640px) {
+    max-width: 640px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1140px;
+  }
+  @media screen and (min-width: 1400px) {
+    max-width: 1320px;
+  }
+  .box {
+    @media screen and (min-width: 576px) {
+      max-width: 540px;
+    }
+    @media screen and (min-width: 640px) {
+      max-width: 640px;
+    }
+    @media screen and (min-width: 768px) {
+      max-width: 720px;
+    }
+    @media screen and (min-width: 992px) {
+      max-width: 960px;
+    }
+    @media screen and (min-width: 640px) {
+      max-width: 640px;
+    }
+    @media screen and (min-width: 1200px) {
+      max-width: 1140px;
+    }
+    @media screen and (min-width: 1400px) {
+      max-width: 1320px;
+    }
+    .group {
+      position: relative;
+      padding: 16px 16px;
+      margin-bottom: 16px;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      color: #664d03;
+      background-color: #fff3cd;
+      border-color: #ffecb5;
+      button {
+        margin-right: 8px;
+      }
+    }
+  }
+}

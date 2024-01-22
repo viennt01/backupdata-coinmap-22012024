@@ -1,0 +1,21 @@
+@import '@/styles/color.scss';
+
+.performanceContainer {
+  margin-bottom: 24px;
+
+  .title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: 0.08em;
+    color: $WHITE;
+    margin-bottom: 24px;
+  }
+  .performanceContent {
+    background-color: $RICH_BLACK;
+    .down {
+      color: $SUNSET_ORANGE;
+    }
+  }
+
+}

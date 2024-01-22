@@ -1,0 +1,9 @@
+export { default as SvgUserAvatar } from './user-avatar.svg';
+export { default as SvgUserProfile } from './user-profile.svg';
+export { default as SvgLayers } from './layers.svg';
+export { default as SvgCreditCard } from './credit-card.svg';
+export { default as SvgLogout } from './logout.svg';
+export { default as SvgGroupUser } from './group-user.svg';
+export { default as SvgMenu } from './menu.svg';
+export { default as SvgDashboard } from './dashboard.svg';
+export { default as SvgTradingBot } from './trading-bot.svg';

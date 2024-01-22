@@ -1,0 +1,130 @@
+$white: #ffffff;
+$black: #050206;
+$orange: #fe842b;
+$purple: #b02bfe;
+$purpleShadow: rgba(176, 43, 254, 0.5);
+$blue: #31affe;
+$red: #ff5757;
+$gray: #8f9bce;
+$green: #52b16f;
+
+.tradingBotItem {
+  display: flex;
+  flex-direction: column;
+  min-height: 440px;
+  height: 100%;
+  background-color: $black;
+  border-radius: 8px;
+  padding: 24px;
+  position: relative;
+
+  .topContent {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 40px;
+    .image {
+      border-radius: 50%;
+    }
+    .name {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 24px;
+      color: $blue;
+      .expiredTag {
+        padding: 2px 8px;
+        background: $red;
+        border-radius: 12px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        color: $white;
+      }
+    }
+    .currency {
+      margin-top: 8px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+  .midContent {
+    display: flex;
+    .midContentLeft {
+      flex: 3;
+      .namePnl {
+        font-size: 12px;
+        line-height: 24px;
+        color: $gray;
+      }
+      .valuePnl {
+        font-size: 36px;
+        line-height: 44px;
+        color: green;
+        font-weight: 600;
+        margin-bottom: 12px;
+      }
+      .featureName {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 8px;
+      }
+      .description {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 16px;
+      }
+      .buttonMoreDetails {
+        font-size: 16px;
+        line-height: 22px;
+        padding: 0;
+      }
+    }
+    .midContentRight {
+      flex: 1;
+      text-align: right;
+      .nameDrawdown {
+        font-size: 12px;
+        line-height: 24px;
+        color: $gray;
+        padding-bottom: 13px;
+      }
+      .valueDrawdown {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        color: white;
+      }
+    }
+  }
+  .bottomContent {
+    margin-top: auto;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .price {
+      font-weight: 600;
+      font-size: 48px;
+      color: $orange;
+    }
+    .perTime {
+      line-height: 59px;
+      vertical-align: top;
+    }
+    .launchButton {
+      background: $purple;
+      &:hover {
+        box-shadow: 16px 20px 40px $purpleShadow;
+      }
+      &:active {
+        box-shadow: 16px -20px 40px $purpleShadow;
+      }
+    }
+  }
+}

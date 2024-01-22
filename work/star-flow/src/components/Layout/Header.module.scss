@@ -1,0 +1,269 @@
+$white: #FFFFFF;
+$black: #050206;
+$background: #111024;
+
+.antdHeader {
+  background-color: $white;
+  height: auto;
+  padding: 0;
+}
+
+.container {
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  --tw-bg-opacity: 1;
+  background-color: $white;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 12px;
+  padding-right: 12px;
+  @media screen and(min-width: 1170px) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .box__1 {
+    display: flex;
+    .menu {
+      display: none;
+      width: 100%;
+      @media screen and(min-width: 1170px) {
+        display: block;
+        border: 0;
+        :global {
+          .ant-menu-item, .ant-menu-submenu {
+           &::after {
+            border: 0;
+           }
+            &:hover {
+              &::after {
+                border: 0;
+              }
+            }
+          }
+          .ant-menu-item-selected {
+            &::after {
+              border: 0;
+            }
+          }
+        }
+      }
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    .group {
+      height: 54px;
+      height: 54px;
+      margin-right: 100px;
+      @media screen and(min-width: 1170px) {
+        height: 54px;
+        width: 91px;
+      }
+    }
+  }
+  .box__2 {
+    display: none;
+    @media screen and(min-width: 1170px) {
+      display: block;
+    }
+ 
+    .wrappedUpgradeAndUser {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      font-family: 'Archivo';
+      .wrappedUpgrade {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 151px;
+        height: 44px;
+        background: linear-gradient(270deg, #70badb 0%, #e781dc 100%);
+        box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
+        border-radius: 2px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        color: #ffffff;
+        margin-right: 24px;
+        cursor: pointer;
+      }
+      .wrappedHeaderUser {
+        cursor: pointer;
+        position: relative;
+        flex: 1;
+        max-width: 300px;
+        margin-left: 50px;
+        .userHeader {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          column-gap: 8px;
+          .group {
+            border: 1px solid #dee2e6;
+            border-radius: 50%;
+            border-width: 1px;
+            --tw-border-opacity: 1;
+            border-color: rgb(46 58 82 / var(--tw-border-opacity));
+            .wrapped {
+              width: 44px;
+              height: 44px;
+              svg, img {
+                height: 44px;
+                width: 44px;
+                border-radius: 50%;
+                object-fit: cover;
+                vertical-align: baseline;
+              }
+            }
+          }
+          h1 {
+            margin: 0px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 18px;
+            --tw-text-opacity: 1;
+            color: rgb(97 104 135 / var(--tw-text-opacity));
+          }
+        }        
+        .dropDownAvatar {
+          position: absolute;
+          width: 270px;
+          height: fit-content;
+          background-color: $white;
+          color: #253E53;
+          top: 72px;
+          right: 0%;
+          z-index: 10;
+          display: none;
+          border-radius: 8px;
+          .dropDownItem {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            height: 52px;
+            flex-direction: row;
+            justify-content: flex-start;
+            padding-left: 10px;
+            fill: #253E53;
+            border-bottom: 1px solid #253E53;
+            &:last-child {
+              border-bottom: none;
+            }
+            .content {
+              margin: 2px;
+            }
+            div {
+              margin-left: 20px;
+            }
+            .logOut {
+              color: #fb5757;
+            }
+            &:hover {
+              font-weight: 700;
+            }
+          }
+        }
+        .displayStatus {
+          display: block;
+        }
+      }
+      .wrappedHeaderDashboard {
+        cursor: pointer;
+        position: relative;
+        flex: 1;
+        max-width: 300px;
+        margin-left: 50px;
+        .arrowRightLong {
+          display: block;
+          margin-right: 20px;
+          color: #B4C5E2;
+        }
+        .getReadyBtn {
+          align-items: center;
+          gap: 16px;
+          display: none;
+
+        }
+        .dropDownDashboard {
+          position: absolute;
+          width: 390px;
+          height: fit-content;
+          background-color: $white;
+          color: #253E53;
+          top: 72px;
+          right: 0%;
+          z-index: 10;
+          display: none;
+          border-radius: 8px;
+          .dropDownItem {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            height: 52px;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-left: 10px;
+            padding-right: 10px;
+            fill: #253E53;
+            border-bottom: 1px solid #253E53;
+            &:last-child {
+              border-bottom: none;
+            }
+            .content {
+              margin: 2px;
+            }
+            div {
+              margin-left: 20px;
+            }
+            .logOut {
+              color: #fb5757;
+            }
+            &:hover {
+              font-weight: 700;
+              .getReadyBtn {
+                display: flex;
+              }
+              .arrowRightLong {
+                display: none;
+              }
+            }
+          }
+        }
+        .displayDropdownDashboard {
+          display: block;
+        }
+      }
+    }
+    .groupItemLogin {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      cursor: pointer;
+      column-gap: 8px;
+      h1 {
+        margin: 0;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        --tw-text-opacity: 1;
+        color: rgb(97 104 135 / var(--tw-text-opacity));
+      }
+    }
+  }
+  .box__3 {
+    display: block;
+    @media screen and(min-width: 1170px) {
+      display: none;
+    }
+  }
+}
+
+

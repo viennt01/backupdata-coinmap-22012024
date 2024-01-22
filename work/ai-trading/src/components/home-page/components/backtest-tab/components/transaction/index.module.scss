@@ -1,0 +1,73 @@
+@import '@/styles/color.scss';
+@import '@/styles/mixin.scss';
+
+.transactionContainer {
+  margin-bottom: 24px;
+  .title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    letter-spacing: 0.08em;
+    color: var(--on_secondary_darken_2);
+    margin-bottom: 24px;
+  }
+  .transactionContent {
+    background-color: var(--secondary_darken_1);
+    padding: 40px;
+    border-radius: 8px;
+    display: flex;
+
+    @include mobile-device {
+      display: block;
+    }
+
+    .boxContainer {
+      flex: 1;
+      padding-right: 40px;
+      position: relative;
+
+      @include mobile-device {
+        padding-right: 0;
+      }
+      &:not(:first-child) {
+        padding-left: 40px;
+        @include mobile-device {
+          padding-left: 0;
+        }
+        &::before {
+          content: ' ';
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          border-left: 1px solid $JET_GREY;
+          @include mobile-device {
+            border-left: none;
+          }
+        }
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+
+      .itemContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        color: var(--on_secondary_darken_1);
+        .leftContent {
+          font-weight: 500;
+        }
+        .rightContent {
+        }
+        .up {
+          color: $ALGAE;
+        }
+        .down {
+          color: $SUNSET_ORANGE;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+@import '@/styles/color.scss';
+@import '@/styles/mixin.scss';
+
+.botDetailContainer {
+  padding-top: 24px;
+
+  .infoContainer {
+    margin-bottom: 46px;
+    gap: 24px;
+    display: flex;
+    @include mobile-device {      
+      display: block;
+    }
+      
+    .leftInfoContainer {
+      flex: 1;
+      max-width: 364px;
+      min-width: 364px;
+      @include mobile-device {        
+        width: 100%;
+        max-width: 1170px;
+        min-width: 0;
+      }
+      
+    }
+    .rightInfoContainer {
+      flex: 1;
+      background-color: $BG_SECONDARY;
+      border-radius: 12px;
+      :global {
+        .ant-card {
+          background-color: $BG_SECONDARY;
+        }
+      }
+    }
+  }
+}
+
+.imagePairContainer {
+  position: relative;
+  .imagePair1 {
+    position: relative;
+    z-index: 1;
+    border-radius: 50%;
+  }
+  .imagePair2 {
+    position: absolute;
+    left: 12px;
+    z-index: 0;
+    border-radius: 50%;
+  }
+}
+.pairContainer {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.up {
+  color: $ALGAE;
+}
+.down {
+  color: $SUNSET_ORANGE;
+}

@@ -1,0 +1,63 @@
+.container {
+  $white: #ffffff;
+  $black: #050206;
+  $background: #111024;
+
+  width: 100%;
+  position: relative;
+  height: 100%;
+  flex: 1 1 0%;
+  --tw-bg-opacity: 1;
+  background-color: $background;
+
+  .box__3 {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    @media screen and (min-width: 576px) {
+      max-width: 540px;
+    }
+
+    @media screen and (min-width: 640px) {
+      max-width: 100%;
+    }
+
+    @media screen and (min-width: 768px) {
+      max-width: 640px;
+    }
+
+    @media screen and (min-width: 992px) {
+      max-width: 640px;
+    }
+
+    @media screen and(min-width: 1170px) {
+      max-width: 1170px;
+      padding-top: 64px;
+      padding-bottom: 64px;
+    }
+
+    .group {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 600px;
+      .wrapped {
+        h1, p {
+          color: $white;
+        }
+
+        .registerContainer {
+          text-align: center;
+        }
+      }
+      
+    }
+  }
+}
+
+
+.emailGroup {
+  // 1170px
+}

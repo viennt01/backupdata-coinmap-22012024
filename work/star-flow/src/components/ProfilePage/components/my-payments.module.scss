@@ -1,0 +1,27 @@
+$background: #050206;
+
+$orange: #FE842B;
+$purple: #B02BFE;
+$blue: #31AFFE;
+$red: #FF5757;
+$white: #FFFFFF;
+$gray: #8F9BCE;
+
+.tableContainer {
+  margin-bottom: 24px;
+  thead {
+    color: $gray;
+    > tr > th {
+      color: $gray;
+    }
+  }
+  tbody {
+    > tr > td {
+      color: $white;
+
+    }
+  }
+  .renewalButton {
+    color: $orange;
+  }
+}

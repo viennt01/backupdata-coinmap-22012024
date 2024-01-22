@@ -1,0 +1,26 @@
+@import '@/assets/scss/variables';
+
+.botDetailWrapper {
+  margin-top: 48px;
+
+  .tradeHistoryTable {
+    :global(.ant-table-thead > tr > th) {
+      color: $color-table-text;
+      font-size: 14px;
+      line-height: 22px;
+
+      &::before {
+        display: none;
+      }
+    }
+    td {
+      color: $color-white;
+    }
+    :global {
+      .ant-table-tbody > tr.ant-table-row:hover > td,
+      .ant-table-tbody > tr > td.ant-table-cell-row-hover {
+        background: #09081a;
+      }
+    }
+  }
+}

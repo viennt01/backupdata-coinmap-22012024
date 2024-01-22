@@ -1,0 +1,36 @@
+.lineOption {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  overflow-x: hidden;
+
+  .lineShapeWrapper {
+    position: relative;
+    flex: 1;
+  }
+
+  .lineShape {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 80%;
+    border-style: solid none none none;
+
+    &.size1 {
+      border-width: 1px;
+    }
+
+    &.size2 {
+      border-width: 2px;
+    }
+
+    &.size3 {
+      border-width: 3px;
+    }
+
+    &.size4 {
+      border-width: 4px;
+    }
+  }
+}

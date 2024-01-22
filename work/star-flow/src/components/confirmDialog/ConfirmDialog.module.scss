@@ -1,0 +1,96 @@
+$headerBgColor: #263048;
+$contentBgColor: #0C122A;
+$textColor: #FFF;
+$primaryBtnBg: #14C8D8;
+$secondaryBtnBg: #263048;
+
+.modalConfirm {
+  overflow: hidden;
+  max-width: 96%;
+  width: 560px;
+  border-radius: 8px !important;
+  color: $textColor;
+
+  .modalConfirmContent {
+    border-radius: 8px;
+    overflow: hidden;
+    border: none;
+    background: $contentBgColor;
+    border: 1px solid rgba($color: $primaryBtnBg, $alpha: 0.4);
+  }
+
+  .modalConfirmTitle {
+    position: relative;
+    background: $headerBgColor;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: $textColor;
+
+    div {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+    &>svg {
+      position: absolute;
+      top: 50%;
+      right: 18px;
+      transform: translateY(-50%);
+      width: 16px;
+      height: 16px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .modalConfirmBody {
+    padding: 24px 24px 0 24px;
+    text-align: justify;
+    font-size: 16px;
+    color: $textColor;
+  }
+
+  .modalConfirmFooter {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 24px;
+
+    & div {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $secondaryBtnBg;
+      width: 248px;
+      height: 44px;
+      font-size: 18px;
+      color: #AEAEAE;
+      border-radius: 4px;
+      padding: 4px 16px;
+      background: $secondaryBtnBg;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &.primary {
+        background: $primaryBtnBg;
+        color: $textColor;
+        font-weight: 700;
+        border: none;
+      }
+    }
+  }
+}

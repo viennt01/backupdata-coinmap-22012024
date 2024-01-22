@@ -1,0 +1,23 @@
+@import '@/styles/color.scss';
+@import '@/styles/mixin.scss';
+
+.modalContainer {
+  position: fixed;
+  z-index: 99; //fixed_level 2
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-y: auto;
+  padding: 48px 80px;
+  @include mobile-device {
+    padding: 32px 16px;
+  }
+  .contentContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

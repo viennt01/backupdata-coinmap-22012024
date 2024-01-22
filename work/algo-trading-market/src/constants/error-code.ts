@@ -1,0 +1,9 @@
+/* eslint-disable no-unused-vars */
+export enum ERROR_CODE {
+  INCORRECT = 'INCORRECT',
+  SUCCESS = 'SUCCESS',
+  OK = 'ok',
+  EMAIL_NOT_VERIFIED = 'EMAIL_NOT_VERIFIED',
+  TOKEN_INVALID = 'TOKEN_INVALID',
+  TOKEN_EXPIRED = 'TOKEN_EXPIRED',
+}

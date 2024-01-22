@@ -1,0 +1,25 @@
+on:
+  workflow_call:
+    secrets:
+      envPAT:
+        required: true
+
+jobs:
+  release:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: CoinmapTrading/actions
+          token: ${{ secrets.envPAT }}
+          path: coinmap-actions
+      - id: deploy
+        uses: ./coinmap-actions/deploy
+        with:
+          version: "prod"
+      # - uses: ./coinmap-actions/notification
+      #   with:
+      #     version: ${{ steps.deploy.outputs.version }}
+      #     environment: ${{ steps.deploy.outputs.environment }}
+
+

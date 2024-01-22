@@ -1,0 +1,19 @@
+@import '@/styles/color.scss';
+
+.tabsContainer {
+  :global {
+    .ant-tabs-nav {
+      &::before {
+        border-bottom: 1px solid $JET_GREY;
+      }
+      .ant-tabs-tab {
+        color: var(--on_secondary_darken_2);
+      }
+      .ant-tabs-tab-active {
+        .ant-tabs-tab-btn {
+          color: var(--primary);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "section-library": {
+    "title": "A.I TRADING LIBRARY",
+    "card-button-registers": "REGISTER",
+    "card-button-launch": "LAUNCH",
+    "card-button-connect-broker": "CONNECT BROKER",
+    "card-button-renewal": "RENEWAL",
+    "card-button-coming-soon": "COMING SOON",
+    "card-required": "REQUIRED",
+    "card-detail": "DETAIL",
+    "card-time": "MONTH"
+  },
+  "section-steps-to-use":{
+    "button-join": "JOIN NOW"
+  },
+  "section-help": {
+    "guide-title": "FAQ"
+  }
+}

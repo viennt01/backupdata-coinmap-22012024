@@ -1,0 +1,125 @@
+.searchIcon {
+  background: #2a2e39;
+  border-radius: 0;
+}
+.searchInput {
+  border-radius: 0;
+  padding-left: 0;
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.typeTags {
+  padding: 10px 5px;
+
+  span {
+    display: inline-block;
+    padding: 3px 10px;
+    background: rgba($color: #15212d, $alpha: 0.5);
+    margin: 0 5px;
+    cursor: pointer;
+
+    &.active,
+    &:hover {
+      background: #15212d;
+      color: #15b1c7;
+    }
+  }
+}
+
+.resultListWrapper {
+  position: relative;
+}
+
+.resultList {
+  min-height: 300px;
+  max-height: calc(100vh - 400px);
+  overflow-y: auto;
+  position: relative;
+  margin: 0 5px;
+
+  :global {
+    .ant-collapse-header {
+      padding: 0 !important;
+      display: flex !important;
+      align-items: center !important;
+    }
+  }
+
+  .resultItem {
+    display: flex;
+    color: #ffffff;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+    padding: 12px;
+    padding-left: 32px;
+    border-top: 1px solid rgba($color: #eee, $alpha: 0.1);
+    cursor: pointer;
+
+    &.label {
+      padding: 6px;
+      padding-left: 0;
+    }
+
+    &:hover {
+      background: rgba($color: #eee, $alpha: 0.1);
+    }
+
+    > * {
+      padding-left: 2px;
+      padding-right: 2px;
+      width: 100px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .description {
+      width: calc(100% - 300px);
+      max-width: 400px;
+      text-align: left;
+    }
+    .type {
+      width: 100px;
+      text-align: center;
+      color: rgba($color: #fff, $alpha: 0.5);
+    }
+    .exchange {
+      width: 100px;
+      text-align: center;
+    }
+
+    &.header {
+      border-top: none;
+      color: rgba($color: #fff, $alpha: 0.5);
+      position: sticky;
+      z-index: 1;
+      top: 0;
+      background: #2c343e;
+      // box-shadow: 0 0 10px 8px rgb(0 0 0 / 30%);
+    }
+  }
+
+  &.hasTopCover {
+    .header {
+      box-shadow: 0 0 10px 8px rgb(0 0 0 / 30%);
+    }
+  }
+
+  &.hasBottomCover {
+    &::after {
+      content: '';
+      display: block;
+      position: sticky;
+      bottom: 0;
+      background: red;
+      box-shadow: 0 0 10px 8px rgb(0 0 0 / 30%);
+    }
+  }
+}
+
+.loading {
+  background: rgb(0 0 0 / 40%);
+  backdrop-filter: blur(2px);
+}

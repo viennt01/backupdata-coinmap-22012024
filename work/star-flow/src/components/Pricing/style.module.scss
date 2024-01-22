@@ -1,0 +1,37 @@
+.page {
+  flex: 1;
+  font-family: 'Montserrat';
+  font-style: normal;
+  color: #FFFFFF;
+  background-image: url('/images/pricing-bg.jpg');
+  background-size: cover;
+
+  .pricingPage {
+    padding: 24px;
+
+    .pricingContainer {
+      position: relative;
+      .chooseYourPlan {
+        margin: 0;
+      }
+      .cardPricing {
+        padding-top: 24px;
+      }
+    }
+
+  }
+}
+
+
+@media (min-width: 1170px) {
+  .page {
+    .pricingPage {
+      padding: 40px 24px;
+
+      .pricingContainer .cardPricing {
+        padding-top: 72px;
+        padding-bottom: 48px;
+      }
+    }
+  }
+}

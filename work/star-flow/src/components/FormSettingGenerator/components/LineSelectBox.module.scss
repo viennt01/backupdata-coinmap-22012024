@@ -1,0 +1,27 @@
+.lineContainer {
+  position: relative;
+  display: block;
+  height: 36px;
+  overflow-x: hidden;
+
+  .line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    border-width: 3px;
+  }
+
+  .solid {
+    border-style: solid none none none;
+  }
+
+  .dot {
+    border-style: dotted none none none;
+  }
+
+  .dash {
+    border-style: dashed none none none;
+  }
+}

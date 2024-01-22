@@ -1,0 +1,53 @@
+@import '@/styles/color.scss';
+@import '@/styles/mixin.scss';
+
+.section {
+  padding: 96px 0;
+  color: var(--on_secondary_darken_2);
+  text-align: center;
+  background: var(--secondary_darken_2) url(./assets/contact-us-bg.png) center top no-repeat;
+  background-size: cover;
+  .title {
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 68px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+  }
+  .desc {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 440px;
+  }
+  .email {
+    margin-top: 111px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 54px;
+    letter-spacing: 0.02em;
+    display: block;
+    word-wrap: break-word;
+  }
+  .message {
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--primary);
+  }
+}
+
+@include desktop-device {
+  .section {
+    .title {
+      font-size: 64px;
+      line-height: 96px;
+    }
+
+    .email {
+      font-size: 36px;
+    }
+  }
+}

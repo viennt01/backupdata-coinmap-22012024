@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <canvas id="c" width="800" height="900"></canvas>
+    <script>
+        var can = document.getElementById('c');
+        var ctx = can.getContext('2d');
+
+        // ctx.transform(1, 0, 0, -1, 0, canvas.height)
+
+        // ctx.lineWidth = 10;
+        // ctx.strokeStyle = 'steelblue';
+        // ctx.fillStyle = 'steelbllue'; // for the triangle fill
+        // ctx.lineJoin = 'butt';
+
+        // ctx.beginPath();
+        // ctx.moveTo(0, 50);
+        // ctx.lineTo(150, 50);
+        // ctx.stroke();
+
+        // ctx.beginPath();
+        // ctx.moveTo(150, 0);
+        // ctx.lineTo(150, 150);
+        // ctx.stroke();
+        // ctx.beginPath();
+        // ctx.moveTo(150, 0);
+        // ctx.lineTo(150, 50);
+        // ctx.stroke();
+
+        // canvas_arrow(ctx, 0, 0, 150, 50, 50);
+        // canvas_arrow(ctx, 150, 150, 50, 50, 10);
+        canvas_arrow1(ctx, 10, 100, 150, 50);
+        // canvasDrawArrow(ctx, 10, 100, 150, 50)
+
+
+        function canvas_arrow(context, fromx, fromy, tox, toy, r) {
+            var x_center = tox;
+            var y_center = toy;
+
+            var angle;
+            var x;
+            var y;
+
+            context.beginPath();
+
+            angle = Math.atan2(toy - fromy, tox - fromx)
+            x = r * Math.cos(angle) + x_center;
+            y = r * Math.sin(angle) + y_center;
+            console.log("1: ", x, y);
+
+            context.moveTo(x, y);
+
+            angle += (1 / 3) * (2 * Math.PI)
+            x = r * Math.cos(angle) + x_center;
+            y = r * Math.sin(angle) + y_center;
+            console.log("2: ", x, y);
+
+            context.lineTo(x, y);
+
+            angle += (1 / 3) * (2 * Math.PI)
+            x = r * Math.cos(angle) + x_center;
+            y = r * Math.sin(angle) + y_center;
+            console.log("3: ", x, y);
+
+
+            context.lineTo(x, y);
+
+            context.closePath();
+
+            context.stroke();
+            // ctx.stroke();
+
+        }
+
+        function canvas_arrow1(context, fromx, fromy, tox, toy) {
+            const dx = tox - fromx;
+            const dy = toy - fromy;
+            const headlen = Math.sqrt(dx * dx + dy * dy) * 0.1; // length of head in pixelspixel
+            console.log(headlen);
+            const angle = Math.atan2(dy, dx);
+            context.beginPath();
+            context.moveTo(fromx, fromy);
+            context.lineTo(tox, toy);
+            context.stroke();
+            context.beginPath();
+            context.moveTo(tox - headlen * Math.cos(angle - Math.PI / 6), toy - headlen * Math.sin(angle - Math.PI / 6));
+            context.lineTo(tox, toy);
+            context.lineTo(tox - headlen * Math.cos(angle + Math.PI / 6), toy - headlen * Math.sin(angle + Math.PI / 6));
+            context.stroke();
+        }
+
+        function canvasDrawArrow(context, fromx, fromy, tox, toy) {
+            var headlen = 10.0;
+            var back = 4.0;
+            var angle1 = Math.PI / 13.0;
+            var angle2 = Math.atan2(toy - fromy, tox - fromx);
+            var diff1 = angle2 - angle1;
+            var diff2 = angle2 + angle1;
+            var xx = getBack(back, fromx, fromy, tox, toy);
+            var yy = getBack(back, fromy, fromx, toy, tox);
+
+            context.moveTo(fromx, fromy);
+            context.lineTo(tox, toy);
+
+            context.moveTo(xx, yy);
+            context.lineTo(xx - headlen * Math.cos(diff1), yy - headlen * Math.sin(diff1));
+
+            context.moveTo(xx, yy);
+            context.lineTo(xx - headlen * Math.cos(diff2), yy - headlen * Math.sin(diff2));
+        }
+
+        function getBack(len, x1, y1, x2, y2) {
+            return x2 - (len * (x2 - x1) / (Math.sqrt(Math.pow(y2 - y1, 2) + Math.pow(x2 - x1, 2))));
+        }
+    </script>
+
+</body>
+
+</html>

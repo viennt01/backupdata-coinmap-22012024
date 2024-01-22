@@ -1,0 +1,188 @@
+$text-color: #AEAEAE;
+
+.buttonAdd {
+  color: $text-color;
+
+  &:hover {
+    background: rgba(55, 55, 55, 0.2);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.symbolSearch {
+  width: 400px;
+  height: fit-content;
+  padding: 0 !important;
+  transform: translateX(calc(-100% + 24px));
+  font-size: 13px;
+}
+
+.symbolSearchContent {
+  border: 1px solid rgba(196, 196, 196, 0.1);
+  border-radius: 2px;
+  padding: 0px;
+  color: $text-color;
+
+  .symbolSearchHeader {
+    display: block;
+    border-bottom: 0.4px solid rgba(196, 196, 196, 0.1);
+    padding: 8px;
+    background: #1C2740;
+
+    .symbolSearchTitle {
+      font-weight: 700;
+    }
+
+    .symbolSearchField {
+      display: flex;
+      align-items: center;
+      margin-top: 8px;
+      background: #0B1525;
+      border: 1px solid rgba(168, 188, 222, 0.4);
+      border-radius: 2px;
+
+      .searchInput {
+        flex: 1;
+        height: 24px;
+        background: #0B1525;
+        color: #AEAEAE;
+        border: none !important;
+        font-size: 13px;
+        padding: 0 8px;
+        padding-right: 8px;
+
+        &:focus {
+          box-shadow: none;
+          outline: none;
+        }
+      }
+
+      .searchIcon {
+        width: 16px;
+        height: 16px;
+        background: #0B1525;
+        border: none !important;
+        padding: 0;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .symbolSearchBody {
+    padding: 0;
+    background: #1C2740;
+
+    .typeTags {
+      display: flex;
+      padding: 8px 8px 0 8px;
+      gap: 8px;
+
+      div {
+        flex: 1;
+        text-align: center;
+        padding: 4px 8px;
+        color: $text-color;
+        background: rgba(196, 196, 196, 0.1);
+        border: 0.4px solid rgba(196, 196, 196, 0.1);
+        cursor: pointer;
+
+        &.active,
+        &:hover {
+          color: #FFFFFF;
+          background: #101B34;
+          border: 0.4px solid rgba(196, 196, 196, 0.1);
+        }
+      }
+    }
+
+    .resultListWrapper {
+      position: relative;
+      padding-bottom: 8px;
+
+      .resultList {
+        position: relative;
+        height: 260px;
+        overflow-y: auto;
+        font-family: 'Montserrat', 'Roboto', sans-serif;
+        :global {
+          .ant-collapse-header {
+            padding: 0 !important;
+            display: flex !important;
+            align-items: center !important;
+          }
+        }
+      
+        .resultItem {
+          display: flex;
+          color: $text-color;
+          align-items: center;
+          cursor: pointer;
+          user-select: none;
+
+          &:hover {
+            background: #0A111F;
+          }
+
+          &.header {
+            border-top: none;
+            position: sticky;
+            top: 0;
+            cursor: default;
+            color: #2BDBEA;
+            background: #1C2740 !important;
+            z-index: 1;
+          }
+
+          >* {
+            width: 90px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          & div {
+            padding: 8px;
+          }
+
+          .description {
+            flex: 1;
+          }
+
+          .type {
+            width: 60px;
+          }
+
+          .exchange {
+            width: 80px;
+          }
+
+          .action {
+            width: 20px;
+            position: relative;
+            overflow: visible;
+            text-align: right;
+
+            & svg {
+              position: absolute;
+              top: 50%;
+              right: 8px;
+              width: 16px;
+              height: 16px;
+              transform: translateY(-50%);
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    .loading {
+      background: rgb(0 0 0 / 40%);
+      backdrop-filter: blur(2px);
+    }
+  }
+}

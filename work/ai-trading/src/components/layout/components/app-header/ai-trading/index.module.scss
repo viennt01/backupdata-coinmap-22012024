@@ -1,0 +1,214 @@
+@import '@/styles/color.scss';
+@import '@/styles/mixin.scss';
+
+.appHeader {
+  position: sticky;
+  z-index: 9; //fixed_level 1
+  top: 0;
+  height: 80px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--secondary);
+  .logo {
+    max-height: 40px;
+    cursor: pointer;
+  }
+  .menu {
+    display: none;
+    flex: 1;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-size: 18px;
+    line-height: 24px;
+    color: $WHITE;
+    background: transparent;
+    :global {
+      .ant-menu-item {
+        margin: 0 16px;
+      }
+      .ant-menu-item,
+      .ant-menu-submenu {
+        &::after {
+          border: 0;
+        }
+        &:hover {
+          &::after {
+            border: 0;
+          }
+        }
+      }
+      .ant-menu-item-selected {
+        &::after {
+          border: 0;
+        }
+      }
+    }
+  }
+  .user {
+    display: none;
+    align-items: center;
+    gap: 12px;
+    height: 100%;
+    font-size: 18px;
+    line-height: 24px;
+    cursor: pointer;
+    .registerButton {
+      font-weight: 700;
+      color: var(--on_secondary);
+    }
+    .userEmail {
+      max-width: 200px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      color: var(--on_secondary);
+    }
+    svg {
+      color: var(--on_secondary);
+    }
+  }
+  .language {
+    display: none;
+    cursor: pointer;
+  }
+  .userMenu {
+    .ant-dropdown-menu {
+      padding-top: 100px;
+    }
+  }
+  .menuButton {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    cursor: pointer;
+    color: var(--on_secondary);
+  }
+}
+
+.languageMenu {
+  :global {
+    .ant-dropdown-menu {
+      .ant-dropdown-menu-item {
+        color: var(--on_secondary_darken_1);
+      }
+    }
+  }
+}
+
+.userMenu {
+  :global {
+    .ant-dropdown-menu {
+      min-width: 240px;
+      background: var(--secondary_darken_1);
+      .ant-dropdown-menu-item {
+        font-size: 16px;
+        line-height: 22px;
+        height: 40px;
+        color: var(--on_secondary_darken_1);
+      }
+      .ant-dropdown-menu-item:hover.ant-dropdown-menu-item-active {
+        background-color: var(--primary);
+        color: var(--on_primary);
+      }
+      .ant-dropdown-menu-item:last-child {
+        color: $SUNSET_ORANGE;
+        &:hover.ant-dropdown-menu-item-active {
+          color: $WHITE;
+          background-color: $SUNSET_ORANGE;
+        }
+      }
+    }
+  }
+
+  .userMenuItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.mobileMenuWrapper {
+  .mobileMenuTitle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: var(--on_secondary_darken_1);
+  }
+  :global {
+    .ant-drawer-header {
+      border-bottom: 1px solid $WHITE;
+    }
+    .ant-drawer-wrapper-body {
+      background: var(--secondary_darken_1);
+    }
+  }
+  .mobileMenu {
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--on_secondary_darken_1);
+    background: transparent;
+    :global {
+      .ant-menu-item.ant-menu-item-active:active,
+      .ant-menu-item-selected {
+        background-color: transparent;
+        color: var(--on_secondary_darken_1);
+      }
+    }
+  }
+  .loginButton {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .registerButton {
+    font-weight: 700;
+    color: var(--on_secondary_darken_1);
+    &:hover {
+      color: var(--on_secondary_darken_1);
+    }
+  }
+  .logoutButton {
+    width: 100%;
+  }
+  .userMenuItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--on_secondary_darken_1);
+  }
+}
+
+.flag {
+  display: inline-block;
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  vertical-align: text-top;
+  line-height: 16px;
+  background: url('/images/flag.png') no-repeat;
+}
+.vi {
+  background-position: 0 -384px;
+}
+.en {
+  background-position: 0 -384px;
+}
+
+@include desktop-device {
+  .appHeader {
+    .menu {
+      display: flex;
+    }
+    .user {
+      display: flex;
+    }
+    .language {
+      display: block;
+    }
+    .menuButton {
+      display: none;
+    }
+  }
+}

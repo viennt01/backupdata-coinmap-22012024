@@ -1,0 +1,81 @@
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: false
+        type: string
+      service:
+        required: false
+        type: string
+      build_type:
+        required: true
+        type: string
+        default: docker
+    secrets:
+      envPAT:
+        required: true
+
+env:
+  SERVICE: ${{ inputs.service }}
+
+jobs:
+  # build-react-stockcharts:
+  #   if: contains(github.repository, 'star-flow')
+  #   runs-on: self-hosted
+  #   container: node:14.18.2-alpine
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #       with:
+  #         repository: CoinmapTrading/actions
+  #         token: ${{ secrets.envPAT }}
+  #         path: coinmap-actions
+  #     - uses: ./coinmap-actions/build-react-stockcharts
+
+  build-docker:
+    # needs: [build-react-stockcharts]
+    # if: "!${{ failure() }}"
+    runs-on: self-hosted
+    outputs:
+      build-version: ${{ steps.build.outputs.build-version }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: CoinmapTrading/actions
+          token: ${{ secrets.envPAT }}
+          path: coinmap-actions
+      - id: build
+        uses: ./coinmap-actions/build
+
+  deploy:
+    needs: [build-docker]
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: CoinmapTrading/actions
+          token: ${{ secrets.envPAT }}
+          path: coinmap-actions
+      - id: deploy
+        uses: ./coinmap-actions/deploy
+        with:
+          version: ${{needs.build-docker.outputs.build-version}}
+      - uses: ./coinmap-actions/notification
+        with:
+          version: ${{needs.build-docker.outputs.build-version}}
+          environment: ${{ steps.deploy.outputs.environment }}
+
+  notification:
+    needs: [build-docker,deploy]
+    if: "${{ failure() }}"
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: CoinmapTrading/actions
+          token: ${{ secrets.envPAT }}
+          path: coinmap-actions
+      - uses: ./coinmap-actions/notification
+        with:
+          version: ${{needs.build-docker.outputs.build-version}}
+          environment: ${{ steps.deploy.outputs.environment }}
+          status: "failure"

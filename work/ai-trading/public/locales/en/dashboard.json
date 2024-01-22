@@ -1,0 +1,69 @@
+{
+  "banner": {
+    "pnl_summary": "PNL SUMMARY",
+    "total_balance": "Total Balance",
+    "pnl_today": "Today's PNL"
+  },
+  "bot_list": {
+    "bot_list_notification":{
+      "description_1": "You don't have any A.I TRADING.",
+      "description_2": "Get one on "
+    },
+    "tabs_data": {
+      "title_1": "All",
+      "title_2": "Activated",
+      "title_3": "Not connected",
+      "title_4": "Suspended",
+      "title_5": "Deactivated"
+    },
+    "all_ai": "All A.I",
+    "card_bot_item": {
+      "total_trade": "Total trade",
+      "profit": "Profit",
+      "gain": "Gain",
+      "balance": "Balance",
+      "insufficient_balance": "Not enough balance",
+      "activated": "Activated",
+      "not_activated": "Deactivated",
+      "connecting": "Connecting",
+      "processing": "Processing",
+      "not_connect": "Not connected",
+      "connect_broker": "Connect broker",
+      "disconnected": "Disconnected",
+      "expired": "Expired",
+      "renewal": "Renewal",
+      "inactive_by_system": "Temporarily stopped by the system",
+      "stop_out": "Stop out"
+    }
+  },
+  "expired": {
+    "title": "Expired",
+    "description": "has expired. Please renew a new plan to keep auto trading.",
+    "button": "RENEWAL"
+  },
+  "insufficient_balance": {
+    "title": "Insufficient balance",
+    "description_1": "has stopped working caused by your balance is lower than the minimum requirement. Please keep your balance higher than minimum balance requirement.",
+    "description_2": "",
+    "description_link": "",
+    "description_3": "",
+    "button": "I UNDERSTAND"
+  },
+  "remove-account": {
+    "title": "Remove account",
+    "description_1": "Your Trading Bot will stop auto trade.",
+    "description_2": "Don’t worry, you can add this account to this bot again any time.",
+    "description_highlight": " You can’t login into other account to this bot.",
+    "button": "REMOVE ACCOUNT"
+  },
+  "insufficient_account": {
+    "title": "Insufficient account",
+    "description": "In order to resume utilization of the A.I. Trading services, it is necessary to fulfill the initial registration requirements, including a minimum deposit of",
+    "button": "CONFIRM"
+  },
+  "max_drawdown_warning": {
+    "title": "Maxdrawdown warning",
+    "description": "When you continue to use A.I Trading, the system will reset from scratch according to the amount you currently have.",
+    "button": "DONE"
+  }
+}

@@ -1,0 +1,21 @@
+@import '@/styles/color.scss';
+
+.itemContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  .leftContent {
+    font-weight: 500;
+    color: var(--on_secondary_darken_1);
+  }
+  .rightContent {
+    color: var(--on_secondary_darken_1);
+  }
+  .up {
+    color: $ALGAE;
+  }
+  .down {
+    color: $SUNSET_ORANGE;
+  }
+}

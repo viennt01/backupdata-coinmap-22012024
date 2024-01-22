@@ -1,0 +1,162 @@
+@import '@/styles/color.scss';
+@import '@/styles/mixin.scss';
+
+.tradingBotItem {
+  display: flex;
+  flex-direction: column;
+  min-height: 440px;
+  height: 100%;
+  background-color: $BG_SECONDARY;
+  border-radius: 8px;
+  padding: 24px;
+  position: relative;
+
+  .topContent {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+    .image {
+      border-radius: 50%;
+    }
+    .titleWrapper {
+      flex: 1;
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        color: $PRIMARY;
+        .name {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          .expiredTag {
+            padding: 2px 8px;
+            background: $SUNSET_ORANGE;
+            border-radius: 12px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            color: $WHITE;
+          }
+        }
+        .groupUser {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 22px;
+          color: $BLUE_BELL;
+        }
+      }
+      .currency {
+        color: $WHITE;
+        margin-top: 8px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+  }
+  .midContent {
+    .pnlAndDrawdown {
+      display: flex;
+      justify-content: space-between;
+      .pnlWrapper {
+        .namePnl {
+          font-size: 12px;
+          line-height: 24px;
+          color: $BLUE_BELL;
+        }
+        .valuePnl {
+          font-size: 36px;
+          line-height: 44px;
+          color: $ALGAE;
+          font-weight: 600;
+          margin-bottom: 12px;
+        }
+      }
+      .drawdownWrapper {
+        flex: 1;
+        text-align: right;
+        .nameDrawdown {
+          font-size: 12px;
+          line-height: 24px;
+          color: $BLUE_BELL;
+          padding-bottom: 13px;
+          white-space: nowrap;
+        }
+        .valueDrawdown {
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 24px;
+          color: $WHITE;
+        }
+      }
+    }
+    .featureName {
+      color: $WHITE;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 8px;
+    }
+    .description {
+      color: $WHITE;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 16px;
+      margin-left: 24px;
+      list-style: disc;
+      list-style-position: outside;
+    }
+  }
+  .bottomContent {
+    margin-top: auto;
+    margin-bottom: 0;
+    .buttonMoreDetails {
+      font-size: 16px;
+      line-height: 22px;
+      padding: 0;
+      margin-bottom: 12px;
+      font-weight: 700;
+      color: $PRIMARY;
+    }
+    .priceAndAction {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      @include mobile-device {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .priceAndTime {
+        white-space: nowrap;
+      }
+      .actionButton {
+        @include mobile-device {
+          width: 100%;
+        }
+      }
+    }
+    .price {
+      font-weight: 600;
+      font-size: 48px;
+      color: $METALIC_GOLD_COLOR;
+    }
+    .perTime {
+      display: inline-block;
+      margin-top: -10px;
+      line-height: 59px;
+      vertical-align: top;
+      color: $BLUE_BELL;
+    }
+  }
+}

@@ -1,0 +1,150 @@
+$white: #ffffff;
+$black: #050206;
+$background: #111024;
+$red: #ff0000;
+
+
+.container {
+  height: 100vh;
+  background-color: $background;
+  @media screen and(min-width: 1170px) {
+    min-height: max(100vh, 1080px);
+  }
+  .content {
+    width: 100%;
+    height: 100%;
+    color: $white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 72px;
+
+    .footprintSectionContainer {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      .animation {
+        transition: all;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-out;
+      }
+      .footprintSectionContainerBg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        transition: all;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-out;
+        &::after {
+          content: '';
+          background: linear-gradient(180deg,rgba(0,0,0,.5) 86.99%,#000);
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+        }
+        > picture {
+          opacity: 0;
+          &.active {
+            z-index: 1;
+            opacity: 1;
+          }
+          > img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            object-fit: cover;
+          }
+        }
+      }
+      .footprintSectionContainerMask {
+        clip-path: circle(var(--r) at var(--x) var(--y));
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        transition: all;
+        transition-timing-function: ease-out;
+        > picture {
+          z-index: 0;
+          opacity: 0;
+          &.active {
+            opacity: 1;
+          }
+          > img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            object-fit: cover;
+          }
+        }
+      }
+      .footprintSectionContainerContent {
+        position: absolute;
+        color:$white;
+        font-size: 40px;
+        top: 100px;
+        right: 0;
+        z-index: 2;
+        padding: 24px;
+        max-width: 1423px;
+        margin-left: auto;
+        margin-right: auto;
+        @media screen and(min-width: 1170px) {
+          display: flex;
+          padding: 0;
+          left: 100px;
+        }
+            
+        .title {
+          font-weight: 700;
+          font-size: 32px;
+          line-height: 78px;
+          @media screen and(min-width: 1170px) {
+            margin-right: 170px;
+            font-size: 64px;
+          }
+        }
+
+        .description {
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
+      .footprintSectionContainerPointer {
+        &:focus {
+          outline: none;
+        }
+        cursor: pointer;
+        border: none;
+        outline: none;
+        z-index: 3;
+        border-radius: 50%;
+        color: $black;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        transition: all;
+        transition-timing-function: ease-out;
+        transform: translate3d(calc(var(--x) - 20px), calc(var(--y) - 20px), 0);
+      }
+    }
+   
+  }
+  .imageGroup {
+    width: 100%;
+    height: auto;
+    max-height: 803px;
+    overflow: hidden;
+  }
+}

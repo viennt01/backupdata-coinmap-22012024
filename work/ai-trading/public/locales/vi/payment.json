@@ -1,0 +1,11 @@
+{
+  "payment": "Quản lý thanh toán",
+  "bot": "A.I Trading",
+  "payment_id": "Mã thanh toán",
+  "payment_date": "Ngày thanh toán",
+  "expired_date": "Ngày hết hạn",
+  "expired": "Hết hạn",
+  "amount": "Giá trị",
+  "status": "Trạng thái",
+  "renewal": "Gia hạn"
+}

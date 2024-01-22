@@ -1,0 +1,36 @@
+// @import './header'
+
+
+.cm-container {
+  margin-left: auto;
+  margin-right: auto;
+
+@media (min-width: 640px) {
+  .cm-container  {
+    max-width: 640px;
+  }
+}
+
+}
+@media (min-width: 1170px) {
+  .cm-container {
+    max-width: 1170px;
+  }
+}
+
+.cm-container-v2 {
+  margin-left: auto;
+  margin-right: auto;
+
+@media (min-width: 640px) {
+  .cm-container-v2  {
+    max-width: 640px;
+  }
+}
+
+}
+@media (min-width: 1425px) {
+  .cm-container-v2 {
+    max-width: 1425px;
+  }
+}

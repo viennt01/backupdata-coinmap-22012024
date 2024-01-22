@@ -1,0 +1,132 @@
+.verticleBottom {
+  vertical-align: bottom;
+}
+.logo {
+  margin: 0 30px;
+}
+.headerPlaceholder {
+  height: 70px;
+  transition: all ease-in-out 0.3s;
+
+  &.hide {
+    height: 0;
+  }
+}
+.header {
+  height: 70px;
+  width: 100%;
+  background: #0d1222;
+  position: relative;
+  transition: all ease-in-out 0.3s;
+  position: absolute;
+  top: 0;
+
+  > nav {
+    padding: 0;
+    height: 100%;
+  }
+  &.hide {
+    top: -70px;
+  }
+}
+.itemWrapper {
+  height: 70px;
+  border-left: 1px solid rgba(188, 186, 227, 0.2);
+  align-items: center;
+  display: inline-flex;
+  position: relative;
+
+  // &:last-child {
+  //   border-right: 1px solid rgba(188, 186, 227, 0.2);
+  // }
+}
+.noBorderLeft {
+  border-left: none;
+}
+.menuItem {
+  text-align: center;
+  font-size: 14px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  color: #b6b2ea !important;
+
+  span {
+    display: inline-block;
+    width: 100%;
+    color: #b6b2ea;
+  }
+  .connectStatus {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #13bfe5;
+    line-height: 20px;
+    vertical-align: baseline;
+  }
+  .networkName {
+    width: auto;
+    margin-left: 10px;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: -0.015em;
+    font-weight: 300;
+  }
+  .statusInfo {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.015em;
+    color: #c1c6d8;
+  }
+  .devider {
+    width: 1px;
+    display: inline-block;
+    height: 14px;
+    background: rgba(188, 186, 227, 0.2);
+    vertical-align: middle;
+    margin: 0 3px;
+  }
+  .userName {
+    width: auto;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: right;
+    color: #6f6c99;
+    margin-left: 5px;
+  }
+}
+
+.navCollapse {
+  height: 100%;
+}
+.toggleHeader {
+  display: block;
+  width: 51px;
+  height: 15px;
+  background: rgba(196, 196, 196, 0.1);
+  border: 1px solid #3d3a42;
+  box-sizing: border-box;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  cursor: pointer;
+  backdrop-filter: blur(3px);
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url('../../assets/images/svg/chervlet-up.svg') no-repeat center;
+    transition: all ease-in-out 0.3s;
+  }
+  &.show::after {
+    transform: rotate(180deg);
+  }
+}

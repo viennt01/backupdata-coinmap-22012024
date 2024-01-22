@@ -1,0 +1,35 @@
+@import '@/assets/scss/variables';
+
+.modalBlur {
+  background-color: transparent;
+
+  :global {
+    .ant-modal-content {
+      background: transparent;
+      box-shadow: none;
+    }
+    .ant-modal-footer {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-top: 38px;
+      
+      .ant-btn {
+        height: 56px;
+        line-height: 24px;
+        margin-inline-start: 0 !important;
+
+        svg {
+          vertical-align: text-bottom;
+        }
+      }
+      .ant-btn:first-child {
+        margin-top: 16px;
+      }
+      .ant-btn:last-child {
+        line-height: 24px;
+        font-weight: 700;
+        font-size: 18px;
+      }
+    }
+  }
+}

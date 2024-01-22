@@ -1,0 +1,25 @@
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: false
+        type: string
+      build_type:
+        required: true
+        type: string
+        default: package
+    secrets:
+      envPAT:
+        required: true
+
+jobs:
+  npm-build:
+    runs-on: self-hosted
+    container: node:14.18.2-alpine
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: CoinmapTrading/actions
+          token: ${{ secrets.envPAT }}
+          path: coinmap-actions
+      - uses: ./coinmap-actions/npm-build

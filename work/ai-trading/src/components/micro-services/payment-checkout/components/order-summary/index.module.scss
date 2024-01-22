@@ -1,0 +1,117 @@
+@import '@/styles/mixin.scss';
+@import '@/styles/color.scss';
+
+.container {
+  border-radius: 4px;
+  background: var(--secondary_darken_1);
+  color: var(--on_secondary_darken_1);
+  .horizontalDivider {
+    border-top: 4px solid var(--secondary_darken_2);
+  }
+  .product {
+    padding: 32px 24px 24px;
+    .header {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 29px;
+    }
+    .productTitle {
+      margin-top: 16px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+    }
+    .productImageName {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 24px;
+      .productImage {
+        min-width: 48px;
+        width: 48px;
+        height: 48px;
+        svg {
+          padding: 12px;
+        }
+        border-radius: 50%;
+      }
+      .productName {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--primary);
+      }
+      .productType {
+        margin-top: 4px;
+        text-transform: lowercase;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        &::first-line {
+          text-transform: capitalize;
+        }
+      }
+    }
+    .productDescription {
+      margin-top: 12px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      color: var(--on_secondary_darken_1);
+    }
+  }
+
+  .billDescriptions {
+    padding: 24px;
+    .description {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      font-size: 16px;
+      line-height: 38px;
+      .descriptionLabel {
+        font-weight: 600;
+        white-space: nowrap;
+      }
+      .descriptionValue {
+        font-weight: 500;
+        &.discountColor {
+          color: $ALGAE;
+        }
+        .currencyWrapper {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          .currencyImage {
+            display: block;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: $JET_GREY;
+          }
+        }
+      }
+    }
+  }
+  .totalBill {
+    padding: 24px 24px 32px 24px;
+    .totalPrice {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .total {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 24px;
+      }
+      .price {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: right;
+        color: var(--on_price);
+      }
+    }
+  }
+}

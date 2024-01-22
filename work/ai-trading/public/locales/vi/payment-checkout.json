@@ -1,0 +1,35 @@
+{
+  "checkout": "Thanh toán",
+  "guide_main": "Vui lòng chuyển khoản đến địa chỉ ví bên dưới để hoàn tất thanh toán",
+  "guide_sub_1": "Vui lòng thanh toán hóa đơn này sau",
+  "guide_sub_2": "Sau thời gian trên, nếu không thanh toán đầy đủ, hóa đơn sẽ tự động bị hủy.",
+  "guide_qr_code": "Quét mã QR này hoặc sao chép và dán chi tiết thanh toán vào ví của bạn",
+  "total_payment": "Tổng tiền",
+  "payment_note": "Hãy chắc chắn rằng bạn chuyển đủ số tiền bao gồm cả phí giao dịch!",
+  "policy": {
+    "agree_to": "Bằng cách xử lý thanh toán, bạn đồng ý với",
+    "according_to": "Thanh toán sẽ được xử lý riêng bằng Coinpayments theo",
+    "and": "và",
+    "our_policy": "Chính sách của chúng tôi",
+    "user_agreement": "Thỏa thuận người dùng",
+    "privacy_policy": "Chính sách bảo mật"
+  },
+  "customer_support": "Hỗ trợ khách hàng",
+  "order_summary": {
+    "title": "Chi tiết đơn hàng",
+    "product": "Sản phẩm",
+    "payment_id": "ID đơn hàng",
+    "billing_cycle": "Chu kỳ",
+    "month": "tháng",
+    "price": "Giá tiền",
+    "payment_method": "Phương thức",
+    "discount": "Giảm giá",
+    "you_saved": "Tiết kiệm",
+    "total": "Tổng"
+  },
+  "timeout": {
+    "title": "Đã hết hạn thanh toán",
+    "description": "Vui lòng trở lại trang mua hàng và tạo thanh toán mới.",
+    "go_to_market": "ĐI ĐẾN TRANG MUA HÀNG"
+  }
+}

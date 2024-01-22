@@ -1,0 +1,45 @@
+.colorWrapper {
+  display: inline-block;
+  position: relative;
+
+  &.disabledPicker {
+    opacity: 0.55;
+    cursor: default;
+  }
+
+  .colorMask {
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 22px;
+    height: 4px;
+    border-radius: 2px;
+    z-index: 1;
+  }
+}
+
+.customTooltip {
+  z-index: 10000;
+  user-select: none;
+
+  :global {
+    .tooltip-inner {
+      background: transparent;
+      padding: 0;
+    }
+
+    .tooltip-arrow::before {
+      border-top-color: #fff;
+    }
+  }
+
+  .presetWrapper {
+    padding: 14px 0 14px 14px;
+    background: #fff;
+    border-top: 1px solid #eee;
+  }
+}
+
+
+

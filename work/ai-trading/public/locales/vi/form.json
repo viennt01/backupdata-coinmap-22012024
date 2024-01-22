@@ -1,0 +1,80 @@
+{
+  "label": {
+    "email":"Email",
+    "password":"Mật khẩu",
+    "change_password":"Thay đổi mật khẩu",
+    "current_password":"Mật khẩu",
+    "new_password":"Mật khẩu mới",
+    "repeat_password":"Nhập lại mật khẩu",
+    "first_name":"Tên",
+    "last_name":"Họ",
+    "country":"Quốc gia",
+    "phone":"Điện thoại",
+    "gender": "Giới tính",
+    "male": "Nam",
+    "female": "Nữ",
+    "others": "Khác",
+    "year_of_birth":"Năm sinh",
+    "broker": "Broker",
+    "server": "Server",
+    "id": "ID",
+    "balance": "Số dư giao dịch",
+    "platform": "Nền tảng",
+    "profile": "Hồ sơ",
+    "upload": "Tải lên"
+  },
+  "placeholder": {
+    "email":"account@email.com",
+    "password":"Mật khẩu",
+    "current_password":"Mật khẩu hiện tại",
+    "repeat_password":"Nhập lại mật khẩu",
+    "first_name":"Tên",
+    "last_name":"Họ",
+    "country":"Quốc gia",
+    "phone":"Điện thoại",
+    "year_of_birth":"yyyy",
+    "broker": "Chọn broker",
+    "server": "Chọn server",
+    "id": "ID",
+    "balance_range": "Chọn phạm vị số dư",
+    "balance": "Nhập số dư giao dịch của bạn",
+    "platform": "Chọn nền tảng",
+    "profile": "Chưa chọn tệp"
+  },
+  "message_error_required": {
+    "email":"Vui lòng nhập email",
+    "password": "Vui lòng nhập mật khẩu",
+    "current_password": "Vui lòng nhập mật khẩu hiện tại",
+    "repeat_password": "Vui lòng nhập lại mật khẩu",
+    "first_name": "Vui lòng nhập tên",
+    "last_name": "Vui lòng nhập họ",
+    "gender": "Vui lòng chọn giới tính",
+    "country": "Vui lòng chọn quốc gia",
+    "phone": "Vui lòng nhập số điện thoại",
+    "year_of_birth": "Vui lòng nhập năm sinh",
+    "broker": "Vui lòng chọn broker",
+    "server": "Vui lòng chọn server",
+    "id": "Vui lòng nhập ID",
+    "payment_method": "Vui lòng chọn phương thức thanh toán",
+    "package": "Vui lòng chọn gói",
+    "balance_range": "Vui lòng chọn phạm vi số dư",
+    "balance": "Vui lòng nhập số dư giao dịch của bạn",
+    "balance_out_of_range": "Số dư ngoài phạm vi",
+    "platform": "Vui lòng chọn nền tảng",
+    "profile": "Vui lòng tải lên tệp hồ sơ"
+  },
+  "message_error_pattern": {
+    "email": "Email không đúng định dạng",
+    "password": "Phải có ít nhất 8 ký tự, một ký tự in hoa, một ký tự thường, một chữ số và một ký tự đặc biệt",
+    "phone": "Số điện thoại không hợp lệ"
+  },
+  "message_error_validator": {
+    "password": "Lặp lại mật khẩu mới không trùng khớp",
+    "confirm_rule": "Bạn chưa đồng ý"
+  },
+  "button": {
+    "save": "Lưu",
+    "cancle": "Hủy bỏ",
+    "connect": "Kết nối"
+  }
+}

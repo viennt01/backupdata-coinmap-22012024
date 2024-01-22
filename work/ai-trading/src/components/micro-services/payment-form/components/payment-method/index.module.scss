@@ -1,0 +1,96 @@
+@import '@/styles/mixin.scss';
+@import '@/styles/color.scss';
+
+.header {
+  margin-bottom: 38px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: var(--on_secondary_darken_2);
+}
+.content {
+  .warning {
+    align-items: flex-start;
+    padding: 0;
+    margin-bottom: 12px;
+    border: none;
+    background: transparent;
+    span {
+      margin-right: 24px;
+      margin-left: -2px;
+      font-size: 20px;
+      color: $SAFFRON_MANGO;
+    }
+    div {
+      font-size: 14px;
+      line-height: 17px;
+      color: $SAFFRON_MANGO;
+    }
+  }
+  .buyCurrency {
+    :global {
+      .ant-form-item-explain-error {
+        border-top: 1px solid $SUNSET_ORANGE;
+        padding-top: 4px;
+      }
+    }
+    .groupSelect {
+      width: 100%;
+    }
+  }
+  .groupItem {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    cursor: pointer;
+    :global {
+      .ant-radio-inner {
+        background-color: var(--secondary_lighten_1);
+      }
+      .ant-radio-checked .ant-radio-inner {
+        background-color: var(--primary);
+      }
+    }
+    &:not(:first-child) {
+      padding: 20px 0;
+      border-top: 1px solid $MUTED;
+    }
+    & > :nth-child(2) {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      color: var(--on_secondary_darken_2);
+    }
+    .info {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      gap: 16px;
+      .name {
+        font-weight: 600;
+        line-height: 22px;
+      }
+    }
+    .network {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: right;
+    }
+  }
+}
+
+@include desktop-device {
+  .content {
+    padding-left: 80px;
+    .groupItem {
+      .info {
+        flex: 1;
+        padding-left: 70px;
+        padding-right: 24px;
+      }
+    }
+  }
+}

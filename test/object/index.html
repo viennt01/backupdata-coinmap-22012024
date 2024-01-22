@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <canvas id="c" width="800" height="900"></canvas>
+    <script>
+        let vd1 = {
+            rectangle
+                :
+            {
+                enable: false,
+                age: "10"
+            },
+            text
+                :
+                { enable: false },
+            trend_line
+                :
+                { enable: false },
+            triangle
+                :
+                { enable: false },
+        }
+        let vd2 = {
+            rectangle
+                :
+            {
+                enable: false,
+                age: "11"
+            },
+            text
+                :
+                { enable: false },
+            trend_line
+                :
+                { enable: false },
+            triangle
+                :
+                { enable: false },
+        }
+        let draws = {
+            btc: {
+                rectangle
+                    :
+                {
+                    enable: false,
+                    age: "10"
+                },
+                text
+                    :
+                    { enable: false },
+                trend_line
+                    :
+                    { enable: false },
+                triangle
+                    :
+                    { enable: false },
+            },
+            vnd: {
+                rectangle
+                    :
+                {
+                    enable: false,
+                    age: "10"
+                },
+                text
+                    :
+                    { enable: false },
+                trend_line
+                    :
+                    { enable: false },
+                triangle
+                    :
+                    { enable: false },
+            }
+        }
+
+        console.log("draws: ", draws);
+
+        const a = {...vd1, ...vd2}
+        console.log(a);
+        // draws.rectangle.enable = true
+        // console.log("draws[rectangle]: ", draws.rectangle.enable);
+        // console.log("draws: ", draws.rectangle);
+
+        // Object.keys(draws).forEach((item) => {
+        //     // console.log(item);
+        //     console.log(draws[item].enable);
+        //     // draws.item.enable = true
+        //     // draws[item]
+        //     draws[item].enable = true
+        // })
+        // console.log("draws: ", draws);
+
+        // draws[rectangle]
+        const chart = state.charts[action.chartId];
+      if (!chart) {
+        return state;
+      }
+      const drawsa = { ...(chart.draws || {}) };
+      const existedDraw = draws[action.drawType];
+      if (existedDraw) {
+        draws[action.drawType] = {
+          ...draws[action.drawType],
+          enable: false,
+          showModal: false,
+          data: action.data,
+          ...(action.otherData || {}),
+        };
+      }
+
+      return {
+        ...state,
+        charts: {
+          ...state.charts,
+          [action.chartId]: {
+            ...chart,
+            draws,
+          },
+        },
+      };
+    </script>
+
+</body>
+
+</html>

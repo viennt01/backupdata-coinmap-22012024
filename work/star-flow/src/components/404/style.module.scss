@@ -1,0 +1,23 @@
+.container404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+
+  .imageContainer {
+    margin-bottom: 32px;
+  }
+  .btnContainer {
+    button {
+      border: 1px solid #414B5F;
+      border-radius: 4px;
+      color: #FFFFFF;
+      background-color: #14C8D8;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 28px;
+      padding: 11px 70px;
+    }
+  }
+}

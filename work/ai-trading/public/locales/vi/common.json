@@ -1,0 +1,17 @@
+{
+  "login": "Đăng nhập",
+  "signup": "Đăng ký",
+  "logout": "Đăng xuất",
+  "dashboard": "Dashboard",
+  "language": "Ngôn ngữ",
+  "year": "Năm",
+  "required": "Yêu cầu",
+  "yes": "Có",
+  "no": "Không",
+  "history_transition": "Lịch sử giao dịch",
+  "detail_trading_ai": "Chi tiết A.I Trading",
+  "report_backtest": "Báo cáo dữ liệu trong quá khứ",
+  "back_to_login": "Đăng nhập",
+  "disclaimer": "Chúng tôi sẽ không chia sẻ thông tin cá nhân của bạn trong bất kỳ trường hợp nào với các cá nhân hoặc tổ chức khác mà không có sự cho phép của bạn, bao gồm các tổ chức công cộng, các tập đoàn hoặc cá nhân, trừ khi áp dụng theo quy định pháp luật.",
+  "confirm_text": "Bạn có chắc chắn để làm điều này?"
+}

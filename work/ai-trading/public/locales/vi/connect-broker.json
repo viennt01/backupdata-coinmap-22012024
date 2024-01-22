@@ -1,0 +1,15 @@
+{
+  "connection": "Kết nối",
+  "requirements": "Yêu cầu",
+  "terms": "Điều khoản",
+  "conditions": "Quy tắc",
+  "policy_1": "Kết nối tài khoản đồng nghĩa với việc bạn đã đọc và đồng ý với",
+  "policy_2": "và từ chối trách nhiệm của MetaAPI",
+  "dont_have_account": "Nếu chưa có tài khoản",
+  "register_here": "đăng ký tại đây",
+  "profile_guide": {
+    "description": "Tải lên tệp hồ sơ MT4 hoặc MT5. Nếu bạn chưa có tệp hồ sơ, hãy xem các hướng dẫn sau đây",
+    "get_mt4_profile_guide": "Cách để lấy tệp hồ sơ MT4",
+    "get_mt5_profile_guide": "Cách để lấy tệp hồ sơ MT5"
+  }
+}

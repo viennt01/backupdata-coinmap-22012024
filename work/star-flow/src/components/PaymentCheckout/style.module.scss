@@ -1,0 +1,224 @@
+.page {
+  flex: 1;
+  font-family: 'Montserrat';
+  font-style: normal;
+  color: #FFFFFF;
+  background: #111024;
+
+  :global {
+    .ant-col {
+      font-family: 'Montserrat';
+      font-style: normal;
+    }
+  }
+
+  .container {
+    padding: 24px;
+
+    .title {
+      margin-bottom: 48px;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 59px;
+      color: #FFFFFF;
+    }
+
+    .leftContent {
+      .guideMain {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+      }
+
+      .guideSub {
+        margin-top: 16px;
+        font-size: 16px;
+        line-height: 22px;
+
+        .countDown {
+          display: inline;
+
+          div {
+            display: inline;
+            font-size: 16px;
+            line-height: 22px;
+            color: #FF5757;
+          }
+        }
+      }
+
+      .paymentInfoWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 36px;
+        gap: 24px;
+
+        .qrCodeSkeleton {
+          width: 100%;
+          height: 100%;
+          border-radius: 0;
+          background: #616887;
+        }
+
+        .paymentInfo {
+          flex: 1;
+          width: 100%;
+
+          .guideline {
+            font-style: italic;
+            font-size: 16px;
+            line-height: 22px;
+          }
+
+          .walletId {
+            margin-top: 16px;
+            border: 1px solid transparent;
+            border-radius: 2px;
+            background: #151424;
+            box-shadow: none;
+
+            &:hover {
+              border: 1px solid #494762;
+            }
+
+            &:focus {
+              border: 1px solid #8F9BCE;
+            }
+
+            input {
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              font-size: 16px;
+              line-height: 22px;
+              color: #8F9BCE;
+              background: transparent;
+            }
+
+            .copyIcon {
+              width: 24px;
+              height: 24px;
+              color: #FFFFFF;
+
+              &:hover {
+                cursor: pointer;
+                color: #31AFFE;
+              }
+            }
+          }
+
+          .amountInfo {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 4px;
+            margin-top: 32px;
+            font-size: 24px;
+            line-height: 24px;
+
+            .amountWrapper {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+
+              .currencyImage {
+                display: block;
+                min-width: 24px;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                background: #616887;
+              }
+            }
+          }
+        }
+      }
+
+      .warning {
+        align-items: flex-start;
+        padding: 0;
+        margin-top: 26px;
+        border: none;
+        background: transparent;
+
+        span {
+          margin-right: 24px;
+          margin-left: -2px;
+          font-size: 20px;
+          color: #FFC657;
+        }
+
+        div {
+          font-size: 14px;
+          line-height: 17px;
+          color: #FFC657
+        }
+      }
+
+      .policy {
+        margin-top: 40px;
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+
+
+    .rightContent .support {
+      display: none;
+    }
+
+    .support {
+      margin-top: 24px;
+      text-align: center;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    .anchorButton {
+      display: inline;
+      padding: 0;
+      font-size: 16px;
+      line-height: 22px;
+      color: #31AFFE;
+    }
+  }
+}
+
+@media (min-width: 1170px) {
+  .page .container {
+    padding: 52px 32px;
+
+    .title {
+      padding-left: 32px;
+    }
+
+    .leftContent {
+      padding-left: 32px;
+
+      .paymentInfoWrapper {
+        flex-direction: row;
+
+        img {
+          width: 156px;
+        }
+      }
+
+      .support {
+        display: none;
+      }
+    }
+
+    .verticalDivider {
+      height: 100%;
+      width: 0;
+      padding-left: 32px;
+      border-right: 1px solid #616887;
+      opacity: 0.5;
+    }
+
+    .rightContent .support {
+      display: block;
+    }
+  }
+}

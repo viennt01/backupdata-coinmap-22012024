@@ -1,0 +1,90 @@
+@import '@/styles/color.scss';
+@import '@/styles/mixin.scss';
+
+.connectBrokerContainer {
+  max-width: 490px;
+  margin: 0 auto;
+  .title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    color: var(--on_secondary_darken_2);
+  }
+  :global {
+    .ant-form-item {
+      margin-bottom: 38px;
+    }
+  }
+  .descriptionContainer {
+    margin-bottom: 54px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--on_secondary_darken_2);
+    .shortDescription {
+      margin-bottom: 24px;
+    }
+    .description {
+      list-style-type: disc;
+      list-style-position: outside;
+      margin-left: 24px;
+      li {
+        color: var(--on_secondary_darken_2);
+      }
+    }
+  }
+  .brokerInputDescription {
+    font-size: 12px;
+    line-height: 15px;
+    margin: -24px 12px 24px;
+    color: var(--on_secondary_darken_2);
+    .anchor {
+      color: var(--primary);
+      cursor: pointer;
+    }
+  }
+  .submitBtnContainer {
+    margin-top: 48px;
+    margin-bottom: 24px;
+  }
+  .policyContainer {
+    padding-bottom: 64px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--on_secondary_darken_2);
+    a {
+      color: var(--primary);
+    }
+  }
+}
+
+.profileTutorial :global {
+  font-size: 12px;
+  p {
+    margin-bottom: 4px;
+  }
+  span {
+    display: inline-block;
+    margin: 4px 0;
+    color: var(--primary) !important;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.guideVideo :global {
+  width: 80vw;
+  min-height: 100vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include mobile-device {
+    width: 100vw;
+    padding: 0 16px;
+  }
+}

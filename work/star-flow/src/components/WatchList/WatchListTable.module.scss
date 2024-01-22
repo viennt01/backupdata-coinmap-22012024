@@ -1,0 +1,142 @@
+$table-header-height: 42px;
+$table-header-color-background: #0C122A;
+$table-header-color-text: #AEAEAE;
+$table-td-red-text: #B33524;;
+$table-td-green-text: #14C8D8;
+$table-th-sort-color: #F5A623;
+
+.watchListTable {
+  font-size: 13px;
+
+  // css auto scroll for table body
+  tbody {
+    display: block;
+    width: 100%;
+  }
+
+  thead,
+  tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  thead {
+    position: absolute;
+    z-index: 1;
+    width: calc(100%);
+    border-bottom: 1px solid #263048;
+    background-color: $table-header-color-background;
+  }
+
+  tbody {
+    margin-top: $table-header-height;
+  }
+
+  // css for data table
+  thead tr {
+    height: $table-header-height;
+
+    th {
+      color: $table-header-color-text;
+      padding: 0 8px !important;
+
+      .dataTableHeaderItem {
+        display: inline-flex;
+        align-items: center;
+        width: fit-content;
+        gap: 8px;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        .dataTableHeaderSortGroup {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          color: $table-header-color-text;
+
+          .colorSorted {
+            color: $table-th-sort-color;
+          }
+        }
+      }
+    }
+  }
+
+  tbody tr {
+    cursor: pointer;
+
+    &.cursorLoading {
+      cursor: progress;
+    }
+
+    &:hover {
+      background: #263048;
+
+      .deleteIcon {
+        display: inline-block;
+      }
+    }
+
+    td {
+      padding: 8px;
+      position: relative;
+      overflow: hidden;
+      user-select: none;
+
+      .deleteIcon {
+        display: none;
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        width: 16px;
+        height: 16px;
+        transform: translateY(-50%);
+        color: $table-header-color-text;
+        cursor: pointer;
+      }
+
+      .increaseColor {
+        color: $table-td-green-text;
+      }
+
+      .decreaseColor {
+        color: $table-td-red-text;
+      }
+    }
+  }
+
+  .symbol {
+    width: 25%;
+    color: $table-header-color-text;
+  }
+
+  .exchange {
+    width: 20%;
+    color: $table-header-color-text;
+  }
+
+
+  .last {
+    width: auto;
+  }
+
+  .change {
+    width: auto;
+  }
+
+  .changePercentage {
+    width: auto;
+  }
+
+  .volume {
+    width: auto;
+    color: $table-header-color-text;
+  }
+
+  .action {
+    width: 30px;
+  }
+}

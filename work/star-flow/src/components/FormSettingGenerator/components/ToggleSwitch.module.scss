@@ -1,0 +1,47 @@
+.toggleSwitch {
+  display: flex;
+  height: 36px;
+  align-items: center;
+  gap: 12px;
+
+  input[type=checkbox] {
+    display: none;
+  }
+
+  label {
+    text-indent: -9999px;
+    display: block;
+    position: relative;
+    width: 28px;
+    height: 16px;
+    background: #414B5F;
+    border-radius: 16px;
+    cursor: pointer;
+  }
+
+  label:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 1.5px;
+    width: 13px;
+    transform: translateY(-50%);
+    height: 13px;
+    background: #fff;
+    border-radius: 13px;
+    transition: 0.2s;
+  }
+
+  input:checked+label {
+    background: #14C8D8;
+  }
+
+  input:checked+label:after {
+    left: calc(100% - 1.5px);
+    transform: translate(-100%, -50%);
+  }
+
+  label:active:after {
+    width: 13px;
+  }
+}

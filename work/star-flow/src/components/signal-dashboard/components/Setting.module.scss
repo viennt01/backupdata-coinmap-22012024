@@ -1,0 +1,50 @@
+.setting {
+  width: 344px;
+  padding: 12px 4px 14px;
+
+  .formTitle {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 600;
+    margin-bottom: 32px;
+  }
+
+  label .formTitle {
+    margin-bottom: 0;
+  }
+
+  :global {
+    .ant-form-item .ant-form-item-label {
+      height: auto;
+
+      label {
+        height: auto;
+        vertical-align: sub;
+      }
+    }
+
+    .ant-form-item-control-input-content {
+      text-align: right;
+    }
+
+    .ant-switch {
+      min-width: 44px;
+      height: 22px;
+
+      .ant-switch-handle {
+        width: 18px;
+        height: 18px;
+      }
+
+      &.ant-switch-checked .ant-switch-handle {
+        inset-inline-start: calc(100% - 20px);
+      }
+    }
+  }
+
+  .description {
+    white-space: pre-wrap !important;
+    color: #8f9bce;
+    font-size: 12px;
+  }
+}

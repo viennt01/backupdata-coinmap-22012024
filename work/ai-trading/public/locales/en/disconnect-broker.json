@@ -1,0 +1,6 @@
+{
+ "title": "Disconnect broker",
+ "description_1": "The A.I Trading strategy will stop trading automatically on this account.",
+ "description_2": "Don't worry, you can reconnect with our trading strategy anytime.",
+ "button": "Disconnect"
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <canvas id="canvas" width="800" height="900"></canvas>
+    <script>
+        var canvas = document.getElementById("canvas");
+        console.log(canvas);
+        var ctx = canvas.getContext("2d");
+        canvas.offsetLeft = 100
+        var hexPath = new Path2D();
+        hexPath.lineTo(40, 10);
+        hexPath.lineTo(75, 0);
+        hexPath.lineTo(100, 43);
+        // hexPath.lineTo(75, 86);
+        // hexPath.lineTo(25, 86);
+        // hexPath.lineTo(0, 43);
+
+
+        function draw(hover) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = hover ? 'blue' : 'red';
+            ctx.fill(hexPath);
+        }
+
+        canvas.onmousemove = function (e) {
+            var x = e.clientX - canvas.offsetLeft, y = e.clientY - canvas.offsetTop;
+            console.log(canvas.offsetLeft);
+            var hover = ctx.isPointInPath(hexPath, x, y)
+            draw(hover)
+        };
+        draw();
+
+    </script>
+
+</body>
+
+</html>

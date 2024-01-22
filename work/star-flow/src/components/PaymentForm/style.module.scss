@@ -1,0 +1,99 @@
+.page {
+  flex: 1;
+  font-family: 'Montserrat';
+  font-style: normal;
+  color: #FFFFFF;
+  background: #111024;
+
+  :global {
+    .ant-col {
+      font-family: 'Montserrat';
+      font-style: normal;
+    }
+  }
+
+  .container {
+    padding: 24px;
+
+    .title {
+      margin-bottom: 48px;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 59px;
+      color: #FFFFFF;
+    }
+
+    .leftContent {
+      .getItButton {
+        margin-top: 64px;
+      }
+      .cancelButton {
+        margin-top: 24px;
+      }
+    }
+
+    .rightContent {
+      .getItButton,
+      .cancelButton {
+        display: none;
+      }
+    }
+
+    .getItButton {
+      width: 100%;
+      height: 56px;
+      margin-top: 24px;
+      color: #FFFFFF;
+      background: #FE842B;
+    }
+
+    .cancelButton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      width: 100%;
+      height: 56px;
+      margin-top: 24px;
+      font-family: 'Montserrat';
+      font-weight: 700;
+      font-size: 18px;
+      color: #FFFFFF;
+    }
+  }
+}
+
+
+@media (min-width: 1170px) {
+  .page .container {
+    padding: 52px 32px;
+
+    .title {
+      padding-left: 32px;
+    }
+
+    .leftContent {
+      padding-left: 32px;
+
+      .getItButton,
+      .cancelButton {
+        display: none;
+      }
+    }
+
+    .verticalDivider {
+      height: 100%;
+      width: 0;
+      padding-left: 32px;
+      border-right: 1px solid #616887;
+      opacity: 0.5;
+    }
+
+    .rightContent {
+      .getItButton,
+      .cancelButton {
+        display: flex;
+      }
+    }
+  }
+}

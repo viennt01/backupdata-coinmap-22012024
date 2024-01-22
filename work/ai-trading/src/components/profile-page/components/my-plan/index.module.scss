@@ -1,0 +1,155 @@
+@import '@/styles/color.scss';
+@import '@/styles/mixin.scss';
+
+.title {
+  margin-bottom: 48px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  color: var(--on_secondary_darken_2);
+  .planNumber {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.planItemContainer {
+  display: flex;
+  width: 100%;
+  margin-bottom: 32px;
+  gap: 16px;
+  @include mobile-device {
+    flex-direction: column;
+  }
+  .planItemContentContainer {
+    background-color: var(--secondary_darken_1);
+    border-radius: 4px;
+    padding: 24px;
+    display: flex;
+    flex: 1;
+    max-width: 1920px;
+    justify-content: space-between;
+    gap: 58px;
+    @include mobile-device {
+      flex-direction: column;
+      gap: 16px;
+    }
+    .leftContentContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .leftWrapper {
+        display: flex;
+        gap: 12px;
+      }
+      .itemName {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        color: var(--primary);
+        margin-bottom: 12px;
+      }
+      .description {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: var(--on_secondary_darken_1);
+      }
+    }
+    .rightContentContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+      @include mobile-device {
+        align-items: flex-start;
+      }
+      .rightWrapper {
+        margin-bottom: 54px;
+        display: flex;
+        @include mobile-device {
+          margin-bottom: 32px;
+        }
+        .price {
+          font-weight: 600;
+          font-size: 48px;
+          line-height: 59px;
+          color: var(--on_price);
+        }
+        .perTime {
+          margin-top: 12px;
+          font-size: 16px;
+          line-height: 22px;
+          color: var(--on_secondary_darken_1);
+        }
+      }
+      .actionButton {
+        @include mobile-device {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .planItemTimeContainer {
+    background-color: var(--secondary_darken_1);
+    border-radius: 4px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include mobile-device {
+      display: none;
+    }
+    .textContainer {
+      margin-bottom: 10px;
+      .textTitle {
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--on_secondary_darken_1);
+        &.expired {
+          color: $SUNSET_ORANGE;
+        }
+      }
+      .textDate {
+        color: var(--on_secondary_darken_1);
+      }
+    }
+    .goToMarketplace {
+      font-size: 16px;
+      line-height: 22px;
+      color: var(--primary);
+      cursor: pointer;
+    }
+  }
+  .planItemTimeContainerMobile {
+    display: none;
+    @include mobile-device {
+      display: block;
+    }
+    .textContainer {
+      margin-bottom: 10px;
+      .textTitle {
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--on_secondary_darken_1);
+        &.expired {
+          color: $SUNSET_ORANGE;
+        }
+      }
+      .textDate {
+        color: var(--on_secondary_darken_1);
+      }
+    }
+    .goToMarketplace {
+      font-size: 16px;
+      line-height: 22px;
+      color: var(--primary);
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+$white: #ffffff;
+$black: #050206;
+$background: #111024;
+$blueGray: hsl(229, 16%, 45%);
+$backgroundLight: #1d1c32;
+$orange: #fe842b;
+$purple: #b02bfe;
+$blue: #31affe;
+$red: #ff5757;
+$white: #ffffff;
+$gray: #8f9bce;
+$green: #52b16f;
+
+.tradingBotContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0 16px;
+  .containerAxi {
+    position: relative;
+    padding-bottom: 20px;
+    cursor: pointer;
+  }
+  .buttonCreateAccount {
+    position: absolute;
+    color: #fc404d;
+    background-color: $white;
+    size: 16px;
+    font-weight: 700;
+    top: 30%;
+    right: 20px;
+  }
+  .tradingBotItemWrapper {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+}
+
+@media (min-width: 1170px) {
+  .tradingBotContainer {
+    margin: 0 8px;
+    .tradingBotItemWrapper {
+      display: inline-block;
+      width: 33.333333%;
+      padding-left: 8px;
+      padding-right: 8px;
+      margin-bottom: 16px;
+    }
+  }
+}

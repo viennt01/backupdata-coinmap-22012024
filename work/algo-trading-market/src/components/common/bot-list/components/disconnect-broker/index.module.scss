@@ -1,0 +1,36 @@
+@import '@/styles/color.scss';
+
+.removeAccountContainer {
+  color: $WHITE;
+  max-width: 492px;
+  margin: 84px auto;
+  .icon {
+    border-radius: 50%;
+    color: $DARK;
+    background-color: $SUNSET_ORANGE;
+    font-size: 32px;
+  }
+  .contentContainer {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 48px;
+    .highlightText {
+      color: $SAFFRON_MANGO;
+    }
+  }
+  .actionButton {
+    width: 100%;
+    height: 56px;
+    background-color: $SUNSET_ORANGE;
+    &:hover {
+      box-shadow: 16px 20px 40px rgba($color: $SUNSET_ORANGE, $alpha: 0.5);
+    }
+    &:active {
+      box-shadow: 16px -20px 40px rgba($color: $SUNSET_ORANGE, $alpha: 0.5);
+    }
+    &:disabled {
+      background-color: $SUNSET_ORANGE;
+    }
+  }
+}

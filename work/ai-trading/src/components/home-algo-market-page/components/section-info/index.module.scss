@@ -1,0 +1,77 @@
+@import '@/styles/color.scss';
+@import '@/styles/mixin.scss';
+
+.section {
+  padding: 40px 0 40px;
+  color: $BLACK;
+  background: $SOFT_BLUE;
+  background-size: cover;
+  .row {
+    flex-direction: column-reverse;
+  }
+  .title {
+    margin-bottom: 36px;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 72px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $BLACK;
+  }
+  .topDesc {
+    font-size: 18px;
+    line-height: 27px;
+    color: $BLACK;
+  }
+  .desc {
+    margin-top: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $BLACK;
+  }
+  ul {
+    margin-bottom: 32px;
+    padding-left: 30px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: $BLACK;
+  }
+  .btn {
+    height: 54px;
+  }
+  .imgCol {
+    text-align: center;
+    .img {
+      max-width: 100%;
+      max-height: 664px;
+      height: auto;
+      width: auto;
+      margin-left: auto;
+    }
+  }
+}
+
+@include desktop-device {
+  .section {
+    padding: 113px 0 113px;
+    background-size: 100% auto;
+    .row {
+      flex-direction: row;
+    }
+    .title {
+      font-size: 64px;
+      line-height: 72px;
+    }
+    .imgCol {
+      text-align: right;
+      img {
+        margin-top: 0;
+      }
+    }
+    ul {
+      margin-bottom: 92px;
+    }
+  }
+}

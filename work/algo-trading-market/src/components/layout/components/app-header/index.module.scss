@@ -1,0 +1,205 @@
+@import '@/styles/_base.scss';
+
+.appHeader {
+  position: sticky;
+  z-index: 9; //fixed_level 1
+  top: 0;
+  height: 72px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  background: $PRIMARY_DARK;
+  .logo {
+    max-height: 44px;
+    cursor: pointer;
+  }
+  .menu {
+    display: none;
+    flex: 1;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-size: 18px;
+    line-height: 24px;
+    color: $WHITE;
+    border-bottom: none;
+    background: transparent;
+    :global {
+      .ant-menu-item {
+        margin: 0 16px;
+      }
+      .ant-menu-item,
+      .ant-menu-submenu {
+        &::after {
+          border: 0;
+        }
+        &:hover {
+          &::after {
+            border: 0;
+          }
+        }
+      }
+      .ant-menu-item-selected {
+        &::after {
+          border: 0;
+        }
+      }
+    }
+  }
+  .user {
+    display: none;
+    align-items: center;
+    gap: 12px;
+    height: 100%;
+    font-size: 18px;
+    line-height: 24px;
+    color: $WHITE;
+    cursor: pointer;
+    .loginButton,
+    .dashboardButton {
+      background: $WHITE;
+      color: $PRIMARY_DARK;
+      font-weight: 700;
+    }
+    .registerButton {
+      font-weight: 700;
+    }
+    .userEmail {
+      max-width: 200px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+  .userMenu {
+    .ant-dropdown-menu {
+      padding-top: 100px;
+    }
+  }
+  .menuButton {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+    cursor: pointer;
+  }
+}
+
+.userMenu {
+  :global {
+    .ant-dropdown-menu {
+      min-width: 240px;
+      background: #0e1829;
+      .ant-dropdown-menu-item {
+        font-size: 16px;
+        line-height: 22px;
+        height: 40px;
+        color: $WHITE;
+      }
+      .ant-dropdown-menu-item:hover.ant-dropdown-menu-item-active {
+        background-color: $PRIMARY;
+      }
+      .ant-dropdown-menu-item:last-child {
+        color: $SUNSET_ORANGE;
+        &:hover.ant-dropdown-menu-item-active {
+          color: $WHITE;
+          background-color: $SUNSET_ORANGE;
+        }
+      }
+    }
+  }
+
+  .userMenuItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.mobileMenuWrapper {
+  .mobileMenuTitle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    .title {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      .userEmail {
+        max-width: 200px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+    .closeDrawer {
+      margin-left: auto;
+      color: $WHITE;
+    }
+  }
+  :global {
+    .ant-drawer-header {
+      border-bottom: 1px solid $WHITE;
+    }
+    .ant-drawer-wrapper-body {
+      background: $BG_PRIMARY;
+    }
+  }
+  .mobileMenu {
+    font-size: 18px;
+    line-height: 24px;
+    color: $WHITE;
+    background: transparent;
+    :global {
+      .ant-menu-item.ant-menu-item-active:active,
+      .ant-menu-item-selected {
+        background-color: transparent;
+      }
+    }
+  }
+  .loginButton {
+    background: $WHITE;
+    color: $PRIMARY_DARK;
+    font-weight: 700;
+    margin-bottom: 8px;
+    &:hover {
+      background: $WHITE;
+      color: $PRIMARY_DARK;
+    }
+  }
+  .registerButton {
+    font-weight: 700;
+  }
+  .logoutButton {
+    width: 100%;
+    background: $SUNSET_ORANGE;
+    &:hover {
+      box-shadow: 16px 20px 40px rgba($color: $SUNSET_ORANGE, $alpha: 0.5);
+    }
+    &:active {
+      box-shadow: 16px -20px 40px rgba($color: $SUNSET_ORANGE, $alpha: 0.5);
+    }
+  }
+  .btnDashboard {
+    background: $WHITE;
+    color: $PRIMARY_DARK;
+    font-weight: 700;
+    &:hover {
+      background: $WHITE;
+      color: $PRIMARY_DARK;
+    }
+  }
+}
+
+@include desktop-device {
+  .appHeader {
+    .menu {
+      display: flex;
+    }
+    .user {
+      display: flex;
+    }
+    .menuButton {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+
+
+@mixin mobile-device {
+  @media screen and (max-width: 1170px) {
+   @content;
+  }
+}
+
+@mixin desktop-device {
+  @media screen and (min-width: 1170px) {
+   @content;
+  }
+}
+
+

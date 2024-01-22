@@ -1,0 +1,27 @@
+.primaryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  background: #FE842B;
+  transition: color 0.3s, background 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 16px 20px 40px rgba(254, 132, 43, 0.5);
+  }
+  &:active {
+    box-shadow: 16px -20px 40px rgba(254, 132, 43, 0.5);
+  }
+  &:disabled {
+    background: #C1C2C4;
+    color: #8F8F8F;
+    box-shadow: none;
+  }
+}

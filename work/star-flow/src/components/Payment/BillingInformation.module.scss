@@ -1,0 +1,120 @@
+.container {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-size: 16px;
+  color: #FFFFFF;
+
+  .header {
+    margin-bottom: 38px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .content {
+    .billingInfo {
+      margin-bottom: 38px;
+
+      :global {
+        .ant-form-item {
+          margin: 0;
+        }
+
+        .ant-form-item-label {
+          padding-bottom: 12px;
+          font-weight: 600;
+          line-height: 22px;
+          text-align: left;
+        }
+
+        .ant-form-item-explain-error {
+          padding-left: 12px;
+          padding-top: 4px;
+        }
+      }
+
+      .phoneCodeWrapper {
+        display: inline-block;
+        width: 104px;
+        margin-right: 16px;
+        margin-bottom: 38px;
+      }
+
+      .phoneWrapper {
+        display: inline-block;
+        width: calc(100% - 104px - 16px);
+        margin-bottom: 38px;
+      }
+
+      .inputField {
+        border-radius: 2px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+
+        &:not(:global .ant-input-affix-wrapper-status-error):hover {
+          border-color: #494762;
+        }
+
+        :global .ant-input-suffix {
+          color: #FFFFFF;
+        }
+      }
+
+      .selectField {
+        width: 100%;
+
+        :global {
+          .ant-select-selector {
+            border-radius: 2px;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+
+            &:hover {
+              border-color: #494762;
+            }
+
+            &:focus {
+              border-color: #8F9BCE;
+            }
+          }
+
+          .ant-select-arrow {
+            color: #FFFFFF;
+          }
+        }
+      }
+
+      .fieldGroup {
+        display: flex;
+        width: 100%;
+        gap: 16px;
+
+        .selectField.phoneCode {
+          width: 103px;
+        }
+      }
+    }
+  }
+}
+
+.selectFieldDropdown {
+  :global {
+    .ant-select-item-option:hover,
+    .ant-select-item-option.ant-select-item-option-selected,
+    .ant-select-item-option.ant-select-item-option-active {
+      background-color: #31AFFE;
+    }
+  }
+}
+
+@media (min-width: 1170px) {
+  .container .content {
+    padding-left: 80px;
+  }
+}

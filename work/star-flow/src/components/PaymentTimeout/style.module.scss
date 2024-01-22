@@ -1,0 +1,110 @@
+.page {
+  flex: 1;
+  font-family: 'Montserrat';
+  font-style: normal;
+  color: #FFFFFF;
+  background: #111024;
+
+  :global {
+    .ant-col {
+      font-family: 'Montserrat';
+      font-style: normal;
+    }
+  }
+
+  .container {
+    padding: 24px;
+
+    .title {
+      margin-bottom: 48px;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 59px;
+      color: #FFFFFF;
+    }
+
+    .leftContent {
+      .info {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+      }
+
+      .timeoutWrapper {
+        display: flex;
+        gap: 24px;
+        margin-top: 32px;
+
+        .redirect {
+          flex: 1;
+          font-size: 16px;
+          line-height: 22px;
+
+          .actionButton {
+            width: 100%;
+            margin-top: 24px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            background: #31AFFE;
+            &:hover {
+              box-shadow: 16px 20px 40px rgba(49, 175, 254, 0.5);
+            }
+            &:active {
+              box-shadow: 16px -20px 40px rgba(49, 175, 254, 0.5);
+            }
+          }
+        }
+      }
+    }
+
+
+    .rightContent .support {
+      display: none;
+    }
+
+    .support {
+      margin-top: 24px;
+      text-align: center;
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    .anchorButton {
+      display: inline;
+      padding: 0;
+      font-size: 16px;
+      line-height: 22px;
+      color: #31AFFE;
+    }
+  }
+}
+
+@media (min-width: 1170px) {
+  .page .container {
+    padding: 52px 32px;
+
+    .title {
+      padding-left: 32px;
+    }
+
+    .leftContent {
+      padding-left: 32px;
+
+      .support {
+        display: none;
+      }
+    }
+
+    .verticalDivider {
+      height: 100%;
+      width: 0;
+      padding-left: 32px;
+      border-right: 1px solid #616887;
+      opacity: 0.5;
+    }
+
+    .rightContent .support {
+      display: block;
+    }
+  }
+}

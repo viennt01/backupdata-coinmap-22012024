@@ -1,0 +1,15 @@
+{
+  "connection": "Connect broker",
+  "requirements": "Requirements",
+  "terms": "Terms",
+  "conditions": "Conditions",
+  "policy_1": "Connecting accounts means that you have read and agree to",
+  "policy_2": "and MetaAPI Disclaimer",
+  "dont_have_account": "If you dont have an account",
+  "register_here": "register here",
+  "profile_guide": {
+    "description": "Upload your MT4 profile or MT5 profile. If you do not have a profile, please watch these tutorials",
+    "get_mt4_profile_guide": "How to get MT4 profile",
+    "get_mt5_profile_guide": "How to get MT5 profile"
+  }
+}

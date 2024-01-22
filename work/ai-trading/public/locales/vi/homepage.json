@@ -1,0 +1,19 @@
+{
+  "section-library": {
+    "title": "THƯ VIỆN A.I TRADING",
+    "card-button-registers": "ĐĂNG KÝ",
+    "card-button-launch": "SỬ DỤNG",
+    "card-button-connect-broker": "KẾT NỐI BROKER",
+    "card-button-renewal": "GIA HẠN",
+    "card-button-coming-soon": "SẮP RA MẮT",
+    "card-required": "Yêu cầu",
+    "card-detail": "Chi tiết",
+    "card-time": "THÁNG"
+  },
+  "section-steps-to-use": {
+    "button-join": "BẮT ĐẦU NGAY"
+  },
+  "section-help": {
+    "guide-title": "Hướng dẫn"
+  }
+}

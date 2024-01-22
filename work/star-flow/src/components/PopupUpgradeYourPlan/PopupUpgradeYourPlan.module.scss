@@ -1,0 +1,35 @@
+.PopupUpgradeYourPlan {
+  font-family: 'Montserrat';
+  font-style: normal;
+  color: #FFFFFF;
+  margin: 96px 0 32px 0;
+  .PopupUpgradeYourPlanContainer {
+    position: relative;
+  }
+  .PopupUpgradeYourPlanTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    position: relative;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase;
+    gap: 8px;
+  }
+  .PopupUpgradeYourPlanHeader {
+    position: relative;
+    margin-bottom: 70px;
+  }
+  .PopupUpgradeYourPlanCardContainer {
+    position: relative;
+  }
+}
+
+@media (min-width: 1170px) {
+  .PopupUpgradeYourPlan {
+    margin: 32px 0;
+  }
+}

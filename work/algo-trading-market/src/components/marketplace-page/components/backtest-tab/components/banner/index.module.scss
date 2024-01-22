@@ -1,0 +1,64 @@
+@import '@/styles/color.scss';
+@import '@/styles/mixin.scss';
+
+.bannerContainer {
+  background-color: $BG_SECONDARY;
+  padding: 48px 40px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  @media screen and (max-width: 1170px) {
+    padding: 24px;
+   }
+  .contentContainer {
+    display: flex;
+    @include mobile-device {    
+      display: block;
+    }
+    .boxContainer {
+      flex: 1;
+      border-right: 1px solid $JET_GREY;
+      padding-left: 24px;
+      color: $WHITE;
+      @include mobile-device {        
+        border: 0;
+        padding-left: 0;
+        margin-bottom: 12px;
+      }
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        border-right: 0;
+      }
+      
+      .itemBox {
+        margin-bottom: 12px;
+         @include mobile-device {         
+          display: flex;
+          justify-content: space-between;
+
+        }
+        .title {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 22px;
+          color: $WHITE;
+          margin-right: 12px;
+        }
+      }
+      .value {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 44px;
+        letter-spacing: 0.02em;
+      }
+      .up {
+        color: $ALGAE;
+      }
+      .down {
+        color: $SUNSET_ORANGE;
+      }
+    
+    }
+  }
+}

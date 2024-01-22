@@ -1,0 +1,39 @@
+{
+
+  "transaction": "Giao dịch",
+  "performance_month": "Hiệu suất hàng tháng",
+
+  "initial_balance": "Số dư ban đầu",
+  "#_of_trades": "Tổng số lệnh",
+  "drawdown": "Số tiền sụt giảm tối đa",
+  "sharpe_ratio": "Hệ số Sharpe",
+  "percent_drawdown": "Phần trăm sụt giảm tối đa",
+  "profit_fator": "Profit factor",
+  "daily_avg_profit": "Lợi nhuận trung bình hàng ngày",
+  "return_do_ratio": "Tỷ lệ lợi nhuận/sụt giảm",
+  "monthly_avg_profit": "Lợi nhuận trung bình hàng tháng",
+  "winning_percent": "Tỷ lệ thắng",
+  "average_trade": "Trung bình lợi nhuận mỗi lệnh",
+  "percent_long_short": "Tỷ lệ lệnh Long & Short",
+  "pnl_buy": "PnL Lệnh Mua",
+  "pnl_sell": "PnL lệnh Bán",
+  "trades_of_weekly": "Số lệnh mở trong tuần",
+  "pnl_by_month": "PnL theo tháng",
+  "banner": {
+    "Tổng lợi nhuận": "Tổng lợi nhuận",
+    "Lợi nhuận theo PIP": "Lợi nhuận theo PIP",
+    "Lợi nhuận TB trên năm": "Lợi nhuận TB trên năm",
+    "Lợi nhuận TB trên năm (%)": "Lợi nhuận TB trên năm (%)"
+  },
+  "gross_profit": "Tổng tiền lệnh thắng",
+  "largest_win": "Lệnh thắng lớn nhất",
+  "of_wins": "Số lệnh thắng",
+  "gross_loss": "Tổng tiền lệnh thua",
+  "largest_loss": "Lệnh thua lớn nhất",
+  "of_losses": "Số lệnh thua",
+  "average_win": "Số tiền TB mỗi lệnh thắng",
+  "max_consec_win": "Chuỗi thắng dài nhất",
+  "of_cancelled_expired": "Số lệnh hủy",
+  "average_loss": "Số tiền TB mỗi lệnh thua",
+  "max_consec_loss": "Chuỗi lệnh thua dài nhất"
+}

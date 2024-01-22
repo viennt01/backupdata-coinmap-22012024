@@ -1,0 +1,73 @@
+$text-color: #AEAEAE;
+
+
+.buttonSettings {
+  color: $text-color;
+
+  &:hover {
+    background: rgba(55, 55, 55, 0.2);
+    color: $text-color;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.paneSettings {
+  width: 200px;
+  height: fit-content;
+  padding: 0 !important;
+  transform: translateX(calc(-100% + 24px));
+  font-size: 13px;
+
+  .menuWrapper {
+    border: none;
+  }
+
+  .menu {
+    padding: 4px 0;
+    border: 1px solid rgba(196, 196, 196, 0.1);
+    border-radius: 2px;
+    background: #1C2740;
+    color: #B9C2D0;
+
+    .section {
+      &+.section {
+        margin-top: 8px;
+        border-top: 0.4px solid rgba(196, 196, 196, 0.1);
+      }
+
+      .sectionTitle {
+        width: 100%;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #26E1CD;
+        padding: 4px 8px;
+      }
+
+      .sectionItem {
+        width: 100%;
+        padding: 4px 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &.hover {
+          cursor: pointer;
+
+          &:hover {
+            background: #313743;
+          }
+        }
+
+        .sectionItemButton {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+        }
+      }
+    }
+  }
+}

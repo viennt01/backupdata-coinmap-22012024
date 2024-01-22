@@ -1,0 +1,58 @@
+@import '@/styles/color.scss';
+
+.connectBrokerContainer {
+  max-width: 490px;
+  margin: 0 auto;
+  .title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    color: $WHITE;
+  }
+  :global {
+    .ant-form-item {
+      margin-bottom: 38px;
+    }
+  }
+  .descriptionContainer {
+    margin-bottom: 54px;
+    color: $WHITE;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    .shortDescription {
+      margin-bottom: 24px;
+    }
+    .description {
+      list-style-type: disc;
+      list-style-position: outside;
+      margin-left: 24px;
+      li {
+        color: $SAFFRON_MANGO;
+      }
+    }
+
+  }
+  .brokerInputDescription {
+    font-size: 12px;
+    line-height: 15px;
+    margin: -24px 12px 24px;
+    a {
+      color: $PRIMARY;
+    }
+  }
+  .submitBtnContainer {
+    margin-top: 48px;
+    margin-bottom: 24px;
+  }
+  .policyContainer {
+    padding-bottom: 64px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    a {
+      color: $PRIMARY;
+    }
+  }
+}

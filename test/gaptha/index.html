@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <canvas id="myCanvas" width="800" height="900" style="border:1px solid grey">
+        <img id="scream" src="./img/Hinh-nen-quoc-ky-Viet-Nam (16).jpg" alt="anh" />
+    </canvas>
+
+    <!-- <canvas id="canvas" width="500" height="300" style="border:1px solid grey">
+    </canvas>
+
+    <canvas id="nhat" width="500" height="300" style="border:1px solid grey">
+    </canvas>
+    <canvas id="ve" width="500" height="300" style="border:1px solid grey">
+    </canvas> -->
+    <a href="http://127.0.0.1:5500/Plotly.html">Plotly</a>
+
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+        const text = canvas.getContext("2d");
+        // canvas.height = canvas.width;
+        ctx.transform(1, 0, 0, -1, 0, canvas.height)
+
+        // const xArray = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150];
+        // const yArray = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15];
+
+        // // ctx.fillStyle = "red";
+        // for (let i = 0; i < xArray.length - 1; i++) {
+        //     let x = xArray[i] * 400 / 150;
+        //     let y = yArray[i] * 400 / 15;
+        //     ctx.beginPath();
+        //     ctx.ellipse(x, y, 3, 3, 0, 0, Math.PI * 2);
+        //     ctx.fill();
+        // }
+        //hinh chu nhat
+        // ctx.fillRect(100, 300, 200, 75);
+
+        //duong thang
+        ctx.moveTo(0, 890);
+        ctx.lineTo(10, 890);
+        ctx.stroke();
+        ctx.moveTo(0, 880);
+        ctx.lineTo(20, 880);
+        ctx.stroke();
+        ctx.moveTo(0, 870);
+        ctx.lineTo(30, 870);
+        ctx.stroke();
+        ctx.moveTo(0, 860);
+        ctx.lineTo(40, 860);
+        ctx.stroke();
+        ctx.moveTo(0, 850);
+        ctx.lineTo(150, 850);
+        ctx.stroke();
+        ctx.moveTo(0, 840);
+        ctx.lineTo(60, 840);
+        ctx.stroke();
+        ctx.moveTo(0, 830);
+        ctx.lineTo(70, 830);
+        ctx.stroke();
+        ctx.moveTo(75, 900);
+        ctx.lineTo(75, 800);
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.ellipse(75, 850, 50, 75, Math.PI / 2, 0, 2 * Math.PI);
+        ctx.stroke();
+
+
+
+
+        ctx.beginPath();
+        ctx.moveTo(200, 400);
+        ctx.lineTo(300, 600);
+        ctx.lineTo(400, 400);
+        ctx.closePath();
+
+
+        ctx.lineWidth = 10;
+        ctx.lineJoin = "round";
+        ctx.strokeStyle = '#FFCC00';
+        ctx.stroke();
+
+        // the fill color
+        ctx.fillStyle = "#FFCC00";
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.moveTo(300, 100);
+        ctx.lineTo(250, 500);
+        ctx.lineTo(350, 500);
+        ctx.closePath();
+        ctx.lineWidth = 10;
+        ctx.lineJoin = "round";
+        ctx.strokeStyle = '#FFCC00';
+        ctx.stroke();
+        ctx.fillStyle = "#FFCC00";
+        ctx.fill();
+
+
+        ctx.beginPath();
+        ctx.arc(300, 600, Math.sqrt((100*100)+(200*200)), 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(400, 400, Math.sqrt((100*100)+(200*200)), 0, 2 * Math.PI);
+        ctx.stroke();
+
+
+
+
+
+
+        var width = 125;  // Triangle Width
+        var height = 105; // Triangle Height
+        var padding = 20;
+
+        // Draw a path
+        ctx.beginPath();
+        ctx.moveTo(padding + width / 2, padding);        // Top Corner
+        ctx.lineTo(padding + width, height + padding); // Bottom Right
+        ctx.lineTo(padding, height + padding);         // Bottom Left
+        ctx.closePath();
+
+        // Fill the path
+        ctx.fillStyle = "#ffc821";
+        ctx.fill();
+
+        ctx.lineWidth = 5;
+        ctx.lineJoin = "bevel";
+        ctx.strokeStyle = "#333";
+        ctx.stroke();
+
+        //duong tron
+        // text.beginPath();
+        // text.arc(600, 120, 60, 0, 2 * Math.PI);
+        // text.stroke();
+
+        //chart canvas
+        // text.font = "30px Arial";
+        // text.fillText("canvas", 10, 50);
+
+        //color charts
+        // var grd = ctx.createRadialGradient(75, 50, 12, 90, 60, 300);
+        // grd.addColorStop(0, "red");
+        // grd.addColorStop(1, "white"); // Fill with gradient
+        // ctx.fillStyle = grd;
+        // ctx.fillRect(200, 20, 150, 80);
+
+        //images
+        // var img = document.getElementById("scream");
+        // ctx.drawImage(img, 10, 10);
+
+        // var canvasm = document.getElementById('canvas');
+        // if (canvasm.getContext) {
+        //     var ct = canvasm.getContext('2d');
+        //     // ct.fillStyle = "rgb(255,0,0)";
+        //     // ct.fillRect(0, 0, 500, 300); 
+        //     ct.beginPath();
+        //     // ct.fillStyle = "yellow";
+        //     ct.moveTo(250, 80);
+        //     ct.lineTo(200, 200);
+        //     ct.lineTo(320, 125);
+        //     ct.lineTo(180, 125);
+        //     ct.lineTo(300, 200);
+        //     ct.lineTo(250, 80);
+        //     // ct.closePath();
+        //     ct.fill();
+        // }
+
+        // var nhat = document.getElementById('nhat');
+        // if (nhat.getContext) {
+        //     var context = nhat.getContext('2d');
+        //     var centerX = nhat.width / 2;
+        //     var centerY = nhat.height / 2;
+        //     var radius = 100;
+
+        //     context.beginPath();
+        //     context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+        //     // context.fillStyle = '#FE0000';
+        //     context.stroke();
+        // }
+
+        // var ve = document.getElementById('ve');
+        // ve.addEventListener('click', function (e) { console.log(e.clientX); })
+        // if (ve.getContext) {
+        //     var ctm = ve.getContext('2d');
+        //     ct.fillStyle = "rgb(255,0,0)";
+        //     ct.fillRect(0, 0, 500, 300);
+        //     ct.beginPath();
+        //     ct.fillStyle = "yellow";
+        //     ct.moveTo(250, 80);
+        //     ct.lineTo(200, 200);
+        //     ct.lineTo(320, 125);
+        //     ct.lineTo(180, 125);
+        //     ct.lineTo(300, 200);
+        //     ct.lineTo(250, 80);
+        //     ct.closePath();
+        //     ct.fill();
+        // }
+    </script>
+
+</body>
+
+</html>

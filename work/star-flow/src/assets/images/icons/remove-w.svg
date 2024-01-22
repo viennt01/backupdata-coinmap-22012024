@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" width="28" height="28">
+    <g fill="white">
+        <path fill-rule="nonzero"
+            d="M8 21c0 1.1.825 2 1.833 2h7.333c1.008 0 1.833-.9 1.833-2v-12h-11v12zm-1 0v-13h13v13c0 1.634-1.252 3-2.833 3h-7.333c-1.581 0-2.833-1.366-2.833-3z">
+        </path>
+        <path d="M17 6l-1-1h-5l-1 1h-3v1h13v-1z"></path>
+        <path fill-rule="nonzero" d="M10 11v9.062h1v-9.062z"></path>
+        <path fill-rule="nonzero" d="M13 11v9.062h1v-9.062z"></path>
+        <path fill-rule="nonzero" d="M16 11v9.062h1v-9.062z"></path>
+    </g>
+</svg>

@@ -1,0 +1,114 @@
+$white: #ffffff;
+$black: #050206;
+$background: #111024;
+$red: #ff0000;
+$blue: #31AFFE;
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 0;
+  @media screen and(min-width: 1170px) {
+    min-height: max(100vh, 1080px);
+  }
+  .content {
+    max-width: 1423px;
+    .title {
+      font-weight: 700;
+      font-size: 55px;
+      line-height: 134px;
+      text-align: center;
+      margin-bottom: 32px;
+      @media screen and(min-width: 1170px) {
+        margin-bottom: 64px;
+        font-size: 110px;
+      }
+    }
+   
+    .description {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 39px;
+      text-align: center;
+      margin-bottom: 32px;
+      @media screen and(min-width: 1170px) {
+        font-size: 32px;
+        margin-bottom: 64px;
+      }
+    }
+  }
+  
+}
+
+.bottomContainer {
+  height: 100vh;
+  position: relative;
+  background-color: $blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media screen and(min-width: 1170px) {
+    min-height: max(100vh, 1080px);
+  }
+  .features {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+  }
+  .gridBackground {
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  .contentContainer {
+    max-width: 1423px;
+    padding: 24px;
+    @media screen and(min-width: 1170px) {
+      display: flex;
+      padding: 0;
+     }
+    
+    .content {
+      color: $white;
+      flex: 1;
+
+      .title {
+        font-weight: 700;
+        line-height: 78px;
+        font-size: 32px;
+        margin-bottom: 32px;
+        @media screen and(min-width: 1170px) {
+          margin-bottom: 64px;
+          font-size: 64px;
+        }
+      }
+      .shortDescription {
+        font-weight: 600;
+        line-height: 29px;
+        margin-bottom: 18px;
+        font-size: 18px;
+        @media screen and(min-width: 1170px) {
+          margin-bottom: 32px;
+          font-size: 24px;
+        }
+      }
+      .description {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+      }
+      
+    }
+    .image {
+      flex: 1;
+      @media screen and(min-width: 1170px) {
+        padding: 64px;
+      }
+    }
+  }
+}

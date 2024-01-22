@@ -1,0 +1,13 @@
+@import '@/styles/color.scss';
+
+.columnChart {
+  padding: 40px;
+  .title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    color: var(--on_secondary_darken_1);
+    letter-spacing: 0.08em;
+    margin-bottom: 24px;
+  }
+}

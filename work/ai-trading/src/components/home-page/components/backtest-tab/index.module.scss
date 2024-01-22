@@ -1,0 +1,79 @@
+@import '@/styles/color.scss';
+@import '@/styles/mixin.scss';
+
+.backtestContainer {
+  min-width: 80vw;
+  .titleContainer {
+    margin-bottom: 24px;
+    color: var(--on_secondary_darken_2);
+
+    .title {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 39px;
+      letter-spacing: 0.08em;
+      margin-right: 12px;
+    }
+    .datetime {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+
+  .bannerContainer {
+    .bannerContent {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 24px;
+      @include mobile-device {
+        display: block;
+      }
+      .lineChart {
+        width: 50%;
+        background-color: var(--secondary_darken_1);
+        padding: 24px;
+        border-radius: 12px;
+        @include mobile-device {
+          width: 100%;
+          margin-bottom: 24px;
+        }
+      }
+      .informationContainer {
+        width: 50%;
+        background-color: var(--secondary_darken_1);
+        padding: 40px;
+        border-radius: 12px;
+        color: $WHITE;
+        @include mobile-device {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .pieChartContainer {
+    display: flex;
+    margin-bottom: 24px;
+    @include mobile-device {
+      display: block;
+    }
+    .itemPieChartContainer {
+      flex: 1;
+    }
+  }
+  .columnChartContainer {
+    display: flex;
+    gap: 24px;
+    @include mobile-device {
+      display: block;
+    }
+
+    .itemColumnChartContainer {
+      background-color: var(--secondary_darken_1);
+      padding: 24px;
+      border-radius: 12px;
+      flex: 1;
+      margin-bottom: 24px;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+$white: #FFFFFF;
+$black: #050206;
+$background: #111024;
+
+.antdFooter {
+  background-color: $white;
+  height: auto;
+  padding: 0;
+}
+.container {
+  $background-color: #050206;
+  $color: #616887;
+  background: $background-color;
+  padding: 24px;
+
+  .content {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      flex: 1;
+    }
+
+    .copyright {
+      color: $color;
+      text-align: center;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      flex: 1;
+    }
+
+    .socialLink {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 16px;
+      flex: 1;
+    }
+  }
+
+  @media screen and(max-width: 1180px) {
+    .content {
+      display: block;
+      .logo {
+        text-align: center;
+        margin-bottom: 24px;
+      }
+      .copyright {
+        margin-bottom: 24px;
+      }
+      .socialLink {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

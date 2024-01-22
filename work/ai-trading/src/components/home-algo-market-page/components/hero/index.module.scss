@@ -1,0 +1,85 @@
+@import '@/styles/color.scss';
+@import '@/styles/mixin.scss';
+
+.wrapper {
+  background: var(--secondary);
+  color: var(--on_secondary);
+  .heroCover {
+    max-height: 800px;
+    width: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    .container {
+      max-height: 800px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .textCol {
+        z-index: 2;
+        overflow: visible;
+        padding: 60px 0;
+        h2 {
+          font-weight: 600;
+          font-size: 22px;
+          line-height: 30px;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          margin: 0;
+        }
+        .desc {
+          margin-top: 16px;
+          font-size: 14px;
+          line-height: 24px;
+          letter-spacing: 0.02em;
+        }
+        .comingSoon {
+          margin-top: 20px;
+          font-style: italic;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 24px;
+          letter-spacing: 0.02em;
+        }
+      }
+    }
+  }
+}
+
+@include desktop-device {
+  .wrapper {
+    .heroCover {
+      min-height: 100vh;
+      aspect-ratio: 1920 / 800;
+      overflow: hidden;
+      background-size: 100% auto;
+      background-position: center bottom;
+      .container {
+        flex-direction: row;
+        .textCol {
+          h2 {
+            font-weight: 600;
+            font-size: 64px;
+            line-height: 72px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin: 0;
+            white-space: nowrap;
+          }
+          .desc {
+            margin-top: 16px;
+            font-size: 24px;
+            line-height: 36px;
+            letter-spacing: 0.02em;
+          }
+          .comingSoon {
+            margin-top: 48px;
+            font-size: 32px;
+            line-height: 48px;
+            letter-spacing: 0.02em;
+          }
+        }
+      }
+    }
+  }
+}

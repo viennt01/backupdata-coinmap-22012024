@@ -1,0 +1,30 @@
+.cardPricing {
+  display: flex;
+  font-family: 'Montserrat';
+  font-style: normal;
+  color: #FFFFFF;
+}
+.cardPricingItem {
+  width: 25%;
+  > div {
+    padding: 0 8px;
+    height: 100%;
+  }
+}
+// css for mobile
+@media (max-width: 1167px) {
+  .cardPricing {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px 0;
+
+    .cardPricingItem {
+      width: 100% !important;
+
+      >div {
+        padding: 0;
+      }
+    }
+  }
+}

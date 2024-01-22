@@ -1,0 +1,13 @@
+@import '@/styles/color.scss';
+
+.notificationCustom  {
+  background-color: $CINDER;
+  :global {
+    .ant-notification-notice-message {
+      color: $WHITE;
+    }
+    .ant-notification-close-icon {
+      color: $WHITE;
+    }
+  }
+}

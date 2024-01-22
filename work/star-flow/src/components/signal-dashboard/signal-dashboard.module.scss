@@ -1,0 +1,78 @@
+@import '@/assets/scss/variables';
+
+.container {
+  background-color: #111024;
+  flex: 1;
+}
+.wrapper {
+  width: 1420px;
+  max-width: 100%;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 0 0 48px;
+  position: relative;
+
+  h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    margin-top: 52px;
+    color: #fff;
+  }
+}
+
+.signalNotification {
+  padding: 16px;
+  font-size: 12px;
+  border-radius: 4px;
+  background-color: $color-table-row;
+  cursor: pointer;
+
+  .info {
+    span {
+      margin-left: 12px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    .buy {
+      color: $color-green;
+      text-transform: capitalize;
+    }
+    .sell {
+      color: $color-red;
+      text-transform: capitalize;
+    }
+  }
+
+  .fakeLink {
+    color: $primary-blue;
+    font-size: 14px;
+  }
+
+  :global {
+    .ant-notification-notice-icon {
+      img {
+        border-radius: 4px;
+      }
+    }
+    .ant-notification-notice-with-icon {
+      .ant-notification-notice-message,
+      .ant-notification-notice-description {
+        margin-inline-start: 132px;
+        font-size: 12px;
+      }
+      .ant-notification-notice-message {
+        font-size: 14px;
+        color: $color-table-text;
+      }
+    }
+    .ant-notification-notice-close {
+      top: 7px;
+      inset-inline-end: 7px;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+export enum LOCAL_STORAGE_KEYS {
+  TOKEN = 'CM_TOKEN',
+  THEME = 'CM_THEME',
+  LANGUAGE = 'LANGUAGE',
+}

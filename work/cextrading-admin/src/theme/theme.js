@@ -1,0 +1,32 @@
+import { extendTheme, withDefaultColorScheme } from '@chakra-ui/react';
+import { globalStyles } from './styles';
+import { font } from './foundations/fonts';
+import { breakpoints } from './foundations/breakpoints';
+import { buttonStyles } from './components/button';
+import { badgeStyles } from './components/badge';
+import { linkStyles } from './components/link';
+import { drawerStyles } from './components/drawer';
+import { CardComponent } from './additions/card/Card';
+import { CardBodyComponent } from './additions/card/CardBody';
+import { CardHeaderComponent } from './additions/card/CardHeader';
+import { MainPanelComponent } from './additions/layout/main-panel';
+import { PanelContentComponent } from './additions/layout/panel-content';
+import { PanelContainerComponent } from './additions/layout/panel-container';
+// import { mode } from "@chakra-ui/theme-tools";
+
+export default extendTheme(
+  { breakpoints }, // Breakpoints
+  globalStyles,
+  font, // Global styles
+  buttonStyles, // Button styles
+  badgeStyles, // Badge styles
+  linkStyles, // Link styles
+  drawerStyles, // Sidebar variant for Chakra's drawer
+  CardComponent, // Card component
+  CardBodyComponent, // Card Body component
+  CardHeaderComponent, // Card Header component
+  MainPanelComponent, // Main Panel component
+  PanelContentComponent, // Panel Content component
+  PanelContainerComponent, // Panel Container component
+  withDefaultColorScheme({ colorScheme: 'teal' }),
+);

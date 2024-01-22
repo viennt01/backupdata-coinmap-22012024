@@ -1,0 +1,13 @@
+@import '@/styles/color.scss';
+
+.notificationCustom  {
+  background-color: $BG_SECONDARY;
+  :global {
+    .ant-notification-notice-message {
+      color: $WHITE;
+    }
+    .ant-notification-close-icon {
+      color: $WHITE;
+    }
+  }
+}

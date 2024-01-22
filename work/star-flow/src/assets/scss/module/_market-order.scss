@@ -1,0 +1,38 @@
+.market-order th {
+  width: 13%;
+}
+.no-data {
+  position: absolute;
+  right: 48%;
+  top: 48%;
+  text-align: center;
+  color: #b9c2ca;
+}
+.no-data i {
+  font-size: 100px;
+  display: block;
+  line-height: 0px;
+  color: #dce1e5;
+}
+.market-order-item {
+  color: #b9c2d0;
+  padding: 8px 15px;
+  background: rgba(196, 196, 196, 0.15);
+}
+.market-order {
+  border-top: 0;
+  min-height: 190px;
+  border: 1px solid #1d222c;
+  border-radius: 2px;
+}
+
+.market-order .nav-link {
+  color: #4a4a4a;
+  padding: 10px 13px;
+}
+
+.market-order .nav-link.active {
+  color: #2bdbea;
+  background: transparent;
+  border-color: transparent;
+}

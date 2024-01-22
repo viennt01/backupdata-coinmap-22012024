@@ -1,0 +1,173 @@
+$white: #ffffff;
+$black: #050206;
+$background: #09081A;
+
+.container {
+  height: 100vh;
+  background-color: $background;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and(min-width: 1170px) {
+    min-height: max(100vh, 1080px);
+  }
+  .content {
+    max-width: 1423px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    color: $white;
+    padding: 24px;
+    @media screen and(min-width: 1170px) {
+      padding: 0;
+    }
+    .rowOne {
+      width: 100%;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      @media screen and(min-width: 1170px) {
+        margin-bottom: 100px;
+        display: flex;
+      }
+
+      .text {
+        font-weight: 700;
+        line-height: 117px;
+        font-size: 48px;
+        white-space:  nowrap;
+        @media screen and(min-width: 1170px) {
+          font-size: 96px;
+        }
+      }
+      .groupImage {
+        flex: 1;
+        max-width: 824px;
+      }
+    }
+    .rowTwo {
+      gap: 16px;
+      align-items: center;
+      width: 100%;
+      @media screen and(min-width: 1170px) {
+        margin-bottom: 100px;
+        display: flex;
+      }
+      .imageAnimationGroup {
+        display: flex;
+        gap: 8px;
+        height: 120px;
+        $durationRatio: 1.2s;
+        .imageAnimationItem {
+          width: 40px;
+          height: 100%;
+          background-color: #ffffff;
+          animation-duration: $durationRatio;
+          background-image: url('/images/home-page/mid.png');
+          background-position: 0px 0px;
+          background-repeat: no-repeat;
+          animation-iteration-count: 1;
+        }
+        .imageAnimationItem1 {
+          animation-delay: 0.5s;
+          background-position: calc(100% / 12 * 1) 0;
+
+        }
+        .imageAnimationItem2 {
+          animation-delay: 0.8s;
+          background-position: calc(100% / 12 * 2) 0;
+        }
+        .imageAnimationItem3 {
+          animation-delay: 1.2s;
+          background-position:   calc(100% / 12 * 3) 0;
+        }
+          .imageAnimationItem4 {
+          animation-duration: 1.1s;
+          animation-delay: 1.8s;
+          background-position:  calc(100% / 12 * 4) 0;
+        }
+          .imageAnimationItem5 {
+          animation-delay: 2s;
+          animation-duration: 1s;
+          background-position:  calc(100% / 12 * 5) 0;
+        }
+          .imageAnimationItem6 {
+          animation-delay: 2.2s;
+          animation-duration: 1s;
+          background-position:  calc(100% / 12 * 6) 0;
+        }
+          .imageAnimationItem7 {
+         animation-delay: 2.4s;
+          animation-duration: 1s;
+          background-position:  calc(100% / 12 * 7) 0;
+        }
+          .imageAnimationItem8 {
+          animation-delay: 2.6s;
+          animation-duration: 1s;
+          background-position:  calc(100% / 12 * 8) 0;
+        }
+          .imageAnimationItem9 {
+          animation-delay: 2.8s;
+          animation-duration: 0.8s;
+          background-position:  calc(100% / 12 * 9) 0;
+        }
+          .imageAnimationItem10 {
+          animation-delay: 3s;
+          animation-duration: 0.8s;
+          background-position:  calc(100% / 12 * 10) 0;
+        }
+        .imageAnimationItem11 {
+          animation-delay: 3.2s;
+          animation-duration: 1s;
+          background-position:  calc(100% / 12 * 11) 0;
+        }
+         .imageAnimationItem12 {
+          animation-delay: 3.4s;
+          animation-duration: 0.8s;
+          background-position:  calc(100% / 12 * 12) 0;
+        }
+      }
+
+      .text {
+        font-weight: 700;
+        line-height: 117px;
+        white-space:  nowrap;
+        font-size: 48px;
+        white-space:  nowrap;
+        @media screen and(min-width: 1170px) {
+          margin-right: 65px;
+          font-size: 96px;
+        }
+      }
+      .groupImage {
+        max-width: 727px;
+        flex: 1;
+      }
+    }
+   .rowThree {
+      height: 100%;
+      gap: 16px;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      @media screen and(min-width: 1170px) {
+        flex-direction: row;
+        align-items: center;
+      }
+      .text {
+        font-weight: 700;
+        line-height: 117px;
+        white-space:  nowrap;
+        font-size: 48px;
+        @media screen and(min-width: 1170px) {
+          font-size: 96px;
+        }
+      }
+      .groupImage {
+        max-width: 600px;
+         width: 100%;
+        flex: 1;
+      }
+    }
+  }
+}

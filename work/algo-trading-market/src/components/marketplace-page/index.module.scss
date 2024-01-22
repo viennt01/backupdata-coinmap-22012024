@@ -1,0 +1,73 @@
+@import '@/styles/color.scss';
+@import '@/styles/mixin.scss';
+
+.wrapper {
+  position: relative;
+  padding: 90px 0;
+  .title {
+    margin-bottom: 32px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    text-align: center;
+    color: $WHITE;
+  }
+  .description {
+    margin-bottom: 56px;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    color: $WHITE;
+  }
+  .botList {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-bottom: -16px;
+    .botItem {
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 16px;
+    }
+  }
+  .detailModalContainer {
+    .tabsContainer {
+      :global {
+        .ant-tabs-nav {
+          &::before {
+            border-bottom: 1px solid $JET_GREY;
+          }
+          .ant-tabs-tab {
+            color: $JET_GREY;
+          }
+          .ant-tabs-tab-active {
+            .ant-tabs-tab-btn {
+              color: $WHITE;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include desktop-device {
+  .wrapper {
+    .background {
+      display: block;
+    }
+    .botList {
+      margin: 0 -8px;
+      margin-bottom: -16px;
+      .botItem {
+        display: inline-block;
+        width: 33.333333%;
+        padding-left: 8px;
+        padding-right: 8px;
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

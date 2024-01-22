@@ -1,0 +1,25 @@
+@import '@/styles/color.scss';
+
+.itemContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .leftContent {
+    font-weight: 500;
+    color: $WHITE;
+
+  }
+  .rightContent {
+
+  }
+  .up {
+    color: $ALGAE;
+  }
+  .down {
+    color: $SUNSET_ORANGE;
+  }
+}

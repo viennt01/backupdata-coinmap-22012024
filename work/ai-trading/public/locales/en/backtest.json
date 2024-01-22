@@ -1,0 +1,38 @@
+{
+  "transaction": "TRANSACTION",
+  "performance_month": "MONTHLY PERFORMANCE ($)",
+
+  "initial_balance": "Initial balance",
+  "#_of_trades": "# OF TRADES",
+  "drawdown": "DRAWDOWN",
+  "sharpe_ratio": "SHARPE RATIO",
+  "percent_drawdown": "% DRAWDOWN",
+  "profit_fator": "PROFIT FACTOR",
+  "daily_avg_profit": "DAILY AVG PROFIT",
+  "return_do_ratio": "RETURN / DD RATIO",
+  "monthly_avg_profit": "MONTHLY AVG PROFIT",
+  "winning_percent": "WINNING PERCENTAGE",
+  "average_trade": "AVERAGE TRADE",
+  "percent_long_short": "Long vs Short trades",
+  "pnl_buy": "Long Profit/Loss",
+  "pnl_sell": "Short Profit/Loss",
+  "trades_of_weekly": "Trades by weekly",
+  "pnl_by_month": "Wins/Losses by month",
+  "banner": {
+    "Tổng lợi nhuận": "TOTAL PROFIT",
+    "Lợi nhuận theo PIP": "PROFIT IN PIPS",
+    "Lợi nhuận TB trên năm": "YEARLY AVG PROFIT",
+    "Lợi nhuận TB trên năm (%)": "YEARLY AVG % RETURN"
+  },
+  "gross_profit": "Gross Profit",
+  "largest_win": "Largest Win",
+  "of_wins": "# of Wins",
+  "gross_loss": "Gross Loss",
+  "largest_loss": "Largest Loss",
+  "of_losses": "# of Losses",
+  "average_win": "Average Win",
+  "max_consec_win": "Max Consec Wins",
+  "of_cancelled_expired": "# of Cancelled/Expired",
+  "average_loss": "Average Loss",
+  "max_consec_loss": "Max Consec Losses"
+}

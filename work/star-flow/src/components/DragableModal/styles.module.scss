@@ -1,0 +1,31 @@
+$menuBg: #0f1a30;
+$detailBg: #1c2740;
+$textColor: #AEAEAE;
+
+.modal {
+  color: $textColor;
+  font-size: 16px;
+  line-height: 16px;
+  overflow: hidden;
+
+  .dialog {
+    width: fit-content;
+    height: calc(100% - 56px);
+
+    &.fullscreen {
+      height: 100%;
+    }
+  }
+
+  .content {
+    border: none;
+    border-radius: 0;
+    background: $detailBg;
+    min-width: 400px;
+    border: 1px solid #374157;
+    border-radius: 4px;
+    height: fit-content;
+    max-height: 100%;
+    min-height: 260px;
+  }
+}

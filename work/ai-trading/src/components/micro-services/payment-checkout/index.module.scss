@@ -1,0 +1,221 @@
+@import '@/styles/mixin.scss';
+@import '@/styles/color.scss';
+
+.wrapper {
+  .title {
+    margin-bottom: 48px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    color: var(--on_secondary_darken_2);
+  }
+  .leftContent {
+    .checkoutContent {
+      .guideMain {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        color: var(--on_secondary_darken_2);
+      }
+      .guideSub {
+        margin-top: 16px;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--on_secondary_darken_2);
+        .countDown {
+          display: inline;
+          div {
+            display: inline;
+            font-size: 16px;
+            line-height: 22px;
+            color: $SUNSET_ORANGE;
+          }
+        }
+      }
+      .paymentInfoWrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 36px;
+        gap: 24px;
+        img {
+          width: 246px;
+          height: 246px;
+        }
+        .qrCodeSkeleton {
+          width: 246px;
+          height: 246px;
+          border-radius: 0;
+          background: $JET_GREY;
+        }
+        .paymentInfo {
+          flex: 1;
+          width: 100%;
+          .guideline {
+            font-style: italic;
+            font-size: 16px;
+            line-height: 22px;
+            color: var(--on_secondary_darken_2);
+          }
+          .walletId {
+            margin-top: 16px;
+            input {
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              font-size: 16px;
+              line-height: 22px;
+            }
+            .copyIcon {
+              color: var(--on_secondary_darken_1);
+            }
+          }
+          .amountInfo {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 4px;
+            margin-top: 32px;
+            font-size: 24px;
+            line-height: 24px;
+            color: var(--on_secondary_darken_2);
+            .amountWrapper {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              .currencyImage {
+                display: block;
+                min-width: 24px;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                background: $JET_GREY;
+              }
+            }
+          }
+        }
+      }
+      .warning {
+        align-items: flex-start;
+        padding: 0;
+        margin-top: 26px;
+        border: none;
+        background: transparent;
+        span {
+          margin-right: 24px;
+          margin-left: -2px;
+          font-size: 20px;
+          color: $SAFFRON_MANGO;
+        }
+        div {
+          font-size: 14px;
+          line-height: 17px;
+          color: $SAFFRON_MANGO;
+        }
+      }
+      .policy {
+        margin-top: 40px;
+        font-size: 16px;
+        line-height: 22px;
+        color: var(--on_secondary_darken_2);
+      }
+    }
+    .timeoutContent {
+      .info {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        color: var(--on_secondary_darken_2);
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        margin-top: 32px;
+        color: var(--on_secondary_darken_2);
+        & > svg {
+          min-width: 128px;
+        }
+        .redirect {
+          width: 100%;
+          font-size: 16px;
+          line-height: 22px;
+          .actionButton {
+            width: 100%;
+            margin-top: 24px;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+  .rightContent .support {
+    display: none;
+  }
+  .support {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .anchorButton {
+    display: inline;
+    padding: 0;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--primary);
+    cursor: pointer;
+  }
+}
+
+@include desktop-device {
+  .wrapper {
+    padding: 52px 32px;
+    .title {
+      padding-left: 32px;
+    }
+    .leftContent {
+      padding-left: 32px;
+      .checkoutContent {
+        .paymentInfoWrapper {
+          flex-direction: row;
+          img {
+            width: 156px;
+            height: 156px;
+          }
+          .qrCodeSkeleton {
+            width: 156px;
+            height: 156px;
+          }
+        }
+        .support {
+          display: none;
+        }
+      }
+      .timeoutContent {
+        .content {
+          flex-direction: row;
+          align-items: center;
+          .redirect {
+            width: unset;
+            flex: 1;
+          }
+        }
+        .support {
+          display: none;
+        }
+      }
+    }
+    .verticalDivider {
+      height: 100%;
+      width: 0;
+      padding-left: 32px;
+      border-right: 1px solid $MUTED;
+      opacity: 0.5;
+    }
+    .rightContent .support {
+      display: block;
+    }
+  }
+}

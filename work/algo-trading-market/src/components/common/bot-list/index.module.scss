@@ -1,0 +1,149 @@
+@import '@/styles/color.scss';
+
+.bannerContainer {
+  background-color: $BG_SECONDARY;
+  padding: 24px;
+  padding-bottom: 48px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  .contentContainer {
+    display: flex;
+
+    .boxContainer {
+      flex: 1;
+      border-right: 1px solid $JET_GREY;
+      padding-left: 24px;
+      color: $WHITE;
+      &:first-child {
+        padding-left: 0;
+      }
+      &:last-child {
+        border-right: 0;
+      }
+      
+      .itemBox {
+        margin-bottom: 12px;
+        .up {
+          color: $ALGAE;
+        }
+        .down {
+          color: $SUNSET_ORANGE;
+        }
+        .icon {
+          font-size: 24px;
+         
+        }
+        .title {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 22px;
+          color: $BLUE_BELL;
+          margin-right: 12px;
+
+        }
+        .percent {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 22px;
+          margin-left: 12px;
+        }
+      }
+      .earn {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 44px;
+        letter-spacing: 0.02em;
+      }
+    }
+  }
+}
+
+.babgeContainer {
+  :global {
+    .ant-badge-count {
+      color: $WHITE;
+    }
+  }
+}
+.tabsContainer {
+  :global {
+    .ant-tabs-nav {
+      &::before {
+        border-bottom: 1px solid $JET_GREY;
+      }
+      .ant-tabs-tab {
+        color: $JET_GREY;
+      }
+      .ant-tabs-tab-active {
+        .ant-tabs-tab-btn {
+          color: $WHITE;
+        }
+      }
+    }
+  }
+}
+
+.botListContainer {
+  height: 100%;
+  overflow: auto;
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.botItemContainer {
+  display: inline-block;
+  min-width: 25%;
+  padding: 8px;
+  .infoContianer {
+    color: $WHITE;
+    padding: 24px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    background-color: $BG_SECONDARY;
+    .titleContainer {
+      display: flex;
+      gap: 12px;
+      .content {
+        .name {
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 24px;
+          margin-bottom: 6px;
+        }
+        .botType {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 17px;
+          color: $BLUE_BELL;
+        }
+      }
+    }
+    .contenInfoContainer {
+      .key {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 24px;
+        color: $BLUE_BELL;
+      }
+      .value {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 24px;
+      }
+      .algae {
+        color: $ALGAE;
+      }
+      .balance {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+  }
+  .actionContrainer {
+    padding: 24px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: $BG_PRIMARY;
+  }
+}

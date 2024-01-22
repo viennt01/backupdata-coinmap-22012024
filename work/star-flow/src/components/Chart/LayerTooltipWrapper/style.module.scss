@@ -1,0 +1,56 @@
+.layerTooltipWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  .buttonAddIndicator {
+    display: block;
+    width: fit-content;
+    height: 22px;
+    padding: 0 4px;
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 12px;
+    white-space: nowrap;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+    transition: 0.5s;
+
+    &:hover {
+      background-image: linear-gradient(to right,
+          #814d8a 0%,
+          #12bfe1 51%,
+          #814d8a 100%);
+      background-size: 200% auto;
+      border: 1px solid rgba(238, 238, 238, 0.3);
+    }
+  }
+
+  .buttonToggleLayerList {
+    display: inline-flex;
+    width: fit-content;
+    height: 19px;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid #363a45;
+    border-radius: 2px;
+    color: #fff;
+    background: rgba(12, 18, 42, 0.8);
+
+    &:hover {
+      cursor: pointer;
+      border-color: rgba(238, 238, 238, 0.3);
+      background: #252b41;
+    }
+
+    .toggleIcon {
+      width: 12px;
+      height: 12px;
+    }
+
+    .layerCount {
+      font-size: 12px;
+    }
+  }
+}

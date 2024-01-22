@@ -1,0 +1,250 @@
+$white: #ffffff;
+$black: #050206;
+$background: #111024;
+$backgroundLight : #1D1C32;
+$textSelected: #31AFFE;
+
+
+
+.page {
+  background-color: $background;
+  position: relative;
+  flex: 1;
+  .leftContainer {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: $backgroundLight;
+
+    .leftContentContainer {
+      grid-column: span 4 / span 4;
+      background-color: $backgroundLight;
+      text-align: center;
+      color: $white;
+      
+      .avatarContainer {
+        display: none;
+        margin-bottom: 32px;
+        :global {
+          .ant-upload {
+            overflow: hidden;
+          }
+         
+        }
+          
+        .welcome {
+          margin-top: 24px;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 24px;
+          text-align: left;
+          padding-left: 24px;
+        }
+      }
+
+      .navigatorContainerDesktop {
+        display: none;
+        :global {
+          .ant-menu-item-selected {
+            color: $textSelected;
+            background-color: transparent;
+          }
+          .ant-menu-title-content {
+            text-align: left;
+          }
+        }
+      }
+    }
+
+    
+  }
+  .rightContainer {
+    background-color: $background;
+    width: 100%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    :global {
+      .countryCode .ant-select-selector {
+      }
+      .ant-input[disabled] {
+        background-color: $backgroundLight;
+        color: $white;
+      }
+     }
+    .rightContentContainer {
+      flex: 1;
+      padding: 24px;
+      grid-column: span 8 / span 8;
+      background-color: $background;
+      color: $white;
+      margin-right: auto;
+      .accountSection {
+        padding-bottom: 48px;
+      }
+     .personalSection {
+     }
+     h1 {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 59px;
+     }
+     h2 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 29px;
+     }
+     h2, label {
+     color: $white;
+     }
+    }
+    .policy {
+      display: none;
+      margin-top: 150px;
+      flex: 1;
+      max-width: 308px;
+      color: $white;
+      > div {
+        padding: 24px;
+        border-radius: 8px;
+        background-color: $black;
+      }
+    }
+   
+  }
+}
+
+@media (min-width: 1170px) {
+.page {
+  background-color: $background;
+  position: relative;
+  flex: 1;
+  display: flex;
+  .leftContainer {
+    width: 20%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: $backgroundLight;
+
+    .leftContentContainer {
+      grid-column: span 4 / span 4;
+      background-color: $backgroundLight;
+      text-align: center;
+      padding-top: 64px;
+      padding-bottom: 64px;
+      max-width: 474px;
+      margin-left: auto;
+      color: $white;
+      
+      .avatarContainer {
+        display: block;
+        margin-bottom: 32px;
+        :global {
+          .ant-upload {
+            overflow: hidden;
+          }
+         
+        }
+          
+        .welcome {
+          margin-top: 24px;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 24px;
+          text-align: left;
+          padding-left: 24px;
+        }
+      }
+
+      .navigatorContainerMobile {
+        display: none;
+
+      }
+
+      .navigatorContainerDesktop {
+        display: block;
+        :global {
+          .ant-menu-item-selected {
+            color: $textSelected;
+            background-color: transparent;
+          }
+          .ant-menu-title-content {
+            text-align: left;
+          }
+        }
+      }
+    }
+
+    
+  }
+  .rightContainer {
+    background-color: $background;
+    width: 80%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    padding-right: 24px;
+    color: $white;
+
+    :global {
+      .countryCode .ant-select-selector {
+      }
+      .ant-input[disabled] {
+        background-color: $backgroundLight;
+        color: $white;
+      }
+     }
+
+    .rightContentContainer {
+      flex: 1;
+      padding: 56px 52px;
+      grid-column: span 8 / span 8;
+      background-color: $background;
+      margin-right: auto;
+    }
+    .myProfileTab {
+      color: $white;
+      max-width: 949px;
+      .accountSection {
+        margin-left: 50px;
+        padding-bottom: 48px;
+      }
+     .personalSection {
+      margin-left: 50px;
+     }
+     h1 {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 59px;
+     }
+     h2 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 29px;
+     }
+     h2, label {
+     color: $white;
+     }
+    }
+    .policy {
+      display: block;
+      margin-top: 150px;
+      flex: 1;
+      max-width: 308px;
+      color: $white;
+      > div {
+        padding: 24px;
+        border-radius: 8px;
+        background-color: $black;
+      }
+    }
+   
+  }
+}
+
+}
+
+

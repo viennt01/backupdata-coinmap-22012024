@@ -1,0 +1,36 @@
+.order-flow-button {
+  padding: 8px;
+  border: 0px;
+  color: white;
+  background: transparent;
+}
+
+.order-flow-button:focus {
+  color: rgb(17, 231, 71);
+}
+
+.order-flow-select {
+  border-top: 0;
+  border-bottom: 0;
+  border-right-width: 1px;
+  border-left-width: 1px;
+  border-left-color: rgba(82, 80, 80, 0.658);
+  border-right-color: rgba(82, 80, 80, 0.658);
+  color: white;
+  background-color: #1a1928; //#2a3740;
+  height: 44px;
+  width: 110px;
+  font-size: medium;
+  margin-top: 10px;
+}
+
+.order-flow-toolbar {
+  position: absolute;
+  height: 100%;
+  width: 44px;
+  z-index: 8;
+  background-color: rgba(82, 80, 80, 0.658);
+  border-color: white;
+  padding-right: 2px;
+  box-shadow: 2px 8px 11px 7px rgb(0 0 0 / 30%);
+}

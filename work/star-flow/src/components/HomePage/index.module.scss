@@ -1,0 +1,10 @@
+
+$background: #111024;
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+  background-color: $background;
+}

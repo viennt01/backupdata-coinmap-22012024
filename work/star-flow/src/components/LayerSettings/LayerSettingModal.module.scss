@@ -1,0 +1,84 @@
+$detailBg: #1c2740;
+$menuBg: #0f1a30;
+$textColor: #AEAEAE;
+
+.header {
+  height: 60px;
+  background: $menuBg;
+  padding: 0 24px;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+  cursor: move;
+
+  .title {
+    font-size: 16px;
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    & svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .closeButton {
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    cursor: pointer;
+    margin-right: -8px;
+  }
+}
+
+.body {
+  background: $detailBg;
+  min-height: 150px;
+  margin: 24px 4px 24px 24px;
+  padding: 0 20px 0 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+
+  .contentWrapper {
+    max-height: 100%;
+    min-height: 150px;
+    margin-top: -16px;
+    margin-bottom: -16px;
+  }
+}
+
+.footer {
+  display: flex;
+  min-height: 84px;
+  height: 84px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: sticky;
+  bottom: 0;
+  background: $detailBg;
+  border-top: 1px solid #374157;
+  z-index: 1000;
+
+  .button {
+    height: 36px;
+    line-height: 36px;
+    min-width: 128px;
+    padding: 0 8px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: none !important;
+    background: #263048;
+    color: $textColor;
+    font-weight: 400;
+    font-size: 16px;
+
+    &.primary {
+      background: #14C8D8;
+      color: #FFFFFF;
+    }
+  }
+}
